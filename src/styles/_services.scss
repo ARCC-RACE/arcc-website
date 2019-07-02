@@ -1,12 +1,13 @@
 .service-one {
 	padding-top: 120px;
+  color: $thm_gray !important;
     &__single {
         padding-left: 50px;
         padding-right: 50px;
         padding-top: 50px;
         padding-bottom: 50px;
         border-radius: 4px;
-        background-color: rgb(255, 255, 255);
+        background-color: $thm_light_black;
         box-shadow: 0px 10px 60px 0px rgba(46, 61, 98, 0.1);
         overflow: hidden;
         position: relative;
@@ -52,7 +53,7 @@
         margin-bottom: 40px;
 
         a {
-            color: #2E3D62;
+            color: $thm_gray;
             transition: all .4s ease;
 
             &:hover {
@@ -62,7 +63,7 @@
     }
 
     &__text {
-        color: #666E82;
+        color: $thm_gray_dark;
         font-size: 16px;
         line-height: 34px;
         margin: 0;
@@ -92,7 +93,7 @@
         .service-one__title a,
         .service-one__text,
         .service-one__link {
-            color: #fff;
+            color: #F3F3F3;
         }
 
         &:before {
@@ -122,7 +123,7 @@
         .service-one__title a,
         .service-one__text,
         .service-one__link {
-            color: #fff;
+            color: #F3F3F3;
         }
 
         &:before {
@@ -152,7 +153,7 @@
         .service-one__title a,
         .service-one__text,
         .service-one__link {
-            color: #fff;
+            color: #F3F3F3;
         }
 
         &:before {
@@ -182,7 +183,7 @@
         .service-one__title a,
         .service-one__text,
         .service-one__link {
-            color: #fff;
+            color: #F3F3F3;
         }
 
         &:before {

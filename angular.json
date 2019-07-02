@@ -26,9 +26,6 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "src/assets/js/jquery.js",
-              "src/assets/js/bootstrap.bundle.min.js",
-              "src/assets/js/theme.js"
             ]
           },
           "configurations": {
