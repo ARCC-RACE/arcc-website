@@ -73,7 +73,7 @@
             var Self = $(this);
             var menu = Self.data('target');
             $(menu).slideToggle();
-            $(menu).toggleClass('showen');
+            $(menu).toggleClass('shown');
             return false;
         });
         subNavToggler.on('click', function() {
