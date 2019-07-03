@@ -90,31 +90,3 @@
         }
     }
 }
-
-
-.banner-one__home-two {
-    background-image: url(assets/images/banner-bg-1-2.jpg);
-    .block-title__text {
-        color: #fff;
-    }
-    .block-title__text span:before {
-        background-color: #fff;
-        opacity: .1;
-    }
-
-    .banner-one__text {
-        color: #fff;
-    }
-    .banner-one__btn {
-        background-color: #fff;
-        color: #2E3D62;
-        &:hover {
-            background-color: #2E3D62;
-            color: #fff;
-        }
-    }
-    .banner-one__moc {
-        top: auto;
-        bottom: 0;
-    }
-}

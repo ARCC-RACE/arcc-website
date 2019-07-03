@@ -178,8 +178,7 @@
         bottom: 70px;
         right: 0;
         @media(max-width: 1440px) {
-            transform: scale(.75);
-            transform-origin: right center;
+            display: none;
         }
     }
 
@@ -191,7 +190,6 @@
     }
 
     &__feature {
-        display: flex;
         justify-content: space-between;
         margin-bottom: 50px;
 
