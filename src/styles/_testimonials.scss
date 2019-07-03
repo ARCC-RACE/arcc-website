@@ -1,5 +1,5 @@
 .testimonials-style-one {
-    background: transparent url(assets/images/testi-bg-1-1.png) center top no-repeat;
+    background: transparent url(assets/images/testi-bg-1-1.svg) center top no-repeat;
     padding-top: 530px;
     padding-bottom: 120px;
     background-size: cover;
@@ -15,7 +15,7 @@
     .single-testi-one {
         p {
             margin: 0;
-            color: #666E82;
+            color: $thm_gray;
             font-size: 22px;
             line-height: 46px;
         }
@@ -54,7 +54,7 @@
         position: relative;
         top: 0px;
         opacity: .3;
-        color: #666E82;
+        color: $thm_gray_dark;
         z-index: 10;
         transition: all .4s ease;
 

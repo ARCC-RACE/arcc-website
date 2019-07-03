@@ -1,5 +1,5 @@
 .cta-one {
-    background: transparent url(assets/images/cta-bg-1-1.png) center center no-repeat;
+    background: transparent url(assets/images/cta-bg-1-1.svg) center center no-repeat;
     background-size: cover;
     padding-top: 205px;
     padding-bottom: 195px;
@@ -76,7 +76,7 @@
 
     &__text {
         font-size: 20px;
-        color: #666E82;
+        color: $thm_gray;
         line-height: 40px;
         margin: 0;
     }
@@ -91,7 +91,7 @@
     &__list-item {
         font-size: 18px;
         position: relative;
-        color: #666E82;
+        color: $thm_gray;
         padding-left: 30px;
 
         i {
@@ -217,7 +217,7 @@
             font-weight: 600;
 
             a {
-                color: #2E3D62;
+                color: $thm_gray;
                 transition: all .4s ease;
 
                 &:hover {
@@ -253,7 +253,7 @@
 
 
 .cta-three {
-    background: transparent url(assets/images/cta-bg-1-2.png) bottom center no-repeat;
+    background: transparent url(assets/images/cta-bg-1-2.svg) bottom center no-repeat;
     background-size: cover;
     padding-bottom: 220px;
     padding-top: 382px;
@@ -301,7 +301,7 @@
 
     &__text {
         font-size: 20px;
-        color: #666E82;
+        color: $thm_gray;
         line-height: 40px;
         margin: 0;
     }
@@ -316,7 +316,7 @@
     &__list-item {
         font-size: 18px;
         position: relative;
-        color: #666E82;
+        color: $thm_gray;
         padding-left: 30px;
 
         i {
