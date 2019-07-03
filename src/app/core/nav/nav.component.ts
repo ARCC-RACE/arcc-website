@@ -1,35 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {SlideInOutAnimation} from './animations';
+import {NavigationEnd, NavigationStart, Router} from '@angular/router';
+import {skip} from 'rxjs/operators';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
-  animations: [
-    trigger('collapse', [
-      state('open', style({
-        opacity: '1',
-        display: 'block',
-        transform: 'translate3d(0, 0, 0)'
-      })),
-      state('closed',   style({
-        opacity: '0',
-        display: 'none',
-        transform: 'translate3d(0, -100%, 0)'
-      })),
-      transition('closed => open', animate('200ms ease-in')),
-      transition('open => closed', animate('100ms ease-out'))
-    ])
-  ]
+  animations: [SlideInOutAnimation]
 })
-export class NavComponent {
+export class NavComponent implements OnInit{
 
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    // Jank solution so it doesn't open on page load
+    this.router.events.pipe(skip(5)).forEach((event) => {
+      if (event instanceof NavigationStart) {
+        this.toggleCollapse();
+      }
+    });
+  }
   open = false;
+  animationState = 'out';
 
   toggleCollapse() {
 // this.show = !this.show
-    console.log('test');
-    this.open = !this.open;
+    this.animationState = this.animationState === 'out' ? 'in' : 'out';
   }
 
 }

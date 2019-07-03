@@ -11,7 +11,7 @@
         </button>
       </div><!-- /.logo-box -->
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="main-navigation" [class.open]="open">
+      <div class="main-navigation position-block" [@slideInOut]="animationState" >
         <ul class=" navigation-box ">
           <li routerLink="/" routerLinkActive="current" [routerLinkActiveOptions]="{ exact: true }">
             <a routerLink="/">Home</a>
