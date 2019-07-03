@@ -12,7 +12,7 @@
 * 6. blog styles
 * 7. fun fact styles
 * 8. brand styles
-* 9. testimonials styles
+* 9. founder-letter styles
 * 10. inner-banner styles
 * 11. pricing styles
 * 12. cta styles
@@ -424,7 +424,7 @@ hr.style-one {
   display: none;
 }
 
-.header-one {
+.header {
   position: absolute;
   top: 0;
   left: 0;
@@ -451,7 +451,7 @@ hr.style-one {
   -webkit-box-shadow: 0px 10px 30px 0px rgba(255, 130, 87, 0.3);
           box-shadow: 0px 10px 30px 0px rgba(255, 130, 87, 0.3);
 }
-.header-one .header-navigation.stricky-fixed {
+.header .header-navigation.stricky-fixed {
   position: fixed;
   top: 0;
   left: 0;
@@ -461,7 +461,7 @@ hr.style-one {
   -webkit-box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.06);
           box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.06);
 }
-.header-one .header-navigation.stricky-fixed ul.navigation-box > li {
+.header .header-navigation.stricky-fixed ul.navigation-box > li {
   padding-top: 25px;
   padding-bottom: 25px;
 }
@@ -1589,9 +1589,9 @@ hr.style-one {
 }
 
 /*
-* 9. testimonials styles
+* 9. founder-letter styles
 */
-.testimonials-style-one {
+.founder-letter {
   background: transparent url(../images/testi-bg-1-1.png) center top no-repeat;
   padding-top: 530px;
   padding-bottom: 120px;
@@ -1599,39 +1599,39 @@ hr.style-one {
   position: relative;
   margin-top: -380px;
 }
-.testimonials-style-one .block-title {
+.founder-letter .block-title {
   margin-bottom: 45px;
 }
-.testimonials-style-one .single-testi-one p {
+.founder-letter .founder-text p {
   margin: 0;
   color: #666E82;
   font-size: 22px;
   line-height: 46px;
 }
-.testimonials-style-one .single-testi-one h3 {
+.founder-letter .founder-text h3 {
   color: #FF8257;
   font-weight: 600;
   font-size: 20px;
   margin: 0;
   margin-top: 40px;
 }
-.testimonials-style-one .bx-wrapper {
+.founder-letter .bx-wrapper {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   background-color: transparent;
   margin-bottom: 0;
 }
-.testimonials-style-one .bx-wrapper ul.slider {
+.founder-letter .bx-wrapper ul.slider {
   padding: 0;
   margin: 0;
 }
-.testimonials-style-one .bx-wrapper .bx-controls-direction {
+.founder-letter .bx-wrapper .bx-controls-direction {
   position: absolute;
   bottom: -10px;
   right: 0;
 }
-.testimonials-style-one .bx-wrapper .bx-controls-direction a {
+.founder-letter .bx-wrapper .bx-controls-direction a {
   text-indent: 0;
   background-image: none;
   font-size: 32px;
@@ -1643,19 +1643,19 @@ hr.style-one {
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
 }
-.testimonials-style-one .bx-wrapper .bx-controls-direction a:hover {
+.founder-letter .bx-wrapper .bx-controls-direction a:hover {
   opacity: 1;
   color: #FF8257;
 }
-.testimonials-style-one .bx-wrapper .bx-prev {
+.founder-letter .bx-wrapper .bx-prev {
   left: 0px;
   margin-right: 25px;
 }
-.testimonials-style-one .bx-wrapper .bx-next {
+.founder-letter .bx-wrapper .bx-next {
   right: 0px;
 }
 
-#testimonials-slider-pager {
+#founder-photo {
   width: 536px;
   height: 536px;
   position: relative;
@@ -1717,7 +1717,7 @@ hr.style-one {
             transform: rotate(0deg);
   }
 }
-#testimonials-slider-pager .testi-icon {
+#founder-photo .testi-icon {
   position: absolute;
   top: 50%;
   left: 0;
@@ -1738,7 +1738,7 @@ hr.style-one {
           justify-content: center;
   z-index: 10;
 }
-#testimonials-slider-pager .testi-icon:after, #testimonials-slider-pager .testi-icon:before {
+#founder-photo .testi-icon:after, #founder-photo .testi-icon:before {
   width: 99px;
   height: 99px;
   border-radius: 50%;
@@ -1759,7 +1759,7 @@ hr.style-one {
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
 }
-#testimonials-slider-pager .testi-icon:after {
+#founder-photo .testi-icon:after {
   -webkit-animation-delay: .6s;
           animation-delay: .6s;
 }
@@ -1783,11 +1783,11 @@ hr.style-one {
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
-#testimonials-slider-pager .testi-icon img {
+#founder-photo .testi-icon img {
   position: relative;
   z-index: 11;
 }
-#testimonials-slider-pager .testimonials-slider-pager-one .pager-item {
+#founder-photo .testimonials-slider-pager-one .pager-item {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1797,7 +1797,7 @@ hr.style-one {
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
 }
-#testimonials-slider-pager .testimonials-slider-pager-one .pager-item.active {
+#founder-photo .testimonials-slider-pager-one .pager-item.active {
   opacity: 1;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
@@ -1894,7 +1894,7 @@ hr.style-one {
 /*
 * 11. pricing styles
 */
-.pricing-one {
+.club-members {
   position: relative;
   z-index: 10;
   padding-top: 60px;
@@ -1998,7 +1998,7 @@ hr.style-one {
 /*
 * 12. cta styles
 */
-.cta-one {
+.deepracer {
   background: transparent url(../images/cta-bg-1-1.png) center center no-repeat;
   background-size: cover;
   padding-top: 205px;
@@ -2056,7 +2056,7 @@ hr.style-one {
   bottom: 0;
   left: 0;
 }
-.cta-one .block-title {
+.deepracer .block-title {
   margin-bottom: 40px;
 }
 .cta-one__text {
@@ -2111,11 +2111,11 @@ hr.style-one {
           box-shadow: 0px 10px 30px 0px rgba(46, 61, 98, 0.3);
 }
 
-.cta-two {
+.race {
   position: relative;
   padding-bottom: 120px;
 }
-.cta-two [class*=bubble-] {
+.race [class*=bubble-] {
   position: absolute;
   -webkit-animation-name: bubbleMover;
           animation-name: bubbleMover;
@@ -2130,25 +2130,25 @@ hr.style-one {
   -webkit-perspective: 400px;
           perspective: 400px;
 }
-.cta-two .bubble-1 {
+.race .bubble-1 {
   top: 15%;
   left: 10%;
 }
-.cta-two .bubble-2 {
+.race .bubble-2 {
   bottom: 15%;
   left: 40%;
 }
-.cta-two .bubble-3 {
+.race .bubble-3 {
   top: 5%;
   right: 10%;
 }
-.cta-two hr {
+.race hr {
   margin: 0;
   border: none;
   border-top: 1px solid #EAEAEA;
   margin-bottom: 120px;
 }
-.cta-two .block-title {
+.race .block-title {
   margin-bottom: 50px;
 }
 .cta-two__moc {
@@ -2226,14 +2226,14 @@ hr.style-one {
           box-shadow: 0px 10px 30px 0px rgba(46, 61, 98, 0.3);
 }
 
-.cta-three {
+.jetson {
   background: transparent url(../images/cta-bg-1-2.png) bottom center no-repeat;
   background-size: cover;
   padding-bottom: 220px;
   padding-top: 382px;
   position: relative;
 }
-.cta-three [class*=bubble-] {
+.jetson [class*=bubble-] {
   position: absolute;
   -webkit-animation-name: bubbleMover;
           animation-name: bubbleMover;
@@ -2248,19 +2248,19 @@ hr.style-one {
   -webkit-perspective: 400px;
           perspective: 400px;
 }
-.cta-three .bubble-1 {
+.jetson .bubble-1 {
   top: 30%;
   left: 15%;
 }
-.cta-three .bubble-2 {
+.jetson .bubble-2 {
   top: 30%;
   right: 10%;
 }
-.cta-three .bubble-3 {
+.jetson .bubble-3 {
   bottom: 10%;
   left: 40%;
 }
-.cta-three .container {
+.jetson .container {
   position: relative;
 }
 .cta-three__moc {
@@ -2270,7 +2270,7 @@ hr.style-one {
           transform: translateY(-50%) translateX(-100px);
   left: 0;
 }
-.cta-three .block-title {
+.jetson .block-title {
   margin-bottom: 40px;
 }
 .cta-three__text {

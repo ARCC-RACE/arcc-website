@@ -8,7 +8,7 @@
         margin-bottom: 50px;
 
         border-radius: 4px;
-        background-color: rgb(255, 255, 255);
+        background-color: $thm_dark_black;
         box-shadow: 0px 10px 60px 0px rgba(46, 61, 98, 0.1);
 
         border-top: 5px solid #9364D4;
@@ -22,7 +22,7 @@
     &__title {
         margin: 0;
         color: #9364D4;
-        font-size: 60px;
+        font-size: 50px;
         font-weight: 300;
         line-height: 1em;
     }
@@ -36,7 +36,7 @@
         letter-spacing: .2em;
         margin-top: 20px;
         margin-bottom: 60px;
-        color: #2E3D62;
+        color: $thm_gray_dark;
     }
 
     &__feature {
@@ -48,7 +48,7 @@
 
         &-item {
             font-size: 16px;
-            color: #666E82;
+            color: $thm_gray;
             line-height: 1em;
         }
         &-item+ &-item {
@@ -86,26 +86,26 @@
 }
 
 [class*=col-]:nth-child(2) {
-	.pricing-one__single {
+	.club-members__single {
 		border-top-color: #EE539B;
 	}
-	.pricing-one__title {
+	.club-members__title {
 		color: #EE539B;
 	}
-	.pricing-one__btn:hover {
+	.club-members__btn:hover {
 		background-color: #EE539B;
 		border-color: #EE539B;
 	}
 }
 
 [class*=col-]:nth-child(3) {
-	.pricing-one__single {
+	.club-members__single {
 		border-top-color: #FDDD6E;
 	}
-	.pricing-one__title {
+	.club-members__title {
 		color: #FDDD6E;
 	}
-	.pricing-one__btn:hover {
+	.club-members__btn:hover {
 		background-color: #FDDD6E;
 		border-color: #FDDD6E;
 	}
