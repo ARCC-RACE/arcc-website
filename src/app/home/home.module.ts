@@ -10,10 +10,14 @@ import { ClubMembersComponent } from './club-members/club-members.component';
 import { FounderLetterComponent } from './founder-letter/founder-letter.component';
 import { FunFactComponent } from './fun-fact/fun-fact.component';
 import { BlogComponent } from './blog/blog.component';
+import {FragmentPolyfillModule} from '../fragment-polyfill/fragment-polyfill.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FragmentPolyfillModule.forRoot({
+      smooth: true
+    }),
   ],
   declarations: [
     HomeComponent,

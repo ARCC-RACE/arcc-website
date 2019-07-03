@@ -8,6 +8,10 @@ import { CardComponent } from './all/card/card.component';
   imports: [
     CommonModule
   ],
-  declarations: [PostComponent, AllComponent, CardComponent]
+  declarations: [PostComponent, AllComponent, CardComponent],
+  exports: [
+    AllComponent,
+    PostComponent
+  ]
 })
 export class BlogModule { }

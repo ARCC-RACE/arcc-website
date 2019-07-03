@@ -6,6 +6,8 @@ import {CoreModule} from './core/core.module';
 import {HomeModule} from './home/home.module';
 import {AppRoutingModule} from './app-routing.module';
 import {RouterModule} from '@angular/router';
+import {BlogModule} from './blog/blog.module';
+import {FragmentPolyfillModule} from './fragment-polyfill/fragment-polyfill.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,11 @@ import {RouterModule} from '@angular/router';
     CoreModule,
     HomeModule,
     RouterModule,
-    AppRoutingModule
+    BlogModule,
+    AppRoutingModule,
+    FragmentPolyfillModule.forRoot({
+      smooth: true
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

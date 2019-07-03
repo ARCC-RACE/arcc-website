@@ -13,24 +13,20 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="main-navigation">
         <ul class=" navigation-box ">
-          <li>
-            <a href="/">Home</a>
+          <li routerLink="/" routerLinkActive="current" [routerLinkActiveOptions]="{ exact: true }">
+            <a routerLink="/">Home</a>
           </li>
           <li>
-            <a href="#ourprojects">Our Projects</a>
+            <a routerLink="" routerLinkActive="current" fragment="ourprojects">Our Projects</a>
           </li>
           <li>
-            <a href="#jetsoncar">Jetson Car</a>
+            <a routerLink="" routerLinkActive="current" fragment="jetsoncar">Jetson Car</a>
           </li>
           <li>
-            <a href="#race">RACE</a>
+            <a routerLink="" routerLinkActive="current" fragment="race">RACE</a>
           </li>
           <li>
-            <a href="#blog">Blog</a>
-            <ul class="sub-menu">
-              <li><a href="blog.html">Blog Style 01</a></li>
-              <li><a href="blog-details.html">Blog Details</a></li>
-            </ul><!-- /.sub-menu -->
+            <a routerLink="blog" routerLinkActive="current">Blog</a>
           </li>
         </ul>
       </div><!-- /.navbar-collapse -->
