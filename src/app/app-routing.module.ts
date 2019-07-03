@@ -17,6 +17,10 @@ const routes: Routes = [
     component: PostComponent
   },
   {
+    path: 'editor',
+    loadChildren: './blog-editor/blog-editor.module#BlogEditorModule'
+  },
+  {
     path: '**',
     component: HomeComponent
   }

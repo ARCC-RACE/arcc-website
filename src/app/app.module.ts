@@ -8,6 +8,10 @@ import {AppRoutingModule} from './app-routing.module';
 import {RouterModule} from '@angular/router';
 import {BlogModule} from './blog/blog.module';
 import {FragmentPolyfillModule} from './fragment-polyfill/fragment-polyfill.module';
+import {environment} from '../environments/environment';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFirestore} from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -23,8 +27,10 @@ import {FragmentPolyfillModule} from './fragment-polyfill/fragment-polyfill.modu
     FragmentPolyfillModule.forRoot({
       smooth: true
     }),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

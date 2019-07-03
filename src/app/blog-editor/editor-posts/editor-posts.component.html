@@ -1,0 +1,27 @@
+<!-- <p>Logged in as {{ user.displayName }}!</p> -->
+<section class="editor editor-posts">
+  <div class="container">
+
+    <form class="py-2">
+      <div class="form-group">
+        <input class="form-control" #new_post_title type="text" placeholder="Enter Post Title">
+        <input class="form-control" #new_post_author type="text" placeholder="Enter Author">
+        <textarea class="form-control" #new_post_text placeholder="Write your article here"></textarea>
+      </div>
+    </form>
+
+    <button class="btn btn-dark mx-auto" (click)="onEnter(new_post_title, new_post_author, new_post_text)">Create New Post</button>
+
+    <div class="text-center">
+      <h3>Posts</h3>
+      <ul class="list-unstyled">
+        <li class="mb-3 pb-2" *ngFor="let post of posts | async">
+          {{ post.data.title }} &nbsp;&nbsp;
+          <a class="btn btn-sm btn-dark mx-2" routerLink="/editor/post/{{ post.id }}">Open</a>
+          <a class="btn btn-sm btn-dark mx-2" (click)="deleteItem(post.id)">Delete</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
