@@ -5,12 +5,13 @@ import {AllComponent} from './all/all.component';
 
 const editorRoutes: Routes = [
   {
-    path: 'post/:id',
-    component: PostComponent
-  },
-  { path: '',
+    path: 'posts',
     component: AllComponent
   },
+  {
+    path: 'post/:id',
+    component: PostComponent
+  }
 ];
 
 @NgModule({

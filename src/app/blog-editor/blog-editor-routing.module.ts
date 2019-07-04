@@ -11,11 +11,7 @@ const editorRoutes: Routes = [
   {
     path: 'post/:id',
     component: EditorPostComponent
-  },
-  { path: '',
-    redirectTo: 'posts',
-    pathMatch: 'full'
-  },
+  }
 ];
 
 @NgModule({

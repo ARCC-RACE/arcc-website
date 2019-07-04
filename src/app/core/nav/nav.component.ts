@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {SlideInOutAnimation} from './animations';
-import {NavigationEnd, NavigationStart, Router} from '@angular/router';
+import {ActivationEnd, ActivationStart, NavigationEnd, NavigationStart, Router} from '@angular/router';
 import {skip} from 'rxjs/operators';
 
 @Component({
@@ -16,9 +16,8 @@ export class NavComponent implements OnInit{
 
   ngOnInit() {
     // Jank solution so it doesn't open on page load
-    this.router.events.pipe(skip(5)).forEach((event) => {
-      if (event instanceof NavigationStart) {
-        this.toggleCollapse();
+    this.router.events.forEach((event) => {
+      if (event instanceof NavigationEnd) {
       }
     });
   }
