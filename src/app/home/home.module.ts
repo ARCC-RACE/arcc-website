@@ -11,6 +11,7 @@ import { FounderLetterComponent } from './founder-letter/founder-letter.componen
 import { FunFactComponent } from './fun-fact/fun-fact.component';
 import { BlogComponent } from './blog/blog.component';
 import {FragmentPolyfillModule} from '../fragment-polyfill/fragment-polyfill.module';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import {FragmentPolyfillModule} from '../fragment-polyfill/fragment-polyfill.mod
     FragmentPolyfillModule.forRoot({
       smooth: true
     }),
+    RouterModule
   ],
   declarations: [
     HomeComponent,
