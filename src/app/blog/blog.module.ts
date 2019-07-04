@@ -10,10 +10,6 @@ import {BlogRoutingModule} from './blog-routing.module';
     CommonModule,
     BlogRoutingModule
   ],
-  declarations: [PostComponent, AllComponent, CardComponent],
-  exports: [
-    AllComponent,
-    PostComponent
-  ]
+  declarations: [PostComponent, AllComponent, CardComponent]
 })
 export class BlogModule { }

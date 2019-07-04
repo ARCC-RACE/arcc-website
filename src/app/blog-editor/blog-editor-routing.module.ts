@@ -5,7 +5,7 @@ import {EditorPostsComponent} from './editor-posts/editor-posts.component';
 
 const editorRoutes: Routes = [
   {
-    path: 'posts',
+    path: '',
     component: EditorPostsComponent
   },
   {

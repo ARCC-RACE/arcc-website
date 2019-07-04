@@ -22,7 +22,6 @@ import {AngularFirestore} from '@angular/fire/firestore';
     CoreModule,
     HomeModule,
     RouterModule,
-    BlogModule,
     AppRoutingModule,
     FragmentPolyfillModule.forRoot({
       smooth: true

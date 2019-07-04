@@ -5,9 +5,9 @@
         <div class="blog__single">
           <div class="blog__single-inner-block">
             <a href="blog-details.html" class="blog__author">By {{ post.data.author }}</a>
-            <h3 class="blog__title"><a routerLink="/post/{{ post.id }}">{{ post.data.title }}</a></h3>
+            <h3 class="blog__title"><a routerLink="/blog/post/{{ post.id }}">{{ post.data.title }}</a></h3>
             <p class="blog__text">{{ post.data.content }} ...</p>
-            <a routerLink="/post/{{ post.id }}" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>
+            <a routerLink="/blog/post/{{ post.id }}" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>
           </div><!-- /.blog__single-inner-block -->
         </div><!-- /.blog__single -->
       </div><!-- /.col-lg-4 -->

@@ -5,7 +5,7 @@ import {AllComponent} from './all/all.component';
 
 const editorRoutes: Routes = [
   {
-    path: 'posts',
+    path: '',
     component: AllComponent
   },
   {
