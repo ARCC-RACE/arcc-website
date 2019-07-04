@@ -3,12 +3,7 @@ import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/fires
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import {Router} from '@angular/router';
-
-export interface Post {
-  title: string;
-  content: string;
-  author: string;
-}
+import {Post} from '../../_models/post.model';
 
 @Component({
   selector: 'app-editor-posts',

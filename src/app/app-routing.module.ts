@@ -10,11 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'blog',
-    component: AllComponent
-  },
-  {
-    path: 'post',
-    component: PostComponent
+    loadChildren: './blog/blog.module#BlogModule'
   },
   {
     path: 'editor',

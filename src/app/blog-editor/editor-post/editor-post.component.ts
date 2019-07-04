@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
-import {Post} from '../editor-posts/editor-posts.component';
+import {Post} from '../../_models/post.model';
+
 @Component({
   selector: 'app-editor-post',
   templateUrl: './editor-post.component.html',

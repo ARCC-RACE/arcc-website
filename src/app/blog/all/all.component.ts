@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
+import {Post} from '../../_models/post.model';
+import {Observable} from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-all',
@@ -7,7 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllComponent implements OnInit {
 
-  constructor() { }
+  private postsCollection: AngularFirestoreCollection<Post>;
+  posts: Observable<any>;
+
+  constructor(private afs: AngularFirestore) {
+    this.postsCollection = afs.collection<Post>('posts');
+    this.posts = this.postsCollection.snapshotChanges()
+      .pipe(map(actions => {
+        return actions.map(a => {
+          let data = a.payload.doc.data() as Post;
+          data.content = data.content.split(' ').slice(0, 10).join(' ');
+          const id = a.payload.doc.id;
+          return { id, data };
+        });
+      }));
+  }
 
   ngOnInit() {
   }
