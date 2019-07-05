@@ -1,0 +1,451 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>arcc-website documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">arcc-website documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>WindowScroller</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/fragment-polyfill/fragment-polyfill.module.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Abstract</span>
+                                <a href="#scrollIntoView">scrollIntoView</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="scrollIntoView"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Abstract</span>
+                            scrollIntoView
+                        </b>
+                        <a href="#scrollIntoView"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>scrollIntoView(elementRef: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/fragment-polyfill/fragment-polyfill.module.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>elementRef</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+import { Directive } from &#x27;@angular/core&#x27;;
+import { ElementRef } from &#x27;@angular/core&#x27;;
+import { Inject } from &#x27;@angular/core&#x27;;
+import { InjectionToken } from &#x27;@angular/core&#x27;;
+import { ModuleWithProviders } from &#x27;@angular/core&#x27;;
+import { NgModule } from &#x27;@angular/core&#x27;;
+import { OnDestroy } from &#x27;@angular/core&#x27;;
+import { OnInit } from &#x27;@angular/core&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+// ----------------------------------------------------------------------------------- //
+// ----------------------------------------------------------------------------------- //
+
+export interface WindowScrollerOptions {
+  smooth: boolean;
+}
+
+export let WINDOW_SCROLLER_OPTIONS &#x3D; new InjectionToken&lt;WindowScrollerOptions&gt;( &#x27;WindowScroller.Options&#x27; );
+
+// I provide the dependency-injection token for the window-scroller so that it can be
+// more easily injected into the FragmentTarget directive. This allows other developers
+// to provide an override that implements this Type without have to deal with the silly
+// @Inject() decorator.
+export abstract class WindowScroller {
+  abstract scrollIntoView( elementRef: ElementRef ): void;
+}
+
+// I provide an implementation for scrolling a given Element Reference into view. By
+// default, it uses the native .scrollIntoView() method; but, it can be overridden to
+// use something like a jQuery plug-in, or other custom implementation.
+export class NativeWindowScroller implements WindowScroller {
+
+  private behavior: &#x27;auto&#x27; | &#x27;smooth&#x27;;
+  private timer: number;
+
+  // I initialize the window scroller implementation.
+  public constructor( @Inject( WINDOW_SCROLLER_OPTIONS ) options: WindowScrollerOptions ) {
+
+    this.behavior &#x3D; ( options.smooth ? &#x27;smooth&#x27; : &#x27;auto&#x27; );
+    this.timer &#x3D; null;
+
+  }
+
+  // ---
+  // PUBLIC METHODS.
+  // ---
+
+  // I scroll the given ElementRef into the client&#x27;s viewport.
+  public scrollIntoView( elementRef: ElementRef ): void {
+
+    // NOTE: There is an odd race-condition that I cannot figure out. The initial
+    // scrollToView() will not work when the BROWSER IS REFRESHED. It will work if
+    // the page is opened in a new tab; it only fails on refresh (WAT?!). To fix this
+    // peculiarity, I&#x27;m putting the first scroll operation behind a timer. The rest
+    // of the scroll operations will initiate synchronously.
+    if ( this.timer ) {
+
+      this.doScroll( elementRef );
+
+    } else {
+
+      this.timer &#x3D; setTimeout(
+        (): void &#x3D;&gt; {
+
+          this.doScroll( elementRef );
+
+        },
+        0
+      );
+
+    }
+
+  }
+
+  // ---
+  // PRIVATE METHOD.
+  // ---
+
+  // I perform the scrolling of the viewport.
+  private doScroll( elementRef: ElementRef ): void {
+
+    elementRef.nativeElement.scrollIntoView({
+      behavior: this.behavior,
+      block: &#x27;start&#x27;
+    });
+
+  }
+
+}
+
+// ----------------------------------------------------------------------------------- //
+// ----------------------------------------------------------------------------------- //
+
+@Directive({
+  selector: &#x27;[id], a[name]&#x27;,
+  inputs: [ &#x27;id&#x27;, &#x27;name&#x27; ]
+})
+export class FragmentTargetDirective implements OnInit, OnDestroy {
+
+  public id: string;
+  public name: string;
+
+  private activatedRoute: ActivatedRoute;
+  private elementRef: ElementRef;
+  private fragmentSubscription: Subscription;
+  private windowScroller: WindowScroller;
+
+  // I initialize the fragment-target directive.
+  constructor(
+    activatedRoute: ActivatedRoute,
+    elementRef: ElementRef,
+    windowScroller: WindowScroller
+  ) {
+
+    this.activatedRoute &#x3D; activatedRoute;
+    this.elementRef &#x3D; elementRef;
+    this.windowScroller &#x3D; windowScroller;
+
+    this.id &#x3D; null;
+    this.fragmentSubscription &#x3D; null;
+    this.name &#x3D; null;
+
+  }
+
+  // ---
+  // PUBLIC METHODS.
+  // ---
+
+  // I get called once when the directive is being destroyed.
+  public ngOnDestroy(): void {
+
+    ( this.fragmentSubscription ) &amp;&amp; this.fragmentSubscription.unsubscribe();
+
+  }
+
+
+  // I get called once after the inputs have been bound for the first time.
+  public ngOnInit(): void {
+
+    this.fragmentSubscription &#x3D; this.activatedRoute.fragment.subscribe(
+      ( fragment: string ): void &#x3D;&gt; {
+
+        if ( ! fragment ) {
+
+          return;
+
+        }
+
+        if (
+          ( fragment !&#x3D;&#x3D; this.id ) &amp;&amp;
+          ( fragment !&#x3D;&#x3D; this.name )
+        ) {
+
+          return;
+
+        }
+
+        this.windowScroller.scrollIntoView( this.elementRef );
+
+      }
+    );
+
+  }
+
+}
+
+// ----------------------------------------------------------------------------------- //
+// ----------------------------------------------------------------------------------- //
+
+interface ModuleOptions {
+  smooth?: boolean;
+}
+
+@NgModule({
+  exports: [
+    FragmentTargetDirective
+  ],
+  declarations: [
+    FragmentTargetDirective
+  ]
+})
+export class FragmentPolyfillModule {
+
+  static forRoot( options?: ModuleOptions ): ModuleWithProviders {
+
+    return({
+      ngModule: FragmentPolyfillModule,
+      providers: [
+        {
+          provide: WINDOW_SCROLLER_OPTIONS,
+          useValue: {
+            smooth: ( ( options &amp;&amp; options.smooth ) || false )
+          }
+        },
+        {
+          provide: WindowScroller,
+          useClass: NativeWindowScroller
+        }
+      ]
+    });
+
+  }
+
+}
+
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'WindowScroller.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
