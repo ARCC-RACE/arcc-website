@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
 import {SlideInOutAnimation} from './animations';
-import {ActivationEnd, ActivationStart, NavigationEnd, NavigationStart, Router} from '@angular/router';
-import {skip} from 'rxjs/operators';
+import { NavigationEnd, Router} from '@angular/router';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
