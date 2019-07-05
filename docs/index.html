@@ -30,20 +30,35 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="arccwebsite">ArccWebsite</h1>
-<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 6.0.8.</p>
-<h2 id="development-server">Development server</h2>
-<p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
-<h2 id="code-scaffolding">Code scaffolding</h2>
-<p>Run <code>ng generate component component-name</code> to generate a new component. You can also use <code>ng generate directive|pipe|service|class|guard|interface|enum|module</code>.</p>
-<h2 id="build">Build</h2>
-<p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory. Use the <code>--prod</code> flag for a production build.</p>
-<h2 id="running-unit-tests">Running unit tests</h2>
-<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
-<h2 id="running-end-to-end-tests">Running end-to-end tests</h2>
-<p>Run <code>ng e2e</code> to execute the end-to-end tests via <a href="http://www.protractortest.org/">Protractor</a>.</p>
-<h2 id="further-help">Further help</h2>
-<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://github.com/angular/angular-cli/blob/master/README.md">Angular CLI README</a>.</p>
+<h1 id="arcc-website">ARCC Website</h1>
+<p>Check out our <a href="https://jhs-arcc-club.github.io/arcc-website/">Compodoc Documentation</a></p>
+<h2 id="about-this-project">About This Project</h2>
+<p>An Angular 8 webpage for the JHS ARCC Club, an autonomous rc car club out of Jesuit High School Sacramento.</p>
+<p>Designed and developed by <a href="https://github.com/caelinsutch">Caelin Sutch</a>.</p>
+<p>This project is hosted with Firebase webhosting and uses Firestore for the blog. Bootstrap 4 is used for layout, and ngx-markdown is used for markdown support.</p>
+<h2 id="get-started-with-development">Get started with development</h2>
+<ol>
+<li>Install NVM: <code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash</code></li>
+<li>Install node 12 <code>nvm install 12</code></li>
+<li>Set node 12 as default<code>nvm alias default 12</code></li>
+<li>Install Angular CLI globally <code>npm i -g @angular/cli</code></li>
+<li>Clone repository <code>git clone https://github.com/JHS-ARCC-Club/arcc-website</code></li>
+<li>Install packages <code>npm i</code></li>
+<li>Start development server <code>ng s</code></li>
+</ol>
+<p><em>Optional for Release</em></p>
+<ol>
+<li>Install Compodoc <code>npm i -g compodoc</code></li>
+<li>Install Firebase <code>npm i -g firebase</code> and setup/login to account. For permissions to release, contact Caelin</li>
+</ol>
+<h2 id="release-cycle">Release Cycle</h2>
+<ol>
+<li>Merge into master branch</li>
+<li>Make sure code is linted <code>ng lint</code></li>
+<li>Build documentation <code>npm run doc</code></li>
+<li>Deploy <code>firebase deploy</code></li>
+</ol>
+<p>If you have any questions, shoot Caelin a question.</p>
 
 
 

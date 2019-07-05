@@ -348,7 +348,7 @@ export class BlogComponent implements OnInit {
     this.posts &#x3D; this.postsCollection.snapshotChanges()
       .pipe(map(actions &#x3D;&gt; {
         return actions.map(a &#x3D;&gt; {
-          let data &#x3D; a.payload.doc.data() as Post;
+          const data &#x3D; a.payload.doc.data() as Post;
           data.content &#x3D; data.content.split(&#x27; &#x27;).slice(0, 20).join(&#x27; &#x27;);
           const id &#x3D; a.payload.doc.id;
           return { id, data };
