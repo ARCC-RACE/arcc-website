@@ -2,7 +2,12 @@ body {
     font-family: $thm_font;
     font-size: 16px;
     line-height: 34px;
-    color: #666e82;
+    background-color: $thm_black;
+    color: $thm_gray;
+}
+
+h1 h2 h3 h4 h5 p {
+  color: $thm_gray
 }
 
 
@@ -52,7 +57,7 @@ hr.style-one {
 .block-title__text {
     margin: 0;
     font-weight: bold;
-    color: #2E3D62;
+    color:$thm_gray;
     font-size: 50px;
     line-height: 60px;
     span {
@@ -146,7 +151,7 @@ hr.style-one {
     height: 100%;
     z-index: 9999;
     background-color: #fff;
-    //background-image: url(../images/preloader.gif);
+    background-image: url(assets/images/preloader.gif);
     background-repeat: no-repeat;
     background-position: center center;
 }

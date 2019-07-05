@@ -59,12 +59,12 @@
 }
 
 .site-footer__bottom-footer {
-    background-color: #FAFAFA;
+    background-color: $thm_black;
     padding: 44px 0;
 
     p {
         margin: 0;
-        color: #666E82;
+        color: $thm_gray;
         font-size: 16px;
 
         a {

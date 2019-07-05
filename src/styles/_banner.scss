@@ -1,5 +1,5 @@
 .banner-one {
-    //background: transparent url(~src/assets/images/banner-bg-1-1.png) right top no-repeat;
+    background: transparent url(assets/images/banner-bg-1-1..svg) right top no-repeat;
     background-size: cover;
     padding-top: 315px;
     padding-bottom: 147px;
@@ -66,7 +66,7 @@
         margin: 0;
         font-size: 16px;
         line-height: 34px;
-        color: #666E82;
+        color: $thm_gray_dark;
         margin-bottom: 50px;
     }
 
@@ -88,33 +88,5 @@
             color: #fff;
             box-shadow: 0px 10px 30px 0px rgba($thm_black, 0.3);
         }
-    }
-}
-
-
-.banner-one__home-two {
-    //background-image: url(~src/assets/images/banner-bg-1-2.jpg);
-    .block-title__text {
-        color: #fff;
-    }
-    .block-title__text span:before {
-        background-color: #fff;
-        opacity: .1;
-    }
-
-    .banner-one__text {
-        color: #fff;
-    }
-    .banner-one__btn {
-        background-color: #fff;
-        color: #2E3D62;
-        &:hover {
-            background-color: #2E3D62;
-            color: #fff;
-        }
-    }
-    .banner-one__moc {
-        top: auto;
-        bottom: 0;
     }
 }

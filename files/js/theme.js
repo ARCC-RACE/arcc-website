@@ -73,7 +73,7 @@
             var Self = $(this);
             var menu = Self.data('target');
             $(menu).slideToggle();
-            $(menu).toggleClass('showen');
+            $(menu).toggleClass('shown');
             return false;
         });
         subNavToggler.on('click', function() {
@@ -219,8 +219,8 @@
         if ($('.preloader').length) {
             $('.preloader').fadeOut('slow');
         }
-        if ($('.testimonials-slider').length) {
-            $('.testimonials-slider').bxSlider({
+        if ($('.founder-letter-slider').length) {
+            $('.founder-letter-slider').bxSlider({
                 // adaptiveHeight: true,
                 auto: true,
                 controls: true,
@@ -229,7 +229,7 @@
                 pause: 5000,
                 speed: 500,
                 pager: true,
-                pagerCustom: '.testimonials-slider-pager-one'
+                pagerCustom: '.founder-letter-slider-pager-one'
             });
         }
     });

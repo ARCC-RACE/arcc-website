@@ -1,4 +1,4 @@
-.blog-one {
+.blog {
     padding-top: 190px;
     padding-bottom: 90px;
     background: transparent url(../images/blog-bg-1-1.png) center center no-repeat;
@@ -144,7 +144,7 @@
 }
 
 
-.blog-one [class*=col-]:nth-child(2) {
+.blog [class*=col-]:nth-child(2) {
     .blog-one__date {
         background-color: #EF4059;
     }
@@ -170,7 +170,7 @@
     }
 }
 
-.blog-one [class*=col-]:nth-child(3) {
+.blog [class*=col-]:nth-child(3) {
     .blog-one__date {
         background-color: #5dd8d3;
     }
@@ -196,7 +196,7 @@
     }
 }
 
-.blog-one [class*=col-]:nth-child(4) {
+.blog [class*=col-]:nth-child(4) {
     .blog-one__date {
         background-color: #7E9AE0;
     }
@@ -222,7 +222,7 @@
     }
 }
 
-.blog-one [class*=col-]:nth-child(5) {
+.blog [class*=col-]:nth-child(5) {
     .blog-one__date {
         background-color: #ED539B;
     }
@@ -248,7 +248,7 @@
     }
 }
 
-.blog-one [class*=col-]:nth-child(6) {
+.blog [class*=col-]:nth-child(6) {
     .blog-one__date {
         background-color: #FD8257;
     }

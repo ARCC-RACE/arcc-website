@@ -26,15 +26,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "src/assets/js/jquery.js",
-              "src/assets/js/bootstrap.bundle.min.js",
-              "src/assets/js/owl.carousel.min.js",
-              "src/assets/js/waypoints.min.js",
-              "src/assets/js/jquery.counterup.min.js",
-              "src/assets/js/jquery.bxslider.min.js",
-              "src/assets/js/jquery.bxslider.min.js",
-              "src/assets/js/jquery.easing.min.js",
-              "src/assets/js/theme.js"
+              "node_modules/marked/lib/marked.js"
             ]
           },
           "configurations": {

@@ -1,3 +1,71 @@
-<p>
-  all works!
-</p>
+<section class="blog blog__blog-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let post of posts | async">
+        <div class="blog__single">
+          <div class="blog__single-inner-block">
+            <a href="blog-details.html" class="blog__author">By {{ post.data.author }}</a>
+            <h3 class="blog__title"><a routerLink="/blog/post/{{ post.id }}">{{ post.data.title }}</a></h3>
+            <p class="blog__text">{{ post.data.content }} ...</p>
+            <a routerLink="/blog/post/{{ post.id }}" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>
+          </div><!-- /.blog__single-inner-block -->
+        </div><!-- /.blog__single -->
+      </div><!-- /.col-lg-4 -->
+      <!--<div class="col-lg-4">-->
+        <!--<div class="blog__single">-->
+          <!--<div class="blog__single-inner-block">-->
+            <!--<div class="blog__date">30 April, 2019</div>&lt;!&ndash; /.blog__date &ndash;&gt;-->
+            <!--<a href="blog-details.html" class="blog__author">By layerdrops</a>-->
+            <!--<h3 class="blog__title"><a href="blog-details.html">Social currency high performance keywords</a></h3>-->
+            <!--<p class="blog__text">There are many variations of passages of but majority have in some by inject.</p>-->
+            <!--<a href="blog-details.html" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>-->
+          <!--</div>&lt;!&ndash; /.blog__single-inner-block &ndash;&gt;-->
+        <!--</div>&lt;!&ndash; /.blog__single &ndash;&gt;-->
+      <!--</div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
+      <!--<div class="col-lg-4">-->
+        <!--<div class="blog__single">-->
+          <!--<div class="blog__single-inner-block">-->
+            <!--<div class="blog__date">30 April, 2019</div>&lt;!&ndash; /.blog__date &ndash;&gt;-->
+            <!--<a href="blog-details.html" class="blog__author">By layerdrops</a>-->
+            <!--<h3 class="blog__title"><a href="blog-details.html">Prioritize these line items quarterly sales</a></h3>-->
+            <!--<p class="blog__text">There are many variations of passages of but majority have in some by inject.</p>-->
+            <!--<a href="blog-details.html" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>-->
+          <!--</div>&lt;!&ndash; /.blog__single-inner-block &ndash;&gt;-->
+        <!--</div>&lt;!&ndash; /.blog__single &ndash;&gt;-->
+      <!--</div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
+      <!--<div class="col-lg-4">-->
+        <!--<div class="blog__single">-->
+          <!--<div class="blog__single-inner-block">-->
+            <!--<div class="blog__date">30 April, 2019</div>&lt;!&ndash; /.blog__date &ndash;&gt;-->
+            <!--<a href="blog-details.html" class="blog__author">By layerdrops</a>-->
+            <!--<h3 class="blog__title"><a href="blog-details.html">Forcing function blue money, nor powerpoint</a></h3>-->
+            <!--<p class="blog__text">There are many variations of passages of but majority have in some by inject.</p>-->
+            <!--<a href="blog-details.html" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>-->
+          <!--</div>&lt;!&ndash; /.blog__single-inner-block &ndash;&gt;-->
+        <!--</div>&lt;!&ndash; /.blog__single &ndash;&gt;-->
+      <!--</div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
+      <!--<div class="col-lg-4">-->
+        <!--<div class="blog__single">-->
+          <!--<div class="blog__single-inner-block">-->
+            <!--<div class="blog__date">30 April, 2019</div>&lt;!&ndash; /.blog__date &ndash;&gt;-->
+            <!--<a href="blog-details.html" class="blog__author">By layerdrops</a>-->
+            <!--<h3 class="blog__title"><a href="blog-details.html">Execute marketing computer development</a></h3>-->
+            <!--<p class="blog__text">There are many variations of passages of but majority have in some by inject.</p>-->
+            <!--<a href="blog-details.html" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>-->
+          <!--</div>&lt;!&ndash; /.blog__single-inner-block &ndash;&gt;-->
+        <!--</div>&lt;!&ndash; /.blog__single &ndash;&gt;-->
+      <!--</div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
+      <!--<div class="col-lg-4">-->
+        <!--<div class="blog__single">-->
+          <!--<div class="blog__single-inner-block">-->
+            <!--<div class="blog__date">30 April, 2019</div>&lt;!&ndash; /.blog__date &ndash;&gt;-->
+            <!--<a href="blog-details.html" class="blog__author">By layerdrops</a>-->
+            <!--<h3 class="blog__title"><a href="blog-details.html">Onward and upward, productize the deliver</a></h3>-->
+            <!--<p class="blog__text">There are many variations of passages of but majority have in some by inject.</p>-->
+            <!--<a href="blog-details.html" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>-->
+          <!--</div>&lt;!&ndash; /.blog__single-inner-block &ndash;&gt;-->
+        <!--</div>&lt;!&ndash; /.blog__single &ndash;&gt;-->
+      <!--</div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section><!-- /.blog -->
