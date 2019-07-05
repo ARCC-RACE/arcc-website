@@ -12,6 +12,7 @@ import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestore} from '@angular/fire/firestore';
+import {MarkdownModule} from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import {AngularFirestore} from '@angular/fire/firestore';
     }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    MarkdownModule.forRoot(),
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

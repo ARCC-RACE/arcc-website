@@ -13,10 +13,13 @@ export class EditorPostComponent implements OnInit {
   private postDoc: AngularFirestoreDocument<Post>;
   formModel: Post;
   constructor(private afs: AngularFirestore, private route: ActivatedRoute) {}
+  previewText: any;
 
   update() {
     if (this.postDoc) {
       // TODO throttle update
+      console.log(this.formModel.content);
+      this.previewText = this.formModel.content;
       this.postDoc.update(this.formModel).then();
     }
   }

@@ -4,12 +4,14 @@ import { EditorPostComponent } from './editor-post/editor-post.component';
 import { EditorPostsComponent } from './editor-posts/editor-posts.component';
 import {FormsModule} from '@angular/forms';
 import {BlogEditorRoutingModule} from './blog-editor-routing.module';
+import {MarkdownModule} from 'ngx-markdown';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    BlogEditorRoutingModule
+    BlogEditorRoutingModule,
+    MarkdownModule
   ],
   declarations: [EditorPostComponent, EditorPostsComponent]
 })

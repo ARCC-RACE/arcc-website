@@ -8,7 +8,7 @@
         <a href="#" class="blog-details__meta-link">By {{(post | async)?.author}}</a>
       </div><!-- /.blog-details__meta -->
       <h3 class="blog-details__title">{{(post | async)?.title}}</h3><!-- /.blog-details__title -->
-      <p class="blog-details__text">{{(post | async)?.content}}</p><!-- /.blog-details__text -->
+      <markdown class="blog-details__text" [data]="(post | async)?.content"></markdown><!-- /.blog-details__text -->
     </div><!-- /.blog-details__content -->
     <!--<div class="blog-details__author">-->
       <!--<div class="blog-details__author-image">-->
