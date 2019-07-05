@@ -5,14 +5,18 @@ import { EditorPostsComponent } from './editor-posts/editor-posts.component';
 import {FormsModule} from '@angular/forms';
 import {BlogEditorRoutingModule} from './blog-editor-routing.module';
 import {MarkdownModule} from 'ngx-markdown';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestore} from '@angular/fire/firestore';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     BlogEditorRoutingModule,
+    AngularFireModule,
     MarkdownModule
   ],
-  declarations: [EditorPostComponent, EditorPostsComponent]
+  declarations: [EditorPostComponent, EditorPostsComponent],
+  providers: [AngularFirestore]
 })
 export class BlogEditorModule { }

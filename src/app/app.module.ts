@@ -11,7 +11,7 @@ import {FragmentPolyfillModule} from './fragment-polyfill/fragment-polyfill.modu
 import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
-import {AngularFirestore} from '@angular/fire/firestore';
+import {AngularFirestore, AngularFirestoreModule} from '@angular/fire/firestore';
 import {MarkdownModule} from 'ngx-markdown';
 
 @NgModule({
@@ -28,7 +28,7 @@ import {MarkdownModule} from 'ngx-markdown';
       smooth: true
     }),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
+    AngularFirestoreModule,
     MarkdownModule.forRoot(),
   ],
   providers: [AngularFirestore],
