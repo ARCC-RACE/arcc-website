@@ -130,7 +130,7 @@ export class FragmentTargetDirective implements OnInit, OnDestroy {
   // I get called once when the directive is being destroyed.
   public ngOnDestroy(): void {
 
-    ( this.fragmentSubscription ) && this.fragmentSubscription.unsubscribe();
+    this.fragmentSubscription.unsubscribe();
 
   }
 
