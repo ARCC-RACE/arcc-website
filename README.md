@@ -4,7 +4,7 @@ Check out our [Compodoc Documentation](https://jhs-arcc-club.github.io/arcc-webs
 
 ## About This Project
 
-An Angular 8 webpage for the JHS ARCC Club, an autonomous rc car club out of Jesuit High School Sacramento.
+An Angular 8 webpage for the JHS ARCC Club, an autonomous RC car club out of Jesuit High School Sacramento.
 
 Designed and developed by [Caelin Sutch](https://github.com/caelinsutch).
 
@@ -22,7 +22,7 @@ This project is hosted with Firebase webhosting and uses Firestore for the blog.
 
 _Optional for Release_
 
-1. Install Compodoc `npm i -g compodoc`
+1. Install Compodoc `npm i -g @compodoc/compodoc`
 2. Install Firebase `npm i -g firebase` and setup/login to account. For permissions to release, contact Caelin
 
 
@@ -31,6 +31,7 @@ _Optional for Release_
 1. Merge into master branch
 2. Make sure code is linted `ng lint`
 3. Build documentation `npm run doc`
-4. Deploy `firebase deploy`
+4. Build app `ng build --prod`
+5. Deploy `firebase deploy`
 
 If you have any questions, shoot Caelin a question.

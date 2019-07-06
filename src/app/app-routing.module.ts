@@ -19,7 +19,10 @@ const routes: Routes = [
   {
     path: '**',
     component: HomeComponent
-  }
+  },
+  // { path: `/cart`, loadChildren: () => import(`./cart/cart.module`).then(m => m.CartModule) }
+  // TODO: Refactor routes to look like the above example (Enables type checking and other stuff)
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
