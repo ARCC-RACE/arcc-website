@@ -1,0 +1,21 @@
+@import "../../styles/helper-functions";
+
+.editor {
+  background-color: $thm_black;
+  background-image: none;
+  padding-top: 120px;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.editor ~ input textarea {
+  background-color: $thm_light_black;
+  color: $thm_gray;
+}
+
+.form-group > {
+  .form-control {
+    margin-top: 16px;
+    background-color: $thm_light_black;
+    border: none;
+  }
+}
