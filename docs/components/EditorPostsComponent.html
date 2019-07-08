@@ -96,7 +96,7 @@
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./editor-posts.component.scss</code></td>
+                <td class="col-md-9"><code>./editor-posts.component.scss,<br>../blog-editor.scss</code></td>
             </tr>
 
 
@@ -610,7 +610,7 @@ import {AngularFirestore, AngularFirestoreCollection} from &#x27;@angular/fire/f
 @Component({
   selector: &#x27;app-editor-posts&#x27;,
   templateUrl: &#x27;./editor-posts.component.html&#x27;,
-  styleUrls: [&#x27;./editor-posts.component.scss&#x27;]
+  styleUrls: [&#x27;./editor-posts.component.scss&#x27;, &#x27;../blog-editor.scss&#x27;]
 })
 export class EditorPostsComponent implements OnInit {
   private postsCollection: AngularFirestoreCollection&lt;Post&gt;;
@@ -704,6 +704,31 @@ export class EditorPostsComponent implements OnInit {
                 </p>
                 <pre class="line-numbers"><code class="language-scss">
 </code></pre>
+                <p class="comment">
+                    <code>../blog-editor.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../styles/helper-functions&quot;;
+
+.editor {
+  background-color: $thm_black;
+  background-image: none;
+  padding-top: 120px;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.editor ~ input textarea {
+  background-color: $thm_light_black;
+  color: $thm_gray;
+}
+
+.form-group &gt; {
+  .form-control {
+    margin-top: 16px;
+    background-color: $thm_light_black;
+    border: none;
+  }
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -732,7 +757,7 @@ export class EditorPostsComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><!-- <p>Logged in as {{ user.displayName }}!</p> --><section class="editor editor-posts">  <div class="container">    <form class="py-2">      <div class="form-group">        <input class="form-control" #new_post_title type="text" placeholder="Enter Post Title">        <input class="form-control" #new_post_author type="text" placeholder="Enter Author">        <textarea class="form-control" #new_post_text placeholder="Write your article here"></textarea>      </div>    </form>    <button class="btn btn-dark mx-auto" (click)="onEnter(new_post_title, new_post_author, new_post_text)">Create New Post</button>    <div class="text-center">      <h3>Posts</h3>      <ul class="list-unstyled">        <li class="mb-3 pb-2" *ngFor="let post of posts | async">          {{ post.data.title }} &nbsp;&nbsp;          <a class="btn btn-sm btn-dark mx-2" routerLink="/editor/post/{{ post.id }}">Open</a>          <a class="btn btn-sm btn-dark mx-2" (click)="deleteItem(post.id)">Delete</a>        </li>      </ul>    </div>  </div></section></div>'
-    var COMPONENTS = [{'name': 'AllComponent', 'selector': 'app-all'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'ClubMembersComponent', 'selector': 'app-club-members'},{'name': 'DeepracerComponent', 'selector': 'app-deepracer'},{'name': 'EditorPostComponent', 'selector': 'app-editor-post'},{'name': 'EditorPostsComponent', 'selector': 'app-editor-posts'},{'name': 'EmailSignupComponent', 'selector': 'app-email-signup'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FounderLetterComponent', 'selector': 'app-founder-letter'},{'name': 'FunFactComponent', 'selector': 'app-fun-fact'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JetsonComponent', 'selector': 'app-jetson'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PostComponent', 'selector': 'app-post'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RaceComponent', 'selector': 'app-race'}];
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AllComponent', 'selector': 'app-all'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'BubblesComponent', 'selector': 'app-bubbles'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'ClubMembersComponent', 'selector': 'app-club-members'},{'name': 'DeepracerComponent', 'selector': 'app-deepracer'},{'name': 'EditorPostComponent', 'selector': 'app-editor-post'},{'name': 'EditorPostsComponent', 'selector': 'app-editor-posts'},{'name': 'EmailSignupComponent', 'selector': 'app-email-signup'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FounderLetterComponent', 'selector': 'app-founder-letter'},{'name': 'FunFactComponent', 'selector': 'app-fun-fact'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JetsonComponent', 'selector': 'app-jetson'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PostComponent', 'selector': 'app-post'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RaceComponent', 'selector': 'app-race'}];
     var DIRECTIVES = [{'name': 'FragmentTargetDirective', 'selector': '[id], a[name]'}];
     var ACTUAL_COMPONENT = {'name': 'EditorPostsComponent'};
 </script>
