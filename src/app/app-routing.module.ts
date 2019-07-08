@@ -21,6 +21,10 @@ const routes: Routes = [
     loadChildren: './about/about.module#AboutModule'
   },
   {
+    path: 'support',
+    loadChildren: './support/support.module#SupportModule'
+  },
+  {
     path: '**',
     component: HomeComponent
   },

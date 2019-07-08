@@ -1,0 +1,42 @@
+@import '../../styles/helper-functions';
+
+.card {
+  border-radius: 60px;
+  padding: 16px;
+}
+
+.support {
+  padding-top: 315px;
+  background: transparent url(../../assets/about/background.png) right top no-repeat;
+  background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 147px;
+  z-index: -10000;
+
+  position: relative;
+
+  &__main_card {
+    background-color: $thm_dark_black;
+    @media screen and (min-width: 995px) {
+      padding-left: 150px !important;
+      padding-right: 150px !important;
+    }
+
+    h1 {
+      color: $thm_base_color
+    }
+
+  }
+
+  &__volunteer_card {
+    background-color: $thm_purple;
+  }
+
+  &__materials_card {
+    background-color: $thm_pink;
+  }
+
+  &__donate_card {
+    background-color: $thm_red;
+  }
+}
