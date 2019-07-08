@@ -15,10 +15,21 @@
               Explore
             </h3><!-- /.footer-widget__title -->
             <ul class="footer-widget__link-list">
-              <li><a href="#">General</a></li>
-              <li><a href="#">Our Projects</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Blog</a></li>
+                <li>
+                  <a routerLink="/">Home</a>
+                </li>
+                <li>
+                  <a routerLink="" fragment="ourprojects">Our Projects</a>
+                </li>
+                <li>
+                  <a routerLink="" fragment="jetsoncar">Jetson Car</a>
+                </li>
+                <li>
+                    <a routerLink="support" fragment="race">R.A.C.E</a>
+                  </li>
+                <li>
+                  <a routerLink="blog" fragment="deepracer">Deep Racer</a>
+                </li>
             </ul><!-- /.footer-widget__link-list -->
           </div><!-- /.footer-widget -->
         </div><!-- /.col-lg-2 -->
@@ -28,9 +39,21 @@
               Projects
             </h3><!-- /.footer-widget__title -->
             <ul class="footer-widget__link-list">
-              <li><a href="#">Jetson Car</a></li>
-              <li><a href="#">RACE</a></li>
-              <li><a href="#">Deep Racer</a></li>
+                <li>
+                    <a routerLink="/"  [Options]="{ exact: true }">Home</a>
+                  </li>
+                  <li>
+                    <a routerLink="" fragment="ourprojects">Our Projects</a>
+                  </li>
+                  <li>
+                    <a routerLink="about">Jetson Car</a>
+                  </li>
+                  <li>
+                      <a routerLink="support">RACE</a>
+                    </li>
+                  <li>
+                    <a routerLink="blog">Deep Racer</a>
+                  </li>
             </ul><!-- /.footer-widget__link-list -->
           </div><!-- /.footer-widget -->
         </div><!-- /.col-lg-3 -->
