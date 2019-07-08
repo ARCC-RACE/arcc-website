@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>BannerComponent</li>
+  <li>SupportComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/home/banner/banner.component.ts</code>
+    <code>src/app/support/support.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-banner</code></td>
+                <td class="col-md-9"><code>app-support</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./banner.component.scss</code></td>
+                <td class="col-md-9"><code>./support.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./banner.component.html</code></td>
+                <td class="col-md-9"><code>./support.component.html</code></td>
             </tr>
 
 
@@ -156,7 +156,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/home/banner/banner.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/support/support.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -196,7 +196,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/home/banner/banner.component.ts:12</a></div>
+                            class="link-to-prism">src/app/support/support.component.ts:12</a></div>
                 </td>
             </tr>
 
@@ -221,11 +221,11 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-banner&#x27;,
-  templateUrl: &#x27;./banner.component.html&#x27;,
-  styleUrls: [&#x27;./banner.component.scss&#x27;]
+  selector: &#x27;app-support&#x27;,
+  templateUrl: &#x27;./support.component.html&#x27;,
+  styleUrls: [&#x27;./support.component.scss&#x27;]
 })
-export class BannerComponent implements OnInit {
+export class SupportComponent implements OnInit {
 
   constructor() { }
 
@@ -237,88 +237,86 @@ export class BannerComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;section class&#x3D;&quot;banner&quot; id&#x3D;&quot;home&quot;&gt;
-
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;support&quot;&gt;
   &lt;app-bubbles&gt;&lt;/app-bubbles&gt;
-
-
-  &lt;img src&#x3D;&quot;../../../assets/images/coding-graphic.png&quot; class&#x3D;&quot;banner__moc&quot; alt&#x3D;&quot;Awesome Image&quot;/&gt;
   &lt;div class&#x3D;&quot;container&quot;&gt;
     &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col-lg-6&quot;&gt;
-        &lt;div class&#x3D;&quot;banner__content&quot;&gt;
-          &lt;div class&#x3D;&quot;block-title&quot;&gt;
-            &lt;div class&#x3D;&quot;block-title__text&quot;&gt;&lt;span&gt; Autonomous Race Car &lt;/span&gt; &lt;br&gt; &lt;span&gt; Club (ARCC) &lt;/span&gt;&lt;/div&gt;&lt;!-- /.block-title__text --&gt;
-          &lt;/div&gt;&lt;!-- /.block-title --&gt;
-          &lt;p class&#x3D;&quot;banner__text&quot;&gt;
-            A group of engineers who love working on RC autonomous cars.
-            &lt;br&gt; Founded in 2018 by Michael Equi &#x27;20 and Caelin Sutch &#x27;20
-          &lt;/p&gt;&lt;!-- /.banner-one__text --&gt;
-          &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;banner__btn&quot;&gt;Get Started&lt;/a&gt;
-        &lt;/div&gt;&lt;!-- /.banner-one__content --&gt;
-      &lt;/div&gt;&lt;!-- /.col-lg-5 --&gt;
-    &lt;/div&gt;&lt;!-- /.row --&gt;
-  &lt;/div&gt;&lt;!-- /.container --&gt;
-&lt;/section&gt;&lt;!-- /.banner --&gt;
+      &lt;div class&#x3D;&quot;col-12&quot;&gt;
+        &lt;div class&#x3D;&quot;card support__main_card text-center p-4&quot;&gt;
+          &lt;h1&gt;Support ARCC&lt;/h1&gt;
+          &lt;p&gt;ARCC needs your help to get started! We’re looking for a variety of things, including time, volunteers, materials and money. The list below has some items that we’re looking for. You can help ARCC make AI education a reality for hundreds of students.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12 text-center p-4&quot;&gt;
+        &lt;div class&#x3D;&quot;support__volunteer_card card&quot;&gt;
+            &lt;h2&gt;Time&lt;/h2&gt;
+            &lt;p&gt;Help with ARCC education initiatives to teach the next generation of engineers about Autonomous Robotics. ARCC has set curriculum and resources for educators. Get started today by contacting us.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12 text-center p-4&quot;&gt;
+        &lt;div class&#x3D;&quot;support__materials_card card&quot;&gt;
+        	&lt;h2&gt;Materials&lt;/h2&gt;
+        	&lt;p&gt;The ARCC competition and Jetson Car is in constant need of materials. Things such as colored tape, RC cars, foam tiles, power cords, posters, tables, and more can help our organization a lot. Check out our full Amazon wishlist to see what we’re currently looking for. Contact us to get a list.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-4 col-md-12 text-center p-4&quot;&gt;
+        &lt;div class&#x3D;&quot;support__donate_card card&quot;&gt;
+          &lt;h2&gt;Funding&lt;/h2&gt;
+          &lt;p&gt;Coming Soon. R.A.C.E will require a large amount of funding to get started. From working with venus, purchasing educational equipment, and maintaing our research projects, any amount can help.&lt;/p&gt;
+          &lt;p&gt;&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./banner.component.scss</code>
+                    <code>./support.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">@import &quot;../../../styles/_helper-functions&quot;;
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;../../styles/helper-functions&#x27;;
 
-.banner {
-    background: transparent url(../../../assets/images/banner-bg-1-1..svg) right top no-repeat;
-    background-size: cover;
-    padding-top: 315px;
-    padding-bottom: 147px;
+.card {
+  border-radius: 60px;
+  padding: 16px;
+}
 
-    position: relative;
+.support {
+  padding-top: 315px;
+  background: transparent url(../../assets/about/background.png) right top no-repeat;
+  background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 147px;
+  z-index: -10000;
 
-    &amp;__moc {
-        position: absolute;
-        top: 245px;
-        right: 0;
+  position: relative;
 
+  &amp;__main_card {
+    background-color: $thm_dark_black;
+    @media screen and (min-width: 995px) {
+      padding-left: 150px !important;
+      padding-right: 150px !important;
     }
 
-    .block-title {
-        margin-bottom: 35px;
-    }
-    .block-title__text {
-        font-size: 60px;
-        line-height: 70px;
+    h1 {
+      color: $thm_base_color
     }
 
-    &amp;__text {
-        margin: 0;
-        font-size: 16px;
-        line-height: 34px;
-        color: $thm_gray_dark;
-        margin-bottom: 50px;
-    }
+  }
 
-    &amp;__btn {
-        display: inline-block;
-        vertical-align: middle;
-        border-radius: 32px;
-        text-align: center;
-        background-color: #FF8257;
-        color: #FFFFFF;
-        font-size: 16px;
-        font-weight: 600;
-        padding: 15px 59.5px;
-        transition: all .4s ease;
-        box-shadow: 0px 10px 30px 0px rgba(255, 130, 87, 0.3);
+  &amp;__volunteer_card {
+    background-color: $thm_purple;
+  }
 
-        &amp;:hover {
-            background-color: $thm_black;
-            color: #fff;
-            box-shadow: 0px 10px 30px 0px rgba($thm_black, 0.3);
-        }
-    }
+  &amp;__materials_card {
+    background-color: $thm_pink;
+  }
+
+  &amp;__donate_card {
+    background-color: $thm_red;
+  }
 }
 </code></pre>
     </div>
@@ -348,10 +346,10 @@ export class BannerComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><section class="banner" id="home">  <app-bubbles></app-bubbles>  <img src="../../../assets/images/coding-graphic.png" class="banner__moc" alt="Awesome Image"/>  <div class="container">    <div class="row">      <div class="col-lg-6">        <div class="banner__content">          <div class="block-title">            <div class="block-title__text"><span> Autonomous Race Car </span> <br> <span> Club (ARCC) </span></div><!-- /.block-title__text -->          </div><!-- /.block-title -->          <p class="banner__text">            A group of engineers who love working on RC autonomous cars.            <br> Founded in 2018 by Michael Equi \'20 and Caelin Sutch \'20          </p><!-- /.banner-one__text -->          <a href="#" class="banner__btn">Get Started</a>        </div><!-- /.banner-one__content -->      </div><!-- /.col-lg-5 -->    </div><!-- /.row -->  </div><!-- /.container --></section><!-- /.banner --></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="support">  <app-bubbles></app-bubbles>  <div class="container">    <div class="row">      <div class="col-12">        <div class="card support__main_card text-center p-4">          <h1>Support ARCC</h1>          <p>ARCC needs your help to get started! We’re looking for a variety of things, including time, volunteers, materials and money. The list below has some items that we’re looking for. You can help ARCC make AI education a reality for hundreds of students.</p>        </div>      </div>      <div class="col-lg-4 col-md-12 text-center p-4">        <div class="support__volunteer_card card">            <h2>Time</h2>            <p>Help with ARCC education initiatives to teach the next generation of engineers about Autonomous Robotics. ARCC has set curriculum and resources for educators. Get started today by contacting us.</p>        </div>      </div>      <div class="col-lg-4 col-md-12 text-center p-4">        <div class="support__materials_card card">        	<h2>Materials</h2>        	<p>The ARCC competition and Jetson Car is in constant need of materials. Things such as colored tape, RC cars, foam tiles, power cords, posters, tables, and more can help our organization a lot. Check out our full Amazon wishlist to see what we’re currently looking for. Contact us to get a list.</p>        </div>      </div>      <div class="col-lg-4 col-md-12 text-center p-4">        <div class="support__donate_card card">          <h2>Funding</h2>          <p>Coming Soon. R.A.C.E will require a large amount of funding to get started. From working with venus, purchasing educational equipment, and maintaing our research projects, any amount can help.</p>          <p></p>        </div>      </div>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AllComponent', 'selector': 'app-all'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'BubblesComponent', 'selector': 'app-bubbles'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'ClubMembersComponent', 'selector': 'app-club-members'},{'name': 'DeepracerComponent', 'selector': 'app-deepracer'},{'name': 'EditorPostComponent', 'selector': 'app-editor-post'},{'name': 'EditorPostsComponent', 'selector': 'app-editor-posts'},{'name': 'EmailSignupComponent', 'selector': 'app-email-signup'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FounderLetterComponent', 'selector': 'app-founder-letter'},{'name': 'FunFactComponent', 'selector': 'app-fun-fact'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JetsonComponent', 'selector': 'app-jetson'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PostComponent', 'selector': 'app-post'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RaceComponent', 'selector': 'app-race'},{'name': 'SupportComponent', 'selector': 'app-support'}];
     var DIRECTIVES = [{'name': 'FragmentTargetDirective', 'selector': '[id], a[name]'}];
-    var ACTUAL_COMPONENT = {'name': 'BannerComponent'};
+    var ACTUAL_COMPONENT = {'name': 'SupportComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -385,7 +383,7 @@ export class BannerComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'BannerComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'SupportComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

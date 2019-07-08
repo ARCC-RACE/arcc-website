@@ -209,13 +209,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/HomeModule.html" data-type="entity-link">HomeModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-HomeModule-a2313dc215ae819a1ba775f517e02842"' : 'data-target="#xs-components-links-module-HomeModule-a2313dc215ae819a1ba775f517e02842"' }>
+                                            'data-target="#components-links-module-HomeModule-e7d26fc2b228564931a60657201d5773"' : 'data-target="#xs-components-links-module-HomeModule-e7d26fc2b228564931a60657201d5773"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-HomeModule-a2313dc215ae819a1ba775f517e02842"' :
-                                            'id="xs-components-links-module-HomeModule-a2313dc215ae819a1ba775f517e02842"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-HomeModule-e7d26fc2b228564931a60657201d5773"' :
+                                            'id="xs-components-links-module-HomeModule-e7d26fc2b228564931a60657201d5773"' }>
                                             <li class="link">
                                                 <a href="components/BannerComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">BannerComponent</a>
@@ -261,6 +261,27 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="modules/HomeRoutingModule.html" data-type="entity-link">HomeRoutingModule</a>
+                            </li>
+                            <li class="link">
+                                <a href="modules/SupportModule.html" data-type="entity-link">SupportModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SupportModule-b52f856c02f303583ecddf964aa12492"' : 'data-target="#xs-components-links-module-SupportModule-b52f856c02f303583ecddf964aa12492"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SupportModule-b52f856c02f303583ecddf964aa12492"' :
+                                            'id="xs-components-links-module-SupportModule-b52f856c02f303583ecddf964aa12492"' }>
+                                            <li class="link">
+                                                <a href="components/SupportComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SupportComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/SupportRoutingModule.html" data-type="entity-link">SupportRoutingModule</a>
                             </li>
                 </ul>
                 </li>

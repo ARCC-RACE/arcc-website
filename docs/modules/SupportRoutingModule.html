@@ -34,7 +34,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>AboutRoutingModule</li>
+    <li>SupportRoutingModule</li>
 </ol>
 
 
@@ -54,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/about/about-routing.module.ts</code>
+            <code>src/app/support/support-routing.module.ts</code>
         </p>
 
 
@@ -72,21 +72,21 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
-import { AboutComponent } from &#x27;./about.component&#x27;;
+import { SupportComponent } from &#x27;./support.component&#x27;;
 
-const aboutRoutes: Routes &#x3D; [
+const supportRoutes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
-    component: AboutComponent
+    component: SupportComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(aboutRoutes)],
+  imports: [RouterModule.forChild(supportRoutes)],
   exports: [RouterModule],
   declarations: []
 })
-export class AboutRoutingModule {
+export class SupportRoutingModule {
 
 }
 </code></pre>
@@ -123,7 +123,7 @@ export class AboutRoutingModule {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AboutRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'SupportRoutingModule.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
