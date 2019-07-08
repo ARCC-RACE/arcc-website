@@ -10,6 +10,7 @@ import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestore, AngularFirestoreModule} from '@angular/fire/firestore';
 import {MarkdownModule} from 'ngx-markdown';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {MarkdownModule} from 'ngx-markdown';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     MarkdownModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

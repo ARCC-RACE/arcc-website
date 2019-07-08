@@ -7,7 +7,7 @@ import {Post} from '../../_models/post.model';
 @Component({
   selector: 'app-editor-post',
   templateUrl: './editor-post.component.html',
-  styleUrls: ['./editor-post.component.scss']
+  styleUrls: ['./editor-post.component.scss', '../blog-editor.scss']
 })
 export class EditorPostComponent implements OnInit {
   private postDoc: AngularFirestoreDocument<Post>;

@@ -8,7 +8,7 @@ import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firest
 @Component({
   selector: 'app-editor-posts',
   templateUrl: './editor-posts.component.html',
-  styleUrls: ['./editor-posts.component.scss']
+  styleUrls: ['./editor-posts.component.scss', '../blog-editor.scss']
 })
 export class EditorPostsComponent implements OnInit {
   private postsCollection: AngularFirestoreCollection<Post>;

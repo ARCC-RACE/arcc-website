@@ -6,7 +6,7 @@ import {PostComponent} from './blog/post/post.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    loadChildren: './home/home.module#HomeModule'
   },
   {
     path: 'blog',
@@ -15,6 +15,10 @@ const routes: Routes = [
   {
     path: 'editor',
     loadChildren: './blog-editor/blog-editor.module#BlogEditorModule'
+  },
+  {
+    path: 'about',
+    loadChildren: './about/about.module#AboutModule'
   },
   {
     path: '**',
