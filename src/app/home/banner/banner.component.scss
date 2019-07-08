@@ -54,6 +54,11 @@
         position: absolute;
         top: 245px;
         right: 0;
+
+        @media only screen and (max-width: 1200px) {
+          display: none;
+        }
+
     }
 
     .block-title {

@@ -6,7 +6,7 @@ import {PostComponent} from './blog/post/post.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    loadChildren: './home/home.module#HomeModule'
   },
   {
     path: 'blog',

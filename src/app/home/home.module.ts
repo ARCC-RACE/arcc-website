@@ -12,6 +12,7 @@ import { FunFactComponent } from './fun-fact/fun-fact.component';
 import { BlogComponent } from './blog/blog.component';
 import {FragmentPolyfillModule} from '../fragment-polyfill/fragment-polyfill.module';
 import {RouterModule} from '@angular/router';
+import { HomeRoutingModule } from './home-routing.module'
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {RouterModule} from '@angular/router';
     FragmentPolyfillModule.forRoot({
       smooth: true
     }),
-    RouterModule
+    RouterModule,
+    HomeRoutingModule
   ],
   declarations: [
     HomeComponent,
