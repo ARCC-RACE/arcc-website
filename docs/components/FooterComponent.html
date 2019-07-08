@@ -238,10 +238,7 @@ export class FooterComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;footer class&#x3D;&quot;site-footer&quot;&gt;
-  &lt;img src&#x3D;&quot;../../../assets/icons/banner-icon-1-1.png&quot; alt&#x3D;&quot;Awesome Image&quot; class&#x3D;&quot;bubble-1&quot; /&gt;
-  &lt;img src&#x3D;&quot;../../../assets/icons/banner-icon-1-3.png&quot; alt&#x3D;&quot;Awesome Image&quot; class&#x3D;&quot;bubble-2&quot; /&gt;
-  &lt;img src&#x3D;&quot;../../../assets/icons/banner-icon-1-2.png&quot; alt&#x3D;&quot;Awesome Image&quot; class&#x3D;&quot;bubble-3&quot; /&gt;
-  &lt;img src&#x3D;&quot;../../../assets/icons/banner-icon-1-4.png&quot; alt&#x3D;&quot;Awesome Image&quot; class&#x3D;&quot;bubble-4&quot; /&gt;
+  &lt;app-bubbles&gt;&lt;/app-bubbles&gt;
   &lt;!-- &lt;app-email-signup&gt;&lt;/app-email-signup&gt; TODO Reincorporate --&gt;
   &lt;div class&#x3D;&quot;site-footer__main-footer pt-5&quot;&gt;
     &lt;div class&#x3D;&quot;container&quot;&gt;
@@ -289,10 +286,10 @@ export class FooterComponent implements OnInit {
         &lt;div class&#x3D;&quot;col-lg-2 col-md-6 col-sm-12 d-flex&quot;&gt;
           &lt;div class&#x3D;&quot;footer-widget my-auto&quot;&gt;
             &lt;div class&#x3D;&quot;social-block&quot;&gt;
-              &lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-              &lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-facebook-f&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-              &lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-              &lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-youtube-play&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;a href&#x3D;&quot;https://www.instagram.com/arcc_ai/&quot;&gt;&lt;i class&#x3D;&quot;fa fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;a href&#x3D;&quot;https://www.facebook.com/autonomousracecarclub&quot;&gt;&lt;i class&#x3D;&quot;fa fa-facebook-f&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;a href&#x3D;&quot;https://www.linkedin.com/company/autonomous-race-car-club/about/?viewAsMember&#x3D;true&quot;&gt;&lt;i class&#x3D;&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;a href&#x3D;&quot;https://www.youtube.com/watch?v&#x3D;eEBaDSQMvGI&amp;feature&#x3D;youtu.be&amp;fbclid&#x3D;IwAR2Z2a-vAQ4I24Z0oa8J53msjoBz7xBtaYDQuyWFySr08KxFKJ8m4jwnpvw&quot;&gt;&lt;i class&#x3D;&quot;fa fa-youtube-play&quot;&gt;&lt;/i&gt;&lt;/a&gt;
             &lt;/div&gt;&lt;!-- /.social-block --&gt;
           &lt;/div&gt;&lt;!-- /.footer-widget --&gt;
         &lt;/div&gt;&lt;!-- /.col-lg-2 --&gt;
@@ -312,7 +309,190 @@ export class FooterComponent implements OnInit {
                 <p class="comment">
                     <code>./footer.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../../styles/_helper-functions&quot;;
+
+.site-footer {
+    position: relative;
+
+
+
+    &amp;__main-footer {
+        padding-bottom: 120px;
+    }
+
+    &amp;__bottom-footer {
+        background-color: $thm_black;
+        padding: 44px 0;
+
+        p {
+            margin: 0;
+            color: $thm_gray;
+            font-size: 16px;
+
+            a {
+                color: #FF8257;
+                transition: all .4s ease;
+
+                &amp;:hover {
+                    color: #9364D4;
+                }
+            }
+        }
+    }
+}
+
+.footer-widget {
+    p {
+        margin: 0;
+        color: #666E82;
+        font-size: 15px;
+        line-height: 26px;
+
+        +p {
+            margin-top: 16px;
+        }
+    }
+
+    .social-block {
+        margin-top: -20px;
+
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            color: #666E82;
+            font-size: 22px;
+            transition: all .4s ease;
+
+            +a {
+                margin-left: 22px;
+            }
+
+            &amp;:hover {
+                color: #FF8257;
+            }
+        }
+    }
+}
+
+.footer-widget__footer-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -8px;
+    margin-bottom: 28px;
+}
+
+.footer-widget__title {
+    margin: 0;
+    color: #2E3D62;
+    font-size: 18px;
+    line-height: 1em;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.footer-widget__link-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        line-height: 1em;
+
+        +li {
+            margin-top: 24px;
+        }
+
+        a {
+            color: #666E82;
+            font-size: 15px;
+            display: inline-block;
+            position: relative;
+            transition: all .4s ease;
+
+            &amp;:before {
+                content: &#x27;\f101&#x27;;
+                font-family: &#x27;FontAwesome&#x27;;
+                color: #FF8257;
+                font-size: 14px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%) translateX(-15px);
+                opacity: 0;
+                transition: all .4s ease;
+            }
+
+            &amp;:hover {
+                color: #9364D4;
+                transform: translateX(20px);
+
+                &amp;:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.site-footer__subscribe {
+    padding-bottom: 125px;
+    padding-top: 110px;
+}
+
+.site-footer__subscribe-form {
+    width: 100%;
+    max-width: 685px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 84px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(234, 234, 234);
+    border-radius: 42px;
+    position: relative;
+    overflow: hidden;
+
+    input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #666E82;
+        font-size: 16px;
+        padding-left: 60px;
+
+        @include placeholder {
+            color: #666E82;
+        }
+    }
+
+    button[type&#x3D;submit] {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #FF8257;
+        width: 211px;
+        height: 64px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        border-radius: 32px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        transition: all .4s ease;
+
+        &amp;:hover {
+            background-color: #9364D4;
+        }
+    }
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -340,8 +520,8 @@ export class FooterComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><footer class="site-footer">  <img src="../../../assets/icons/banner-icon-1-1.png" alt="Awesome Image" class="bubble-1" />  <img src="../../../assets/icons/banner-icon-1-3.png" alt="Awesome Image" class="bubble-2" />  <img src="../../../assets/icons/banner-icon-1-2.png" alt="Awesome Image" class="bubble-3" />  <img src="../../../assets/icons/banner-icon-1-4.png" alt="Awesome Image" class="bubble-4" />  <!-- <app-email-signup></app-email-signup> TODO Reincorporate -->  <div class="site-footer__main-footer pt-5">    <div class="container">      <div class="row">        <div class="col-lg-3 col-md-6 col-sm-12">          <div class="footer-widget footer-widget--about-widget">            <a href="/" class="footer-widget__footer-logo"><img src="../../../assets/images/arcc-logo.png" alt="ARCC Logo" /></a>          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-3 -->        <div class="col-lg-2 col-md-6 col-sm-12">          <div class="footer-widget">            <h3 class="footer-widget__title">              Explore            </h3><!-- /.footer-widget__title -->            <ul class="footer-widget__link-list">              <li><a href="#">General</a></li>              <li><a href="#">Our Projects</a></li>              <li><a href="#">Our Team</a></li>              <li><a href="#">Blog</a></li>            </ul><!-- /.footer-widget__link-list -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-2 -->        <div class="col-lg-3 col-md-6 col-sm-12">          <div class="footer-widget">            <h3 class="footer-widget__title">              Projects            </h3><!-- /.footer-widget__title -->            <ul class="footer-widget__link-list">              <li><a href="#">Jetson Car</a></li>              <li><a href="#">RACE</a></li>              <li><a href="#">Deep Racer</a></li>            </ul><!-- /.footer-widget__link-list -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-3 -->        <div class="col-lg-2 col-md-6 col-sm-12">          <div class="footer-widget">            <h3 class="footer-widget__title">              Other            </h3><!-- /.footer-widget__title -->            <ul class="footer-widget__link-list">              <li><a href="#">Contact</a></li>            </ul><!-- /.footer-widget__link-list -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-2 -->        <div class="col-lg-2 col-md-6 col-sm-12 d-flex">          <div class="footer-widget my-auto">            <div class="social-block">              <a href="#"><i class="fa fa-instagram"></i></a>              <a href="#"><i class="fa fa-facebook-f"></i></a>              <a href="#"><i class="fa fa-linkedin"></i></a>              <a href="#"><i class="fa fa-youtube-play"></i></a>            </div><!-- /.social-block -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-2 -->      </div><!-- /.row -->    </div><!-- /.container -->  </div><!-- /.site-footer__main-footer -->  <div class="site-footer__bottom-footer text-center">    <div class="container">      <p>&copy; copyright 2019 and designed by <a href="caelinsutch.com">Caelin Sutch</a></p>    </div><!-- /.container -->  </div><!-- /.site-footer__bottom-footer --></footer><!-- /.site-footer --></div>'
-    var COMPONENTS = [{'name': 'AllComponent', 'selector': 'app-all'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'ClubMembersComponent', 'selector': 'app-club-members'},{'name': 'DeepracerComponent', 'selector': 'app-deepracer'},{'name': 'EditorPostComponent', 'selector': 'app-editor-post'},{'name': 'EditorPostsComponent', 'selector': 'app-editor-posts'},{'name': 'EmailSignupComponent', 'selector': 'app-email-signup'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FounderLetterComponent', 'selector': 'app-founder-letter'},{'name': 'FunFactComponent', 'selector': 'app-fun-fact'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JetsonComponent', 'selector': 'app-jetson'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PostComponent', 'selector': 'app-post'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RaceComponent', 'selector': 'app-race'}];
+        var COMPONENT_TEMPLATE = '<div><footer class="site-footer">  <app-bubbles></app-bubbles>  <!-- <app-email-signup></app-email-signup> TODO Reincorporate -->  <div class="site-footer__main-footer pt-5">    <div class="container">      <div class="row">        <div class="col-lg-3 col-md-6 col-sm-12">          <div class="footer-widget footer-widget--about-widget">            <a href="/" class="footer-widget__footer-logo"><img src="../../../assets/images/arcc-logo.png" alt="ARCC Logo" /></a>          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-3 -->        <div class="col-lg-2 col-md-6 col-sm-12">          <div class="footer-widget">            <h3 class="footer-widget__title">              Explore            </h3><!-- /.footer-widget__title -->            <ul class="footer-widget__link-list">              <li><a href="#">General</a></li>              <li><a href="#">Our Projects</a></li>              <li><a href="#">Our Team</a></li>              <li><a href="#">Blog</a></li>            </ul><!-- /.footer-widget__link-list -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-2 -->        <div class="col-lg-3 col-md-6 col-sm-12">          <div class="footer-widget">            <h3 class="footer-widget__title">              Projects            </h3><!-- /.footer-widget__title -->            <ul class="footer-widget__link-list">              <li><a href="#">Jetson Car</a></li>              <li><a href="#">RACE</a></li>              <li><a href="#">Deep Racer</a></li>            </ul><!-- /.footer-widget__link-list -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-3 -->        <div class="col-lg-2 col-md-6 col-sm-12">          <div class="footer-widget">            <h3 class="footer-widget__title">              Other            </h3><!-- /.footer-widget__title -->            <ul class="footer-widget__link-list">              <li><a href="#">Contact</a></li>            </ul><!-- /.footer-widget__link-list -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-2 -->        <div class="col-lg-2 col-md-6 col-sm-12 d-flex">          <div class="footer-widget my-auto">            <div class="social-block">              <a href="https://www.instagram.com/arcc_ai/"><i class="fa fa-instagram"></i></a>              <a href="https://www.facebook.com/autonomousracecarclub"><i class="fa fa-facebook-f"></i></a>              <a href="https://www.linkedin.com/company/autonomous-race-car-club/about/?viewAsMember=true"><i class="fa fa-linkedin"></i></a>              <a href="https://www.youtube.com/watch?v=eEBaDSQMvGI&feature=youtu.be&fbclid=IwAR2Z2a-vAQ4I24Z0oa8J53msjoBz7xBtaYDQuyWFySr08KxFKJ8m4jwnpvw"><i class="fa fa-youtube-play"></i></a>            </div><!-- /.social-block -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-2 -->      </div><!-- /.row -->    </div><!-- /.container -->  </div><!-- /.site-footer__main-footer -->  <div class="site-footer__bottom-footer text-center">    <div class="container">      <p>&copy; copyright 2019 and designed by <a href="caelinsutch.com">Caelin Sutch</a></p>    </div><!-- /.container -->  </div><!-- /.site-footer__bottom-footer --></footer><!-- /.site-footer --></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AllComponent', 'selector': 'app-all'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'BubblesComponent', 'selector': 'app-bubbles'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'ClubMembersComponent', 'selector': 'app-club-members'},{'name': 'DeepracerComponent', 'selector': 'app-deepracer'},{'name': 'EditorPostComponent', 'selector': 'app-editor-post'},{'name': 'EditorPostsComponent', 'selector': 'app-editor-posts'},{'name': 'EmailSignupComponent', 'selector': 'app-email-signup'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FounderLetterComponent', 'selector': 'app-founder-letter'},{'name': 'FunFactComponent', 'selector': 'app-fun-fact'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JetsonComponent', 'selector': 'app-jetson'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PostComponent', 'selector': 'app-post'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RaceComponent', 'selector': 'app-race'}];
     var DIRECTIVES = [{'name': 'FragmentTargetDirective', 'selector': '[id], a[name]'}];
     var ACTUAL_COMPONENT = {'name': 'FooterComponent'};
 </script>
