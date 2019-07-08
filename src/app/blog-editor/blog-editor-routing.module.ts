@@ -12,10 +12,6 @@ const editorRoutes: Routes = [
   {
     path: 'post/:id',
     component: EditorPostComponent
-  },
-  {
-    path: 'test',
-    component: TagsComponent
   }
 ];
 

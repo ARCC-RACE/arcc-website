@@ -33,7 +33,7 @@ export class EditorPostsComponent implements OnInit {
   }
 
   onEnter(new_post_title: any, new_post_author: any, new_post_text: any) {
-    const post: Post = {title: new_post_title.value, content: new_post_text.value, author: new_post_author.value};
+    const post: Post = {title: new_post_title.value, content: new_post_text.value, author: new_post_author.value, tags: ['']};
     this.addItem(post, (domInput => {
       return data => {
         domInput.value = ''; // empty dom input

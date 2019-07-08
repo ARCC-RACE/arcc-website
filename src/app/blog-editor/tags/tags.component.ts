@@ -1,10 +1,12 @@
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
-import {Component, ElementRef, ViewChild} from '@angular/core';
+import {Component, ElementRef, ViewChild, Input, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {MatAutocompleteSelectedEvent, MatAutocomplete} from '@angular/material/autocomplete';
 import {MatChipInputEvent} from '@angular/material/chips';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { Post } from 'src/app/_models/post.model';
 
 @Component({
   selector: 'app-tags',
@@ -13,6 +15,7 @@ import {map, startWith} from 'rxjs/operators';
 })
 export class TagsComponent implements OnInit {
 
+  private postDoc: AngularFirestoreDocument<Post>;
   visible = true;
   selectable = true;
   removable = true;
@@ -20,22 +23,33 @@ export class TagsComponent implements OnInit {
   separatorKeysCodes: number[] = [ENTER, COMMA];
   tagCtrl = new FormControl();
   filteredTags: Observable<string[]>;
-  tags: string[] = ['Lemon'];
-  alltags: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
+  tags: string[] = ['Machine Learning'];
+  alltags: string[] = ['Machine Learning', 'AI', 'Deep Racer', 'Jetson Car', 'R.A.C.E.', 'News'];
 
+  @Input() id: string;
+  @Input() tagsInput: string[];
   @ViewChild('tagInput', {static: false}) tagInput: ElementRef<HTMLInputElement>;
   @ViewChild('auto', {static: false}) matAutocomplete: MatAutocomplete;
 
-  constructor() {
+  constructor(
+    private afs: AngularFirestore
+  ) {
     this.filteredTags = this.tagCtrl.valueChanges.pipe(
         startWith(null),
         map((tag: string | null) => tag ? this._filter(tag) : this.alltags.slice()));
   }
 
+  async ngOnInit() {
+    // TODO Refactor this, this is messy because it's a double subscription to postDoc for no reason, just can't figure out async
+    this.postDoc = this.afs.doc('posts/' + this.id);
+    this.postDoc.valueChanges().subscribe(v => {
+      this.tags = v.tags;
+    });  }
+
   add(event: MatChipInputEvent): void {
     // Add tag only when MatAutocomplete is not open
     // To make sure this does not conflict with OptionSelected Event
-    if (!this.matAutocomplete.isOpen) {
+    if (!this.matAutocomplete.isOpen && event.value) {
       const input = event.input;
       const value = event.value;
 
@@ -50,8 +64,10 @@ export class TagsComponent implements OnInit {
       }
 
       this.tagCtrl.setValue(null);
-      console.log(this.tags);
     }
+    this.postDoc.update({
+      tags: this.tags
+    });
   }
 
   remove(tag: string): void {
@@ -60,11 +76,17 @@ export class TagsComponent implements OnInit {
     if (index >= 0) {
       this.tags.splice(index, 1);
     }
+    this.postDoc.update({
+      tags: this.tags
+    });
   }
 
   selected(event: MatAutocompleteSelectedEvent): void {
     this.tags.push(event.option.viewValue);
     this.tagCtrl.setValue(null);
+    this.postDoc.update({
+      tags: this.tags
+    });
   }
 
   private _filter(value: string): string[] {
