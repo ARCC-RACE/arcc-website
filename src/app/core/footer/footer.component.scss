@@ -3,35 +3,7 @@
 .site-footer {
     position: relative;
 
-    [class*=bubble-] {
-        position: absolute;
-        animation-name: bubbleMover;
-        animation-duration: 4s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        transition: all .4s ease;
-        perspective: 400px;
-    }
 
-    .bubble-1 {
-        top: 15%;
-        left: 13%;
-    }
-
-    .bubble-2 {
-        top: 15%;
-        right: 20%;
-    }
-
-    .bubble-3 {
-        bottom: 20%;
-        left: 10%;
-    }
-
-    .bubble-4 {
-        bottom: 15%;
-        right: 13%;
-    }
 
     &__main-footer {
         padding-bottom: 120px;
@@ -55,28 +27,6 @@
                 }
             }
         }
-    }
-}
-
-@keyframes bubbleMover {
-    0% {
-        transform: rotate3d(0, 1, 0, 15deg) translateY(0px) translateX(0px);
-    }
-
-    30% {
-        transform: rotate3d(0, 0, 1, 20deg) translateY(10px) translateX(10px);
-    }
-
-    60% {
-        transform: rotate3d(1, 0, 0, 15deg) translateY(20px) translateX(20px);
-    }
-
-    80% {
-        transform: rotate3d(0, 0, 1, 20deg) translateY(10px) translateX(10px);
-    }
-
-    100% {
-        transform: rotate3d(0, 1, 0, 15deg) translateY(0px) translateX(0px);
     }
 }
 

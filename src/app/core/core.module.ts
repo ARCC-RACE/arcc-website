@@ -5,6 +5,7 @@ import { EmailSignupComponent } from './footer/email-signup/email-signup.compone
 import { FooterComponent } from './footer/footer.component';
 import {RouterModule} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BubblesComponent } from './bubbles/bubbles.component';
 
 @NgModule({
   imports: [
@@ -12,11 +13,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     RouterModule,
     BrowserAnimationsModule
   ],
-  declarations: [NavComponent, EmailSignupComponent, FooterComponent],
+  declarations: [NavComponent, EmailSignupComponent, FooterComponent, BubblesComponent],
   exports: [
     NavComponent,
     FooterComponent,
-    EmailSignupComponent
+    EmailSignupComponent,
+    BubblesComponent
   ]
 })
 export class CoreModule { }

@@ -13,6 +13,7 @@ import { BlogComponent } from './blog/blog.component';
 import {FragmentPolyfillModule} from '../fragment-polyfill/fragment-polyfill.module';
 import {RouterModule} from '@angular/router';
 import { HomeRoutingModule } from './home-routing.module'
+import { CoreModule } from '../core/core.module'
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { HomeRoutingModule } from './home-routing.module'
       smooth: true
     }),
     RouterModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    CoreModule
   ],
   declarations: [
     HomeComponent,
