@@ -4,34 +4,6 @@
     position: relative;
     padding-bottom: 120px;
 
-
-
-    [class*=bubble-] {
-        position: absolute;
-        animation-name: bubbleMover;
-        animation-duration: 4s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        transition: all .4s ease;
-        perspective: 400px;
-    }
-
-    .bubble-1 {
-        top: 15%;
-        left: 10%;
-    }
-
-    .bubble-2 {
-        bottom: 15%;
-        left: 40%;
-    }
-
-    .bubble-3 {
-        top: 5%;
-        right: 10%;
-    }
-
-
     hr {
         margin: 0;
         border: none;
