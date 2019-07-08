@@ -562,14 +562,15 @@
   #founder-photo {
     width: 300px;
     height: 300px;
+    right: 100px !important;
   }
 
   #founder-photo .testimonials-slider-pager-one .pager-item img {
     width: 300px;
   }
 
-  #founder-photo .testi-icon {
-    display: none;
+  #founder-photo .founder-icon {
+    display: none !important;
   }
 
   .site-header.header .header-navigation .container .right-side-box {
