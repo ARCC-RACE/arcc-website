@@ -6,6 +6,7 @@
     animation-iteration-count: infinite;
     transition: all .4s ease;
     perspective: 400px;
+    z-index: -1000;
 }
 
 .bubble-1 {
