@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.2.5]
+
 ### Added
 - Colored tags and seperate tag component
 
