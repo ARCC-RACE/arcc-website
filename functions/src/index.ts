@@ -14,11 +14,13 @@ exports.indexentry = functions.firestore.document('posts/{postId}').onWrite(
     const index = client.initIndex(ALGOLIA_POSTS_INDEX_NAME);
     const firebaseObject = {
       title: event.after.get('title'),
-      post: event.after.data,
+      author: event.after.get('author'),
+      tags: event.after.get('tags'),
+      content: event.after.get('content'),
       objectID: event.after.id
     };
 
-    if (!firebaseObject.post) {
+    if (!firebaseObject.title) {
       index.deleteObject(firebaseObject.objectID, (err) => {
         if (err) throw err
         console.log('Removed')

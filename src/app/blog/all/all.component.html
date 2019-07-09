@@ -1,17 +1,30 @@
-<section class="blog blog__blog-page">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4" *ngFor="let post of posts | async">
-        <div class="blog__single">
-          <div class="blog__single-inner-block">
-            <a href="blog-details.html" class="blog__author">By {{ post.data.author }}</a>
-            <h3 class="blog__title"><a routerLink="/blog/post/{{ post.id }}">{{ post.data.title }}</a></h3>
-            <p class="blog__text">{{ post.data.content }} ...</p>
-            <a routerLink="/blog/post/{{ post.id }}" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>
-            <app-tag-viewer [tags]="post.data.tags"></app-tag-viewer>
-          </div><!-- /.blog__single-inner-block -->
-        </div><!-- /.blog__single -->
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-  </div><!-- /.container -->
-</section><!-- /.blog -->
+<div class="search">
+    <div class="container">
+        <ais-instantsearch [config]="algoliaConfig">
+            <ais-search-box>
+            </ais-search-box>
+            <ais-hits>
+              <ng-template let-hits="hits" let-results="results">
+                <!-- Nothing found? -->
+                <div *ngIf="hits.length === 0">
+                  😢 Nothing found for
+                  <strong>{{results.query}}</strong>.
+                </div>
+                <div class="row my-3">
+                    <div *ngFor="let hit of hits" class="col-lg-4 col-md-6">
+                      <div class="blog__single">
+                          <div class="blog__single-inner-block">
+                            <a class="blog__author">By {{ hit.author }}</a>
+                            <h3 class="blog__title"><a routerLink="/blog/post/{{ hit.objectID }}">{{ hit.title }}</a></h3>
+                            <p class="blog__text" routerLink="/blog/post/{{ hit.objectID }}">{{ hit.content | slice:0:30 }} ...</p>
+                            <a routerLink="/blog/post/{{ hit.objectID }}" class="search__link"><i class="nonid-icon-left-arrow"></i></a>
+                            <app-tag-viewer [tags]="hit.tags"></app-tag-viewer>
+                          </div><!-- /.blog__single-inner-block -->
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ais-hits>
+          </ais-instantsearch>
+    </div>
+  </div>
