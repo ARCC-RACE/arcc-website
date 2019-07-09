@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {AllComponent} from './blog/all/all.component';
 import {PostComponent} from './blog/post/post.component';
+import { AdminGuard } from './_guards/admin.guard';
 const routes: Routes = [
   {
     path: '',
@@ -14,7 +15,8 @@ const routes: Routes = [
   },
   {
     path: 'editor',
-    loadChildren: './blog-editor/blog-editor.module#BlogEditorModule'
+    loadChildren: './blog-editor/blog-editor.module#BlogEditorModule',
+    canActivate: [AdminGuard]
   },
   {
     path: 'about',
@@ -27,6 +29,10 @@ const routes: Routes = [
   {
     path: 'press',
     loadChildren: './press/press.module#PressModule'
+  },
+  {
+    path: 'login',
+    loadChildren: './auth/auth.module#AuthModule'
   },
   {
     path: '**',

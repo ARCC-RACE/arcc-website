@@ -12,6 +12,7 @@ import {AngularFirestore, AngularFirestoreModule} from '@angular/fire/firestore'
 import {MarkdownModule} from 'ngx-markdown';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgAisModule } from 'angular-instantsearch';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NgAisModule } from 'angular-instantsearch';
       smooth: true
     }),
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     AngularFirestoreModule,
     MarkdownModule.forRoot(),
     BrowserAnimationsModule,
