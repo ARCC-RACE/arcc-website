@@ -25,6 +25,10 @@ const routes: Routes = [
     loadChildren: './support/support.module#SupportModule'
   },
   {
+    path: 'press',
+    loadChildren: './press/press.module#PressModule'
+  },
+  {
     path: '**',
     component: HomeComponent
   },
