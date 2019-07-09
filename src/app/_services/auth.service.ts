@@ -3,10 +3,10 @@ import { Router } from '@angular/router';
 import { User } from '../_models/user.model';
 import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreDocument, DocumentSnapshot } from '@angular/fire/firestore';
 
 import { Observable, of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { switchMap, take, map } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -53,6 +53,12 @@ export class AuthService {
 
       return userRef.set(data, { merge: true });
 
+    }
+
+    getUserData(): Observable<any> {
+      return this.user$.pipe(take(1), map(value => {
+        return this.afs.doc(`users/${value.uid}`).snapshotChanges();
+      }));
     }
 
     async signOut() {
