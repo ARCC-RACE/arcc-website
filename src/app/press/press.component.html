@@ -21,9 +21,7 @@
             <h3 class="blog__title"><a routerLink="/blog/post/{{ post.id }}">{{ post.data.title }}</a></h3>
             <p class="blog__text">{{ post.data.content }} ...</p>
             <a routerLink="/blog/post/{{ post.id }}" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>
-            <mat-chip-list>
-              <mat-chip *ngFor="let tag of post.data.tags" class="mt-3">{{ tag }}</mat-chip>
-            </mat-chip-list>
+            <app-tag-viewer [tags]="post.data.tags"></app-tag-viewer>
           </div><!-- /.blog__single-inner-block -->
         </div><!-- /.blog__single -->
       </div><!-- /.col-lg-4 -->

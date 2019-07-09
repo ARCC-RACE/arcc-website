@@ -5,18 +5,22 @@ import { EmailSignupComponent } from './footer/email-signup/email-signup.compone
 import { FooterComponent } from './footer/footer.component';
 import {RouterModule} from '@angular/router';
 import { BubblesComponent } from './bubbles/bubbles.component';
+import { TagViewerComponent } from './tag-viewer/tag-viewer.component';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
+    MatChipsModule
   ],
-  declarations: [NavComponent, EmailSignupComponent, FooterComponent, BubblesComponent],
+  declarations: [NavComponent, EmailSignupComponent, FooterComponent, BubblesComponent, TagViewerComponent],
   exports: [
     NavComponent,
     FooterComponent,
     EmailSignupComponent,
-    BubblesComponent
+    BubblesComponent,
+    TagViewerComponent
   ]
 })
 export class CoreModule { }

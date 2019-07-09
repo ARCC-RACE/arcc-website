@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+- Colored tags and seperate tag component
+
 ## [1.2.3] 
 ### Added
 - Press Page
