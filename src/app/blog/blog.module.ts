@@ -7,6 +7,8 @@ import {BlogRoutingModule} from './blog-routing.module';
 import {MarkdownModule} from 'ngx-markdown';
 import { MatChipsModule } from '@angular/material/chips';
 import { CoreModule } from '../core/core.module';
+import { SearchComponent } from './all/search/search.component';
+import { NgAisModule } from 'angular-instantsearch';
 
 @NgModule({
   imports: [
@@ -14,8 +16,9 @@ import { CoreModule } from '../core/core.module';
     BlogRoutingModule,
     MarkdownModule,
     MatChipsModule,
-    CoreModule
+    CoreModule,
+    NgAisModule
   ],
-  declarations: [PostComponent, AllComponent, CardComponent]
+  declarations: [PostComponent, AllComponent, CardComponent, SearchComponent]
 })
 export class BlogModule { }
