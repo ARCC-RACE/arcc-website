@@ -10,6 +10,8 @@ script:
   - npm install
   - ng lint
   - npm run build
+  - cd functions
+  - npm i
 deploy:
   skip_cleanup: true
   provider: firebase
