@@ -1,0 +1,104 @@
+@import '../../../styles//_helper-functions.scss';
+
+.search {
+  padding-top: 200px;
+
+  &__link {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #BCBFC7;
+    transform: rotate(180deg);
+    transition: all .4s ease;
+
+    &__text {
+      font-size: 12px !important;
+      font-weight: lighter !important;
+    }
+}
+}
+
+::ng-deep input {
+  background-color: $thm_light_black !important;
+  color: white !important;
+  border: none;
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+::ng-deep .ais-SearchBox-submit {
+  display: none;
+}
+
+ng-ais-clear-refinements {
+  display: block;
+  margin-top: 1rem;
+}
+
+::ng-deep .result-card {
+  font-size: 16px;
+  background: $thm_light_black;
+  border-radius: 8px;
+}
+
+::ng-deep [class*=result-card]:nth-child(1) {
+   :hover {
+     background-color:  #5DD8D3;
+   }
+}
+
+::ng-deep [class*=result-card]:nth-child(2) {
+  .result-card:hover {
+    background-color: #9364D4;
+
+    &:before {
+        top: 0;
+        right: 0;
+        transform: translate(30%, -30%);
+    }
+
+    &:after {
+        bottom: 0;
+        left: 0;
+        transform: translate(-30%, 30%);
+    }
+  }
+}
+::ng-deep [class*=result-card]:nth-child(3) {
+    background-color: #EE539B;
+
+    &:before {
+        top: 0;
+        right: 0;
+        transform: translate(30%, -30%);
+    }
+
+    &:after {
+        bottom: 0;
+        left: 0;
+        transform: translate(-30%, 30%);
+    }
+}
+
+::ng-deep [class*=result-card]:nth-child(4) {
+  .result-card:hover {
+    background-color: #413dff;
+
+    &:before {
+        top: 0;
+        right: 0;
+        transform: translate(30%, -30%);
+    }
+
+    &:after {
+        bottom: 0;
+        left: 0;
+        transform: translate(-30%, 30%);
+    }
+  }
+}
+
+::ng-deep .ais-SearchBox-reset {
+  display: none;
+}

@@ -7,27 +7,15 @@ import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-all',
   templateUrl: './all.component.html',
-  styleUrls: ['./all.component.css']
+  styleUrls: ['./all.component.scss']
 })
 export class AllComponent implements OnInit {
 
-  private postsCollection: AngularFirestoreCollection<Post>;
-  posts: Observable<any>;
-  loading = true;
-
-  constructor(private afs: AngularFirestore) {
-    this.postsCollection = afs.collection<Post>('posts');
-    this.posts = this.postsCollection.snapshotChanges()
-      .pipe(map(actions => {
-        // this.loading = false;
-        return actions.map(a => {
-          const data = a.payload.doc.data() as Post;
-          data.content = data.content.split(' ').slice(0, 20).join(' ');
-          const id = a.payload.doc.id;
-          return { id, data };
-        });
-      }));
-  }
+  algoliaConfig = {
+    apiKey: 'e73dee597304c92fdaceb339109cbbb0',
+    appId: 'MT2VAQ4QO4',
+    indexName: 'blog'
+  };
 
   ngOnInit() {
   }

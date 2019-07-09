@@ -3,6 +3,18 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Removed
+- Card component
+
+### Edited
+- All Component now has search capabilities
+  - Changed to SCSS
+
+### Added
+- Firebase Functions
+- Mysterious firstore rules
+- Algolia Search Library
+
 ## [1.2.5]
 
 ### Added

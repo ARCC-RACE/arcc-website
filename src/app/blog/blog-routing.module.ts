@@ -11,7 +11,7 @@ const editorRoutes: Routes = [
   {
     path: 'post/:id',
     component: PostComponent
-  }
+  },
 ];
 
 @NgModule({
