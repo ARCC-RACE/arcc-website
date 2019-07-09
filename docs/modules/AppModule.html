@@ -250,6 +250,7 @@ import {AngularFireModule} from &#x27;@angular/fire&#x27;;
 import {AngularFirestore, AngularFirestoreModule} from &#x27;@angular/fire/firestore&#x27;;
 import {MarkdownModule} from &#x27;ngx-markdown&#x27;;
 import {BrowserAnimationsModule} from &#x27;@angular/platform-browser/animations&#x27;;
+import { NgAisModule } from &#x27;angular-instantsearch&#x27;;
 
 @NgModule({
   declarations: [
@@ -267,7 +268,8 @@ import {BrowserAnimationsModule} from &#x27;@angular/platform-browser/animations
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     MarkdownModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgAisModule.forRoot()
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
