@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.2.7]
+
+### Added
+- Auth Module
+- Auth Service
+- User Model
+- Auth and Admin Guards
+
+
 ## [1.2.6]
 
 ### Removed
