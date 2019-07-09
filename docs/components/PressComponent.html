@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>BlogComponent</li>
+  <li>PressComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/home/blog/blog.component.ts</code>
+    <code>src/app/press/press.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-blog</code></td>
+                <td class="col-md-9"><code>app-press</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./blog.component.scss</code></td>
+                <td class="col-md-9"><code>./press.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./blog.component.html</code></td>
+                <td class="col-md-9"><code>./press.component.html</code></td>
             </tr>
 
 
@@ -129,6 +129,9 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                <a href="#loading">loading</a>
+                            </li>
                             <li>
                                 <a href="#posts">posts</a>
                             </li>
@@ -174,7 +177,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/home/blog/blog.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/press/press.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -243,8 +246,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/app/home/blog/blog.component.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/press/press.component.ts:32</a></div>
                 </td>
             </tr>
 
@@ -270,6 +273,32 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="loading"></a>
+                        <span class="name">
+                            <b>
+                            loading</b>
+                            <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/press/press.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="posts"></a>
                         <span class="name">
                             <b>
@@ -286,7 +315,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/home/blog/blog.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/press/press.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -314,7 +343,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/home/blog/blog.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/press/press.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -328,25 +357,27 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import {AngularFirestore, AngularFirestoreCollection} from &#x27;@angular/fire/firestore&#x27;;
-import {Post} from &#x27;../../_models/post.model&#x27;;
-import {Observable} from &#x27;rxjs&#x27;;
-import {map} from &#x27;rxjs/operators&#x27;;
+import { Post } from &#x27;../_models/post.model&#x27;;
+import { AngularFirestoreCollection, AngularFirestore } from &#x27;@angular/fire/firestore&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { map } from &#x27;rxjs/operators&#x27;;
 
 @Component({
-  selector: &#x27;app-blog&#x27;,
-  templateUrl: &#x27;./blog.component.html&#x27;,
-  styleUrls: [&#x27;./blog.component.scss&#x27;]
+  selector: &#x27;app-press&#x27;,
+  templateUrl: &#x27;./press.component.html&#x27;,
+  styleUrls: [&#x27;./press.component.scss&#x27;]
 })
-export class BlogComponent implements OnInit {
+export class PressComponent implements OnInit {
 
   private postsCollection: AngularFirestoreCollection&lt;Post&gt;;
   posts: Observable&lt;any&gt;;
+  loading &#x3D; true;
 
   constructor(private afs: AngularFirestore) {
     this.postsCollection &#x3D; afs.collection&lt;Post&gt;(&#x27;posts&#x27;);
     this.posts &#x3D; this.postsCollection.snapshotChanges()
       .pipe(map(actions &#x3D;&gt; {
+        // this.loading &#x3D; false;
         return actions.map(a &#x3D;&gt; {
           const data &#x3D; a.payload.doc.data() as Post;
           data.content &#x3D; data.content.split(&#x27; &#x27;).slice(0, 20).join(&#x27; &#x27;);
@@ -364,33 +395,101 @@ export class BlogComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;section class&#x3D;&quot;blog&quot; id&#x3D;&quot;blog&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;section class&#x3D;&quot;press&quot;&gt;
   &lt;div class&#x3D;&quot;container&quot;&gt;
-    &lt;div class&#x3D;&quot;block-title text-center&quot;&gt;
-      &lt;div class&#x3D;&quot;block-title__text&quot;&gt;&lt;span&gt;Check out our latest &lt;/span&gt; &lt;br&gt; &lt;span&gt;news &amp; articles&lt;/span&gt;&lt;/div&gt;&lt;!-- /.block-title__text --&gt;
-    &lt;/div&gt;&lt;!-- /.block-title --&gt;
+    &lt;app-bubbles&gt;&lt;/app-bubbles&gt;
+    &lt;div class&#x3D;&quot;press__title text-center&quot;&gt;
+      &lt;h1&gt;Press&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;press__text&quot;&gt;
+      &lt;p&gt;We love working with journalists to share our unique mission and spread awareness of ARCC. If you’d like to work with us, contact us and we’ll get back to you as soon as possible. Download our press assets (logos, screenshots, branding guide, etc.) from Google Drive at the link below. A list of press releases can also be found by clicking on the button in Google Drive. Contact our COO for any questions about ARCC at &lt;a href&#x3D;&quot;mailto: caelinsutch@gmail.com&quot;&gt;caelinsutch@gmail.com&lt;/a&gt;.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;mx-auto text-center&quot;&gt;
+      &lt;a href&#x3D;&quot;https://drive.google.com/drive/folders/1SkoTpY_bDx7jvKH9dUm-oQG0IG9_kzE6?usp&#x3D;sharing&quot; class&#x3D;&quot;press__btn mx-auto&quot;&gt;See our Media Assets&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;press__subtitle mt-3&quot;&gt;
+      &lt;h2&gt;Press Releases&lt;/h2&gt;
+    &lt;/div&gt;
     &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col-lg-4&quot; *ngFor&#x3D;&quot;let post of posts | async; let i &#x3D; index&quot; &gt;
-        &lt;div class&#x3D;&quot;blog__single&quot; *ngIf&#x3D;&quot;i&lt;3&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-4&quot; *ngFor&#x3D;&quot;let post of posts | async&quot;&gt;
+        &lt;div class&#x3D;&quot;blog__single&quot; *ngIf&#x3D;&quot;post.data.tags.includes(&#x27;Press&#x27;)&quot;&gt;
           &lt;div class&#x3D;&quot;blog__single-inner-block&quot;&gt;
             &lt;a href&#x3D;&quot;blog-details.html&quot; class&#x3D;&quot;blog__author&quot;&gt;By {{ post.data.author }}&lt;/a&gt;
             &lt;h3 class&#x3D;&quot;blog__title&quot;&gt;&lt;a routerLink&#x3D;&quot;/blog/post/{{ post.id }}&quot;&gt;{{ post.data.title }}&lt;/a&gt;&lt;/h3&gt;
             &lt;p class&#x3D;&quot;blog__text&quot;&gt;{{ post.data.content }} ...&lt;/p&gt;
             &lt;a routerLink&#x3D;&quot;/blog/post/{{ post.id }}&quot; class&#x3D;&quot;blog__link&quot;&gt;&lt;i class&#x3D;&quot;nonid-icon-left-arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;mat-chip-list&gt;
+              &lt;mat-chip *ngFor&#x3D;&quot;let tag of post.data.tags&quot; class&#x3D;&quot;mt-3&quot;&gt;{{ tag }}&lt;/mat-chip&gt;
+            &lt;/mat-chip-list&gt;
           &lt;/div&gt;&lt;!-- /.blog__single-inner-block --&gt;
         &lt;/div&gt;&lt;!-- /.blog__single --&gt;
       &lt;/div&gt;&lt;!-- /.col-lg-4 --&gt;
-    &lt;/div&gt;&lt;!-- /.row --&gt;
-  &lt;/div&gt;&lt;!-- /.container --&gt;
-&lt;/section&gt;&lt;!-- /.blog --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./blog.component.scss</code>
+                    <code>./press.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;../../styles/helper-functions&#x27;;
+
+.press {
+  padding-top: 100px;
+
+  &amp;__title {
+    font-size: 64px;
+    line-height: 77px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #00C28C;
+  }
+
+  &amp;__text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 34px;
+    /* or 189% */
+
+    color: #FFFFFF;
+  }
+
+  &amp;__btn {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 32px;
+    text-align: center;
+    background-color: #FF8257;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 59.5px;
+    transition: all .4s ease;
+    box-shadow: 0px 10px 30px 0px rgba(255, 130, 87, 0.3);
+
+    &amp;:hover {
+        background-color: $thm_black;
+        color: #fff;
+        box-shadow: 0px 10px 30px 0px rgba($thm_black, 0.3);
+    }
+  }
+
+  &amp;__subtitle {
+    text-align: center;
+    font-size: 48px;
+    line-height: 58px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -418,10 +517,10 @@ export class BlogComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><section class="blog" id="blog">  <div class="container">    <div class="block-title text-center">      <div class="block-title__text"><span>Check out our latest </span> <br> <span>news & articles</span></div><!-- /.block-title__text -->    </div><!-- /.block-title -->    <div class="row">      <div class="col-lg-4" *ngFor="let post of posts | async; let i = index" >        <div class="blog__single" *ngIf="i<3">          <div class="blog__single-inner-block">            <a href="blog-details.html" class="blog__author">By {{ post.data.author }}</a>            <h3 class="blog__title"><a routerLink="/blog/post/{{ post.id }}">{{ post.data.title }}</a></h3>            <p class="blog__text">{{ post.data.content }} ...</p>            <a routerLink="/blog/post/{{ post.id }}" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>          </div><!-- /.blog__single-inner-block -->        </div><!-- /.blog__single -->      </div><!-- /.col-lg-4 -->    </div><!-- /.row -->  </div><!-- /.container --></section><!-- /.blog --></div>'
+        var COMPONENT_TEMPLATE = '<div><section class="press">  <div class="container">    <app-bubbles></app-bubbles>    <div class="press__title text-center">      <h1>Press</h1>    </div>    <div class="press__text">      <p>We love working with journalists to share our unique mission and spread awareness of ARCC. If you’d like to work with us, contact us and we’ll get back to you as soon as possible. Download our press assets (logos, screenshots, branding guide, etc.) from Google Drive at the link below. A list of press releases can also be found by clicking on the button in Google Drive. Contact our COO for any questions about ARCC at <a href="mailto: caelinsutch@gmail.com">caelinsutch@gmail.com</a>.</p>    </div>    <div class="mx-auto text-center">      <a href="https://drive.google.com/drive/folders/1SkoTpY_bDx7jvKH9dUm-oQG0IG9_kzE6?usp=sharing" class="press__btn mx-auto">See our Media Assets</a>    </div>    <div class="press__subtitle mt-3">      <h2>Press Releases</h2>    </div>    <div class="row">      <div class="col-lg-4" *ngFor="let post of posts | async">        <div class="blog__single" *ngIf="post.data.tags.includes(\'Press\')">          <div class="blog__single-inner-block">            <a href="blog-details.html" class="blog__author">By {{ post.data.author }}</a>            <h3 class="blog__title"><a routerLink="/blog/post/{{ post.id }}">{{ post.data.title }}</a></h3>            <p class="blog__text">{{ post.data.content }} ...</p>            <a routerLink="/blog/post/{{ post.id }}" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>            <mat-chip-list>              <mat-chip *ngFor="let tag of post.data.tags" class="mt-3">{{ tag }}</mat-chip>            </mat-chip-list>          </div><!-- /.blog__single-inner-block -->        </div><!-- /.blog__single -->      </div><!-- /.col-lg-4 -->    </div>  </div></section></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AllComponent', 'selector': 'app-all'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'BubblesComponent', 'selector': 'app-bubbles'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'ClubMembersComponent', 'selector': 'app-club-members'},{'name': 'DeepracerComponent', 'selector': 'app-deepracer'},{'name': 'EditorPostComponent', 'selector': 'app-editor-post'},{'name': 'EditorPostsComponent', 'selector': 'app-editor-posts'},{'name': 'EmailSignupComponent', 'selector': 'app-email-signup'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FounderLetterComponent', 'selector': 'app-founder-letter'},{'name': 'FunFactComponent', 'selector': 'app-fun-fact'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JetsonComponent', 'selector': 'app-jetson'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PostComponent', 'selector': 'app-post'},{'name': 'PressComponent', 'selector': 'app-press'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RaceComponent', 'selector': 'app-race'},{'name': 'SupportComponent', 'selector': 'app-support'},{'name': 'TagsComponent', 'selector': 'app-tags'}];
     var DIRECTIVES = [{'name': 'FragmentTargetDirective', 'selector': '[id], a[name]'}];
-    var ACTUAL_COMPONENT = {'name': 'BlogComponent'};
+    var ACTUAL_COMPONENT = {'name': 'PressComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -455,7 +554,7 @@ export class BlogComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'BlogComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'PressComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

@@ -34,7 +34,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>BlogEditorRoutingModule</li>
+    <li>PressRoutingModule</li>
 </ol>
 
 
@@ -54,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/blog-editor/blog-editor-routing.module.ts</code>
+            <code>src/app/press/press-routing.module.ts</code>
         </p>
 
 
@@ -72,27 +72,21 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
-import {EditorPostComponent} from &#x27;./editor-post/editor-post.component&#x27;;
-import {EditorPostsComponent} from &#x27;./editor-posts/editor-posts.component&#x27;;
-import { TagsComponent } from &#x27;./tags/tags.component&#x27;;
+import { PressComponent } from &#x27;./press.component&#x27;;
 
-const editorRoutes: Routes &#x3D; [
+const pressRoutes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
-    component: EditorPostsComponent
-  },
-  {
-    path: &#x27;post/:id&#x27;,
-    component: EditorPostComponent
+    component: PressComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(editorRoutes)],
+  imports: [RouterModule.forChild(pressRoutes)],
   exports: [RouterModule],
   declarations: []
 })
-export class BlogEditorRoutingModule {
+export class PressRoutingModule {
 
 }
 </code></pre>
@@ -129,7 +123,7 @@ export class BlogEditorRoutingModule {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'BlogEditorRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'PressRoutingModule.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
