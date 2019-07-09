@@ -1,0 +1,26 @@
+<div class="container mx-3 auth">
+  <div class="row">
+    <div *ngIf="auth.user$ | async; then authenticated else guest">
+        <!-- template will replace this div -->
+    </div>
+
+    <!-- User NOT logged in -->
+    <ng-template #guest>
+
+      <button (click)="auth.googleSignin()" class="btn auth__btn">
+          <i class="fab fa-google mr-2"></i>Login with Google
+      </button>
+
+    </ng-template>
+
+
+    <!-- User logged in -->
+    <ng-template #authenticated>
+      <div *ngIf="auth.user$ | async as user">
+          <h3>Welcome, {{ user.displayName }}</h3>
+          <p>UID: {{ user.uid }}</p>
+          <button (click)="auth.signOut()" class="btn auth__btn">Logout</button>
+      </div>
+    </ng-template>
+  </div>
+</div>

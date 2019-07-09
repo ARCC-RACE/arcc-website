@@ -1,0 +1,12 @@
+@import '../../styles/helper-functions';
+
+.auth {
+  margin-top: 200px;
+
+  &__btn {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $thm_light_black;
+    color: white;
+  }
+}
