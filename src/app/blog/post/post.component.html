@@ -9,8 +9,8 @@
       </div><!-- /.blog-details__meta -->
       <h3 class="blog-details__title">{{(post | async)?.title}}</h3><!-- /.blog-details__title -->
       <markdown class="blog-details__text" [data]="(post | async)?.content"></markdown><!-- /.blog-details__text -->
-      <mat-chip-list *ngFor="let tag of (post | async)?.tags">
-        <mat-chip class="mt-3">{{ tag }}</mat-chip>
+      <mat-chip-list>
+        <mat-chip class="mt-3" *ngFor="let tag of (post | async)?.tags">{{ tag }}</mat-chip>
       </mat-chip-list>    </div><!-- /.blog-details__content -->
     <!--<div class="blog-details__author">-->
       <!--<div class="blog-details__author-image">-->

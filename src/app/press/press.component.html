@@ -1,0 +1,32 @@
+<section class="press">
+  <div class="container">
+    <app-bubbles></app-bubbles>
+    <div class="press__title text-center">
+      <h1>Press</h1>
+    </div>
+    <div class="press__text">
+      <p>We love working with journalists to share our unique mission and spread awareness of ARCC. If you’d like to work with us, contact us and we’ll get back to you as soon as possible. Download our press assets (logos, screenshots, branding guide, etc.) from Google Drive at the link below. A list of press releases can also be found by clicking on the button in Google Drive. Contact our COO for any questions about ARCC at <a href="mailto: caelinsutch@gmail.com">caelinsutch@gmail.com</a>.</p>
+    </div>
+    <div class="mx-auto text-center">
+      <a href="https://drive.google.com/drive/folders/1SkoTpY_bDx7jvKH9dUm-oQG0IG9_kzE6?usp=sharing" class="press__btn mx-auto">See our Media Assets</a>
+    </div>
+    <div class="press__subtitle mt-3">
+      <h2>Press Releases</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let post of posts | async">
+        <div class="blog__single" *ngIf="post.data.tags.includes('Press')">
+          <div class="blog__single-inner-block">
+            <a href="blog-details.html" class="blog__author">By {{ post.data.author }}</a>
+            <h3 class="blog__title"><a routerLink="/blog/post/{{ post.id }}">{{ post.data.title }}</a></h3>
+            <p class="blog__text">{{ post.data.content }} ...</p>
+            <a routerLink="/blog/post/{{ post.id }}" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>
+            <mat-chip-list>
+              <mat-chip *ngFor="let tag of post.data.tags" class="mt-3">{{ tag }}</mat-chip>
+            </mat-chip-list>
+          </div><!-- /.blog__single-inner-block -->
+        </div><!-- /.blog__single -->
+      </div><!-- /.col-lg-4 -->
+    </div>
+  </div>
+</section>
