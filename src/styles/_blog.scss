@@ -95,7 +95,7 @@
 .blog__author {
     position: relative;
     z-index: 10;
-    color: #9364D4;
+    color: #9364D4 !important;
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: .2em;
@@ -176,7 +176,7 @@
     }
 
     .blog__author {
-        color: #5dd8d3;
+        color: #5dd8d3 !important;
     }
 
     .blog__single-inner-block:hover {
