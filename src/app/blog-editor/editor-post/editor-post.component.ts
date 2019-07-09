@@ -14,18 +14,19 @@ export class EditorPostComponent implements OnInit {
   formModel: Post;
   constructor(private afs: AngularFirestore, private route: ActivatedRoute) {}
   previewText: any;
+  postId: string;
+  tags: string[];
 
   update() {
     if (this.postDoc) {
       // TODO throttle update
-      console.log(this.formModel.content);
       this.previewText = this.formModel.content;
       this.postDoc.update(this.formModel).then();
     }
   }
 
   ngOnInit() {
-    this.formModel = {title: '', content: '', author: ''};
+    this.formModel = {title: '', content: '', author: '', tags: ['']};
     // subscribe to the parameters observable
     this.route.paramMap.subscribe(params => {
       this.getPost(params.get('id'));
@@ -33,6 +34,7 @@ export class EditorPostComponent implements OnInit {
   }
 
   getPost(postId) {
+    this.postId = postId;
     this.postDoc = this.afs.doc('posts/' + postId);
     this.postDoc.valueChanges().subscribe(v => {
       this.formModel = v;

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {EditorPostComponent} from './editor-post/editor-post.component';
 import {EditorPostsComponent} from './editor-posts/editor-posts.component';
+import { TagsComponent } from './tags/tags.component';
 
 const editorRoutes: Routes = [
   {
