@@ -24,7 +24,7 @@ export class TagsComponent implements OnInit {
   tagCtrl = new FormControl();
   filteredTags: Observable<string[]>;
   tags: string[] = ['Machine Learning'];
-  alltags: string[] = ['Machine Learning', 'AI', 'Deep Racer', 'Jetson Car', 'R.A.C.E.', 'News'];
+  alltags: string[] = ['Machine Learning', 'AI', 'Deep Racer', 'Jetson Car', 'R.A.C.E.', 'News', 'Press'];
 
   @Input() id: string;
   @Input() tagsInput: string[];
