@@ -1,6 +1,7 @@
 @import '../../../styles/_helper-functions.scss';
 
 .search {
+  z-index: -100000;
   padding-top: 200px;
 
   &__link {
@@ -18,6 +19,16 @@
 }
 }
 
+ais-instantsearch {
+  position: relative;
+  z-index: -1000;
+}
+
+ais-search-box {
+  position: relative;
+  z-index: -1000;
+}
+
 ::ng-deep input {
   background-color: $thm_light_black !important;
   color: white !important;
@@ -25,6 +36,8 @@
   padding: 8px;
   width: 100%;
   border-radius: 8px;
+  position: relative;
+  z-index: -10000;
 }
 
 ::ng-deep .ais-SearchBox-submit {
@@ -108,5 +121,5 @@ ng-ais-clear-refinements {
   padding-bottom: 90px;
   background: transparent url(../../../assets/images/blog-bg-1-1.svg) center center no-repeat;
   background-size: cover;
-
+  z-index: -10000;
 }

@@ -13,6 +13,10 @@ nav {
   width: 100%;
 }
 
+.active .current {
+  color: red;
+}
+
 @media (max-width: 1199px) {
 
   .header__btn {
@@ -31,6 +35,7 @@ nav {
   }
 
   .navbar-expand-lg .menu-toggler {
+    z-index: 10000000;
     display: block;
     margin-right: 0;
     border-color: #fff;
@@ -359,12 +364,11 @@ nav {
             position: relative;
         }
 
-        &.current>a,
-        &:hover>a {
-            color: $thm_base_color;
-        }
-
     }
+}
+
+.current {
+  color: $thm_base_color;
 }
 
 .clearfix {

@@ -14,10 +14,10 @@
       <div class="main-navigation position-block" [@slideInOut]="animationState" >
         <ul class=" navigation-box " (click)="toggleCollapse()">
           <li>
-            <a routerLink="/" routerLinkActive="current" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            <a routerLink="/"  [routerLinkActive]="['current', 'active']" [routerLinkActiveOptions]="{ exact: true }">Home</a>
           </li>
           <li>
-            <a routerLink="" routerLinkActive="current" fragment="ourprojects">Our Projects</a>
+            <a routerLink="" fragment="ourprojects">Our Projects</a>
           </li>
           <li>
             <a routerLink="about" routerLinkActive="current">About</a>
