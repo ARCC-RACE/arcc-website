@@ -7,6 +7,7 @@ import {RouterModule} from '@angular/router';
 import { BubblesComponent } from './bubbles/bubbles.component';
 import { TagViewerComponent } from './tag-viewer/tag-viewer.component';
 import { MatChipsModule } from '@angular/material/chips';
+import { BlogCardComponent } from './blog-card/blog-card.component';
 
 @NgModule({
   imports: [
@@ -14,13 +15,14 @@ import { MatChipsModule } from '@angular/material/chips';
     RouterModule,
     MatChipsModule
   ],
-  declarations: [NavComponent, EmailSignupComponent, FooterComponent, BubblesComponent, TagViewerComponent],
+  declarations: [NavComponent, EmailSignupComponent, FooterComponent, BubblesComponent, TagViewerComponent, BlogCardComponent],
   exports: [
     NavComponent,
     FooterComponent,
     EmailSignupComponent,
     BubblesComponent,
-    TagViewerComponent
+    TagViewerComponent,
+    BlogCardComponent
   ]
 })
 export class CoreModule { }

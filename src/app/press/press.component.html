@@ -15,15 +15,7 @@
     </div>
     <div class="row">
       <div class="col-lg-4" *ngFor="let post of posts | async">
-        <div class="blog__single" *ngIf="post.data.tags.includes('Press')">
-          <div class="blog__single-inner-block">
-            <a href="blog-details.html" class="blog__author">By {{ post.data.author }}</a>
-            <h3 class="blog__title"><a routerLink="/blog/post/{{ post.id }}">{{ post.data.title }}</a></h3>
-            <p class="blog__text">{{ post.data.content }} ...</p>
-            <a routerLink="/blog/post/{{ post.id }}" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>
-            <app-tag-viewer [tags]="post.data.tags"></app-tag-viewer>
-          </div><!-- /.blog__single-inner-block -->
-        </div><!-- /.blog__single -->
+        <app-blog-card [post]="post.data" *ngIf="post.data.tags.includes('Press')"></app-blog-card>
       </div><!-- /.col-lg-4 -->
     </div>
   </div>

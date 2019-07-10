@@ -8,6 +8,11 @@
   display: none !important;
 }
 
+nav {
+  position: absolute;
+  width: 100%;
+}
+
 @media (max-width: 1199px) {
 
   .header__btn {
@@ -371,8 +376,12 @@
   text-align: center;
 }
 
+nav {
+  position: absolute !important;
+  width: 100%;
+}
+
 .header {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;

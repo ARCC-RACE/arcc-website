@@ -3,4 +3,5 @@ export interface Post {
   content: string;
   author: string;
   tags: string[];
+  date: string;
 }
