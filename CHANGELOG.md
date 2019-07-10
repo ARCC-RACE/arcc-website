@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [UnReleased]
+
+### Edited
+- Footer links and items
+
 ## [1.2.7]
 
 ### Added
