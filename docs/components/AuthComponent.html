@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>EmailSignupComponent</li>
+  <li>AuthComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/core/footer/email-signup/email-signup.component.ts</code>
+    <code>src/app/auth/auth.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-email-signup</code></td>
+                <td class="col-md-9"><code>app-auth</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./email-signup.component.css</code></td>
+                <td class="col-md-9"><code>./auth.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./email-signup.component.html</code></td>
+                <td class="col-md-9"><code>./auth.component.html</code></td>
             </tr>
 
 
@@ -121,6 +121,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#auth">auth</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -151,15 +166,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(auth: <a href="../injectables/AuthService.html">AuthService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/core/footer/email-signup/email-signup.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/auth/auth.component.ts:9</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>auth</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -195,8 +240,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/core/footer/email-signup/email-signup.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="13"
+                            class="link-to-prism">src/app/auth/auth.component.ts:13</a></div>
                 </td>
             </tr>
 
@@ -213,21 +258,56 @@
         </tbody>
     </table>
 </section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="auth"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            auth</b>
+                            <a href="#auth"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/auth/auth.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { AuthService } from &#x27;../_services/auth.service&#x27;;
 
 @Component({
-  selector: &#x27;app-email-signup&#x27;,
-  templateUrl: &#x27;./email-signup.component.html&#x27;,
-  styleUrls: [&#x27;./email-signup.component.css&#x27;]
+  selector: &#x27;app-auth&#x27;,
+  templateUrl: &#x27;./auth.component.html&#x27;,
+  styleUrls: [&#x27;./auth.component.scss&#x27;]
 })
-export class EmailSignupComponent implements OnInit {
+export class AuthComponent implements OnInit {
 
-  constructor() { }
+  constructor(public auth: AuthService) { }
 
   ngOnInit() {
   }
@@ -237,25 +317,52 @@ export class EmailSignupComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;site-footer__subscribe&quot;&gt;
-  &lt;div class&#x3D;&quot;container&quot;&gt;
-    &lt;div class&#x3D;&quot;block-title text-center&quot;&gt;
-      &lt;div class&#x3D;&quot;block-title__text&quot;&gt;&lt;span&gt;Subscribe our newsletter&lt;/span&gt; &lt;br&gt; &lt;span&gt;to get new updates&lt;/span&gt;&lt;/div&gt;&lt;!-- /.block-title__text --&gt;
-    &lt;/div&gt;&lt;!-- /.block-title --&gt;
-    &lt;form action&#x3D;&quot;#&quot; class&#x3D;&quot;site-footer__subscribe-form&quot;&gt;
-      &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;email&quot; placeholder&#x3D;&quot;Enter your email&quot;&gt;
-      &lt;button type&#x3D;&quot;submit&quot;&gt;Get Started&lt;/button&gt;
-    &lt;/form&gt;&lt;!-- /.subscribe-form --&gt;
-  &lt;/div&gt;&lt;!-- /.container --&gt;
-&lt;/div&gt;&lt;!-- /.site-footer__subscribe --&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container mx-3 auth&quot;&gt;
+  &lt;div class&#x3D;&quot;row&quot;&gt;
+    &lt;div *ngIf&#x3D;&quot;auth.user$ | async; then authenticated else guest&quot;&gt;
+        &lt;!-- template will replace this div --&gt;
+    &lt;/div&gt;
+
+    &lt;!-- User NOT logged in --&gt;
+    &lt;ng-template #guest&gt;
+
+      &lt;button (click)&#x3D;&quot;auth.googleSignin()&quot; class&#x3D;&quot;btn auth__btn&quot;&gt;
+          &lt;i class&#x3D;&quot;fab fa-google mr-2&quot;&gt;&lt;/i&gt;Login with Google
+      &lt;/button&gt;
+
+    &lt;/ng-template&gt;
+
+
+    &lt;!-- User logged in --&gt;
+    &lt;ng-template #authenticated&gt;
+      &lt;div *ngIf&#x3D;&quot;auth.user$ | async as user&quot;&gt;
+          &lt;h3&gt;Welcome, {{ user.displayName }}&lt;/h3&gt;
+          &lt;p&gt;UID: {{ user.uid }}&lt;/p&gt;
+          &lt;button (click)&#x3D;&quot;auth.signOut()&quot; class&#x3D;&quot;btn auth__btn&quot;&gt;Logout&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./email-signup.component.css</code>
+                    <code>./auth.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;../../styles/helper-functions&#x27;;
+
+.auth {
+  margin-top: 200px;
+
+  &amp;__btn {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $thm_light_black;
+    color: white;
+  }
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -283,10 +390,10 @@ export class EmailSignupComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="site-footer__subscribe">  <div class="container">    <div class="block-title text-center">      <div class="block-title__text"><span>Subscribe our newsletter</span> <br> <span>to get new updates</span></div><!-- /.block-title__text -->    </div><!-- /.block-title -->    <form action="#" class="site-footer__subscribe-form">      <input type="text" name="email" placeholder="Enter your email">      <button type="submit">Get Started</button>    </form><!-- /.subscribe-form -->  </div><!-- /.container --></div><!-- /.site-footer__subscribe --></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="container mx-3 auth">  <div class="row">    <div *ngIf="auth.user$ | async; then authenticated else guest">        <!-- template will replace this div -->    </div>    <!-- User NOT logged in -->    <ng-template #guest>      <button (click)="auth.googleSignin()" class="btn auth__btn">          <i class="fab fa-google mr-2"></i>Login with Google      </button>    </ng-template>    <!-- User logged in -->    <ng-template #authenticated>      <div *ngIf="auth.user$ | async as user">          <h3>Welcome, {{ user.displayName }}</h3>          <p>UID: {{ user.uid }}</p>          <button (click)="auth.signOut()" class="btn auth__btn">Logout</button>      </div>    </ng-template>  </div></div></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AllComponent', 'selector': 'app-all'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'BubblesComponent', 'selector': 'app-bubbles'},{'name': 'ClubMembersComponent', 'selector': 'app-club-members'},{'name': 'DeepracerComponent', 'selector': 'app-deepracer'},{'name': 'EditorPostComponent', 'selector': 'app-editor-post'},{'name': 'EditorPostsComponent', 'selector': 'app-editor-posts'},{'name': 'EmailSignupComponent', 'selector': 'app-email-signup'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FounderLetterComponent', 'selector': 'app-founder-letter'},{'name': 'FunFactComponent', 'selector': 'app-fun-fact'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JetsonComponent', 'selector': 'app-jetson'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PostComponent', 'selector': 'app-post'},{'name': 'PressComponent', 'selector': 'app-press'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RaceComponent', 'selector': 'app-race'},{'name': 'SupportComponent', 'selector': 'app-support'},{'name': 'TagsComponent', 'selector': 'app-tags'},{'name': 'TagViewerComponent', 'selector': 'app-tag-viewer'}];
     var DIRECTIVES = [{'name': 'FragmentTargetDirective', 'selector': '[id], a[name]'}];
-    var ACTUAL_COMPONENT = {'name': 'EmailSignupComponent'};
+    var ACTUAL_COMPONENT = {'name': 'AuthComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -320,7 +427,7 @@ export class EmailSignupComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'EmailSignupComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'AuthComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

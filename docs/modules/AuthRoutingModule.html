@@ -34,7 +34,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>AppRoutingModule</li>
+    <li>AuthRoutingModule</li>
 </ol>
 
 
@@ -54,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/app-routing.module.ts</code>
+            <code>src/app/auth/auth-routing.module.ts</code>
         </p>
 
 
@@ -71,54 +71,24 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
-import {HomeComponent} from &#x27;./home/home.component&#x27;;
-import {AllComponent} from &#x27;./blog/all/all.component&#x27;;
-import {PostComponent} from &#x27;./blog/post/post.component&#x27;;
-import { AdminGuard } from &#x27;./_guards/admin.guard&#x27;;
-const routes: Routes &#x3D; [
+import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
+import { AuthComponent } from &#x27;./auth.component&#x27;;
+
+const authRoutes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
-    loadChildren: &#x27;./home/home.module#HomeModule&#x27;
-  },
-  {
-    path: &#x27;blog&#x27;,
-    loadChildren: &#x27;./blog/blog.module#BlogModule&#x27;
-  },
-  {
-    path: &#x27;editor&#x27;,
-    loadChildren: &#x27;./blog-editor/blog-editor.module#BlogEditorModule&#x27;,
-    canActivate: [AdminGuard]
-  },
-  {
-    path: &#x27;about&#x27;,
-    loadChildren: &#x27;./about/about.module#AboutModule&#x27;
-  },
-  {
-    path: &#x27;support&#x27;,
-    loadChildren: &#x27;./support/support.module#SupportModule&#x27;
-  },
-  {
-    path: &#x27;press&#x27;,
-    loadChildren: &#x27;./press/press.module#PressModule&#x27;
-  },
-  {
-    path: &#x27;login&#x27;,
-    loadChildren: &#x27;./auth/auth.module#AuthModule&#x27;
-  },
-  {
-    path: &#x27;**&#x27;,
-    component: HomeComponent
-  },
-  // { path: &#x60;/cart&#x60;, loadChildren: () &#x3D;&gt; import(&#x60;./cart/cart.module&#x60;).then(m &#x3D;&gt; m.CartModule) }
-  // TODO: Refactor routes to look like the above example (Enables type checking and other stuff)
-
+    component: AuthComponent
+  }
 ];
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forChild(authRoutes)],
+  exports: [RouterModule],
+  declarations: []
 })
-export class AppRoutingModule { }
+export class AuthRoutingModule {
+
+}
 </code></pre>
     </div>
 </div>
@@ -153,7 +123,7 @@ export class AppRoutingModule { }
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'AuthRoutingModule.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
