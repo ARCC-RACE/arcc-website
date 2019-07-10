@@ -201,3 +201,16 @@
         }
     }
 }
+
+// Responsive
+
+@media(max-width: $breakpoint-xl) {
+
+  .projects .block-title {
+    margin-bottom: 10px;
+  }
+
+  .projects__single {
+    margin-top: 50px;
+  }
+}

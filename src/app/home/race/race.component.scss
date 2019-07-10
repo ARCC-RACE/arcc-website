@@ -90,3 +90,9 @@
         }
     }
 }
+
+@media(max-width: $breakpoint-xs) {
+  .race hr {
+    margin-bottom: 80px;
+  }
+}

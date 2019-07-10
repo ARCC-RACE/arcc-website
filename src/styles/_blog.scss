@@ -449,6 +449,24 @@
     }
 }
 
+@media(max-width: $breakpoint-sm) {
+
+  .blog {
+    padding-top: 100px;
+  }
+
+  .blog-details__author-image,
+  .blog-details__author-content {
+    display: block;
+  }
+
+  .blog-details__author-content {
+    padding-left: 0;
+    margin-top: 40px;
+  }
+}
+
+
 //.comment-one {
 //    margin-bottom: 60px;
 //    &__single {

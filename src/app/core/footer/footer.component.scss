@@ -203,3 +203,33 @@
         }
     }
 }
+
+
+@media(max-width: $breakpoint-lg) {
+
+  .footer-widget {
+    margin-bottom: 50px;
+  }
+
+  .site-footer__main-footer {
+    padding-bottom: 70px;
+  }
+
+}
+@media(max-width: $breakpoint-sm) {
+
+  .site-footer__subscribe-form {
+    overflow: visible;
+    margin-bottom: 84px;
+  }
+
+  .site-footer__subscribe-form button[type=submit] {
+    right: auto;
+    left: 50%;
+    top: 100%;
+    -webkit-transform: translateY(20px) translateX(-50%);
+    -ms-transform: translateY(20px) translateX(-50%);
+    -o-transform: translateY(20px) translateX(-50%);
+    transform: translateY(20px) translateX(-50%);
+  }
+}

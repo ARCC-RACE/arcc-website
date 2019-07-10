@@ -103,3 +103,11 @@
         }
     }
 }
+
+@media(max-width: $breakpoint-lg) {
+
+  .jetson {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
