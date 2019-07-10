@@ -130,6 +130,7 @@ nav {
    .navigation-box>li>.sub-menu,
    .navigation-box>li>.sub-menu>li>.sub-menu {
     position: relative !important;
+    z-index: -1000;
     width: 100% !important;
     opacity: 1 !important;
     visibility: visible !important;
@@ -218,6 +219,7 @@ nav {
     padding-right: 0px;
     padding-left: 0px;
     position: relative;
+    z-index: 10000;
   }
 
    .container .logo-box {

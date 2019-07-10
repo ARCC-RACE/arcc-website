@@ -1,10 +1,20 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [UnReleased]
+## [Unreleased]
 
 ### Edited
 - Footer links and items
+- Put blog CSS in the right place
+- Navbar refactoring
+- Fixed some broken links
+
+### Added
+- Component for blog card
+
+### Removed
+- SCSS for blog
+
 
 ## [1.2.7]
 
