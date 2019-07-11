@@ -31,7 +31,7 @@ const routes: Routes = [
     loadChildren: './press/press.module#PressModule'
   },
   {
-    path: 'login',
+    path: 'auth',
     loadChildren: './auth/auth.module#AuthModule'
   },
   {

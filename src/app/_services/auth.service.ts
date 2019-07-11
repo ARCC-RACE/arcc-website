@@ -5,14 +5,16 @@ import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument, DocumentSnapshot } from '@angular/fire/firestore';
 
-import { Observable, of } from 'rxjs';
-import { switchMap, take, map } from 'rxjs/operators';
+import { Observable, of, Subject } from 'rxjs';
+import { switchMap, take, map, tap } from 'rxjs/operators';
+import { Post } from '../_models/post.model';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
     user$: Observable<User>;
     userFromDatabase$: Observable<boolean>;
+    postDoc: any;
 
     constructor(
         private afAuth: AngularFireAuth,
@@ -39,7 +41,7 @@ export class AuthService {
       return this.updateUserData(credential.user);
     }
 
-    private updateUserData(user) {
+    public updateUserData(user) {
       // Sets user data to firestore on login
       const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
 
@@ -53,6 +55,20 @@ export class AuthService {
 
       return userRef.set(data, { merge: true });
 
+    }
+
+    public getBlogPosts(): Observable<Post> {
+      const post = new Subject<Post>();
+      this.user$.subscribe(user => {
+        this.postDoc = this.afs.doc('posts/' + user.uid);
+        this.postDoc.get().subscribe(value => {
+          console.log(value);
+        });
+        post.next(this.postDoc.valueChanges());
+      });
+
+      return post.asObservable();
+      // @ts-ignore
     }
 
     getUserData(): Observable<any> {

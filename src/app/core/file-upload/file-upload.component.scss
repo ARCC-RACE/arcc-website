@@ -1,0 +1,36 @@
+@import '../../../styles/helper-functions';
+
+.dropzone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+  border: 2px dashed $thm_base_color;
+  border-radius: 5px;
+  background: $thm_light_black;
+  margin: 10px 0;
+
+  &.hovering {
+      border: 2px solid #f16624;
+      color: #dadada !important;
+  }
+}
+
+.file-input {
+  color: white;
+}
+
+input[type=file] + label {
+  display:inline-block;
+  margin:20px;
+  padding: 4px 32px;
+  background-color: $thm_dark_black;
+  border: none;
+  border-radius: 6px;
+  color:$thm_base_color;
+  }
+
+progress::-webkit-progress-value {
+  transition: width 0.1s ease;
+}

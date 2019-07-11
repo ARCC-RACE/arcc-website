@@ -8,6 +8,12 @@
 
 
 .blog-details {
+
+  input textarea {
+    background-color: $thm_light_black !important;
+    color: white !important;
+  }
+
   padding: 120px 0;
 
   &__image {
@@ -82,7 +88,7 @@
 
   &__content-title {
       margin: 0;
-      color: #2E3D62;
+      color: white;
       font-size: 30px;
       font-weight: 600;
       margin-bottom: 40px;
@@ -179,7 +185,7 @@
        margin: 0;
        font-size: 20px;
        font-weight: 600;
-       color: $thm_black;
+       color: white;
    }
    &__date {
        color: #FF8257;
@@ -199,7 +205,7 @@
        margin-right: 12px;
    }
    &__text {
-       color: #666E82;
+       color: white;
        font-size: 16px;
        line-height: 34px;
        margin: 0;
@@ -229,21 +235,18 @@
 
 
 .reply-form {
-   input, textarea {
+   textarea {
        border: none;
        outline: none;
        width: 100%;
        display: block;
        border-radius: 32px;
-       height: 64px;
-       border: 1px solid #EAEAEA;
-       color: #666E82;
+       color: white;
        font-size: 16px;
        padding-left: 30px;
        margin-bottom: 30px;
-   }
-   textarea {
-       height: 243px;
+       background-color: $thm_light_black;
+       height: 100px;
        padding-top: 20px;
    }
    &__btn {

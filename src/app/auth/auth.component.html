@@ -1,26 +1,33 @@
-<div class="container mx-3 auth">
-  <div class="row">
+<section class="auth">
+  <div class="container">
     <div *ngIf="auth.user$ | async; then authenticated else guest">
         <!-- template will replace this div -->
     </div>
 
     <!-- User NOT logged in -->
     <ng-template #guest>
-
-      <button (click)="auth.googleSignin()" class="btn auth__btn">
-          <i class="fab fa-google mr-2"></i>Login with Google
-      </button>
-
+      <app-bubbles></app-bubbles>
+      <div class="row text-center d-block">
+        <h2 class="my-2">Login or Signup with Google</h2>
+        <button (click)="auth.googleSignin()" class="btn auth__btn mx-auto text-center my-2">
+            <i class="fab fa-google mr-2"></i>Connect with Google
+        </button>
+      </div>
     </ng-template>
 
 
     <!-- User logged in -->
-    <ng-template #authenticated>
-      <div *ngIf="auth.user$ | async as user">
-          <h3>Welcome, {{ user.displayName }}</h3>
-          <p>UID: {{ user.uid }}</p>
-          <button (click)="auth.signOut()" class="btn auth__btn">Logout</button>
+    <ng-template #authenticated class="row">
+        <app-bubbles></app-bubbles>
+      <div class="row">
+          <div *ngIf="auth.user$ | async as user" class="mx-auto text-center col-md-6">
+              <h2>Welcome, {{ user.displayName }}</h2>
+              <img [src]="user.photoURL" class="user-photo"><br>
+              <app-account class="my-3"></app-account>
+              <button (click)="auth.signOut()" class="btn auth__btn mx-auto">Logout</button>
+          </div>
+          <app-file-upload class="col-md-6" [user]='auth.user$ | async'></app-file-upload>
       </div>
     </ng-template>
   </div>
-</div>
+</section>
