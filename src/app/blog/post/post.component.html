@@ -12,7 +12,7 @@
       <app-tag-viewer [tags]="(post | async)?.tags"></app-tag-viewer>
     </div><!-- /.blog-details__content -->
     <br>
-    <div class="comment-one">
+    <div class="comment-one" *ngFor="let comment of (post | async)?.comments">
       <div class="comment-one__single">
         <div class="comment-one__image">
           <div class="inner-block">
@@ -22,19 +22,19 @@
         <div class="comment-one__content">
           <div class="comment-one__content-top">
             <div class="comment-one__top-left">
-              <h3 class="comment-one__author">@LaquandaBachmeier</h3>
-              <p class="comment-one__date">20 April, 2019</p>
-              <p class="comment-one__text">Lorem Ipsum is simply dummy text of the rinting and typesetting been the industry standard dummy text ever sincer condimentum purus. In non ex at ligula fringilla lobortis et not the aliquet.</p>
+              <h3 class="comment-one__author">{{ comment.author }}</h3>
+              <p class="comment-one__date">{{ comment.date }}</p>
+              <p class="comment-one__text">{{ comment.comment }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
     <h2 class="blog-details__content-title">Leave a Comment</h2>
-    <form action="#" class="reply-form">
+    <form class="reply-form" [formGroup]="commentForm" (ngSubmit)="submit()">
       <div class="row">
         <div class="col-lg-12">
-          <textarea placeholder="Write message" class="reply-form__field"></textarea>
+          <textarea placeholder="Write message" class="reply-form__field" formControlName="comment" ></textarea>
           <button class="reply-form__btn" type="submit">Submit Comment</button>
         </div>
       </div>

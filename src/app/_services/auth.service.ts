@@ -57,6 +57,10 @@ export class AuthService {
 
     }
 
+    public getUser(userID: string) {
+      return this.afs.doc<User>(`users/${userID}`).valueChanges();
+    }
+
     public getBlogPosts(): Observable<Post> {
       const post = new Subject<Post>();
       this.user$.subscribe(user => {
