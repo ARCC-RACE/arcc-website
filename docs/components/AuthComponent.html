@@ -317,32 +317,39 @@ export class AuthComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container mx-3 auth&quot;&gt;
-  &lt;div class&#x3D;&quot;row&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;section class&#x3D;&quot;auth&quot;&gt;
+  &lt;div class&#x3D;&quot;container&quot;&gt;
     &lt;div *ngIf&#x3D;&quot;auth.user$ | async; then authenticated else guest&quot;&gt;
         &lt;!-- template will replace this div --&gt;
     &lt;/div&gt;
 
     &lt;!-- User NOT logged in --&gt;
     &lt;ng-template #guest&gt;
-
-      &lt;button (click)&#x3D;&quot;auth.googleSignin()&quot; class&#x3D;&quot;btn auth__btn&quot;&gt;
-          &lt;i class&#x3D;&quot;fab fa-google mr-2&quot;&gt;&lt;/i&gt;Login with Google
-      &lt;/button&gt;
-
+      &lt;app-bubbles&gt;&lt;/app-bubbles&gt;
+      &lt;div class&#x3D;&quot;row text-center d-block&quot;&gt;
+        &lt;h2 class&#x3D;&quot;my-2&quot;&gt;Login or Signup with Google&lt;/h2&gt;
+        &lt;button (click)&#x3D;&quot;auth.googleSignin()&quot; class&#x3D;&quot;btn auth__btn mx-auto text-center my-2&quot;&gt;
+            &lt;i class&#x3D;&quot;fab fa-google mr-2&quot;&gt;&lt;/i&gt;Connect with Google
+        &lt;/button&gt;
+      &lt;/div&gt;
     &lt;/ng-template&gt;
 
 
     &lt;!-- User logged in --&gt;
-    &lt;ng-template #authenticated&gt;
-      &lt;div *ngIf&#x3D;&quot;auth.user$ | async as user&quot;&gt;
-          &lt;h3&gt;Welcome, {{ user.displayName }}&lt;/h3&gt;
-          &lt;p&gt;UID: {{ user.uid }}&lt;/p&gt;
-          &lt;button (click)&#x3D;&quot;auth.signOut()&quot; class&#x3D;&quot;btn auth__btn&quot;&gt;Logout&lt;/button&gt;
+    &lt;ng-template #authenticated class&#x3D;&quot;row&quot;&gt;
+        &lt;app-bubbles&gt;&lt;/app-bubbles&gt;
+      &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;div *ngIf&#x3D;&quot;auth.user$ | async as user&quot; class&#x3D;&quot;mx-auto text-center col-md-6&quot;&gt;
+              &lt;h2&gt;Welcome, {{ user.displayName }}&lt;/h2&gt;
+              &lt;img [src]&#x3D;&quot;user.photoURL&quot; class&#x3D;&quot;user-photo&quot;&gt;&lt;br&gt;
+              &lt;app-account class&#x3D;&quot;my-3&quot;&gt;&lt;/app-account&gt;
+              &lt;button (click)&#x3D;&quot;auth.signOut()&quot; class&#x3D;&quot;btn auth__btn mx-auto&quot;&gt;Logout&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;app-file-upload class&#x3D;&quot;col-md-6&quot; [user]&#x3D;&#x27;auth.user$ | async&#x27;&gt;&lt;/app-file-upload&gt;
       &lt;/div&gt;
     &lt;/ng-template&gt;
   &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </code></pre>
     </div>
 
@@ -360,6 +367,13 @@ export class AuthComponent implements OnInit {
     margin-right: auto;
     background-color: $thm_light_black;
     color: white;
+  }
+
+  .user-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 200px;
   }
 }
 </code></pre>
@@ -390,9 +404,9 @@ export class AuthComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="container mx-3 auth">  <div class="row">    <div *ngIf="auth.user$ | async; then authenticated else guest">        <!-- template will replace this div -->    </div>    <!-- User NOT logged in -->    <ng-template #guest>      <button (click)="auth.googleSignin()" class="btn auth__btn">          <i class="fab fa-google mr-2"></i>Login with Google      </button>    </ng-template>    <!-- User logged in -->    <ng-template #authenticated>      <div *ngIf="auth.user$ | async as user">          <h3>Welcome, {{ user.displayName }}</h3>          <p>UID: {{ user.uid }}</p>          <button (click)="auth.signOut()" class="btn auth__btn">Logout</button>      </div>    </ng-template>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AllComponent', 'selector': 'app-all'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'BubblesComponent', 'selector': 'app-bubbles'},{'name': 'ClubMembersComponent', 'selector': 'app-club-members'},{'name': 'DeepracerComponent', 'selector': 'app-deepracer'},{'name': 'EditorPostComponent', 'selector': 'app-editor-post'},{'name': 'EditorPostsComponent', 'selector': 'app-editor-posts'},{'name': 'EmailSignupComponent', 'selector': 'app-email-signup'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FounderLetterComponent', 'selector': 'app-founder-letter'},{'name': 'FunFactComponent', 'selector': 'app-fun-fact'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JetsonComponent', 'selector': 'app-jetson'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PostComponent', 'selector': 'app-post'},{'name': 'PressComponent', 'selector': 'app-press'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RaceComponent', 'selector': 'app-race'},{'name': 'SupportComponent', 'selector': 'app-support'},{'name': 'TagsComponent', 'selector': 'app-tags'},{'name': 'TagViewerComponent', 'selector': 'app-tag-viewer'}];
-    var DIRECTIVES = [{'name': 'FragmentTargetDirective', 'selector': '[id], a[name]'}];
+        var COMPONENT_TEMPLATE = '<div><section class="auth">  <div class="container">    <div *ngIf="auth.user$ | async; then authenticated else guest">        <!-- template will replace this div -->    </div>    <!-- User NOT logged in -->    <ng-template #guest>      <app-bubbles></app-bubbles>      <div class="row text-center d-block">        <h2 class="my-2">Login or Signup with Google</h2>        <button (click)="auth.googleSignin()" class="btn auth__btn mx-auto text-center my-2">            <i class="fab fa-google mr-2"></i>Connect with Google        </button>      </div>    </ng-template>    <!-- User logged in -->    <ng-template #authenticated class="row">        <app-bubbles></app-bubbles>      <div class="row">          <div *ngIf="auth.user$ | async as user" class="mx-auto text-center col-md-6">              <h2>Welcome, {{ user.displayName }}</h2>              <img [src]="user.photoURL" class="user-photo"><br>              <app-account class="my-3"></app-account>              <button (click)="auth.signOut()" class="btn auth__btn mx-auto">Logout</button>          </div>          <app-file-upload class="col-md-6" [user]=\'auth.user$ | async\'></app-file-upload>      </div>    </ng-template>  </div></section></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AllComponent', 'selector': 'app-all'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogCardComponent', 'selector': 'app-blog-card'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'BubblesComponent', 'selector': 'app-bubbles'},{'name': 'ClubMembersComponent', 'selector': 'app-club-members'},{'name': 'DeepracerComponent', 'selector': 'app-deepracer'},{'name': 'EditorPostComponent', 'selector': 'app-editor-post'},{'name': 'EditorPostsComponent', 'selector': 'app-editor-posts'},{'name': 'EmailSignupComponent', 'selector': 'app-email-signup'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FounderLetterComponent', 'selector': 'app-founder-letter'},{'name': 'FunFactComponent', 'selector': 'app-fun-fact'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JetsonComponent', 'selector': 'app-jetson'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PostComponent', 'selector': 'app-post'},{'name': 'PressComponent', 'selector': 'app-press'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RaceComponent', 'selector': 'app-race'},{'name': 'SupportComponent', 'selector': 'app-support'},{'name': 'TagsComponent', 'selector': 'app-tags'},{'name': 'TagViewerComponent', 'selector': 'app-tag-viewer'}];
+    var DIRECTIVES = [{'name': 'DropZoneDirective', 'selector': '[dropZone]'},{'name': 'FragmentTargetDirective', 'selector': '[id], a[name]'}];
     var ACTUAL_COMPONENT = {'name': 'AuthComponent'};
 </script>
 <script src="../js/tree.js"></script>

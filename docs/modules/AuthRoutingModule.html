@@ -73,11 +73,18 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
 import { AuthComponent } from &#x27;./auth.component&#x27;;
+import { AccountComponent } from &#x27;./account/account.component&#x27;;
+import { AuthGuard } from &#x27;../_guards/auth.guard&#x27;;
 
 const authRoutes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
     component: AuthComponent
+  },
+  {
+    path: &#x27;account&#x27;,
+    component: AccountComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [1.3.0]
 
 ### Edited
 - Footer links and items
@@ -11,6 +11,8 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Component for blog card
+- Commenting feaure with photos
+- Login on blog page
 
 ### Removed
 - SCSS for blog
