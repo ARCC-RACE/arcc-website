@@ -14,7 +14,6 @@ export class AuthService {
 
     user$: Observable<User>;
     userFromDatabase$: Observable<boolean>;
-    postDoc: any;
 
     constructor(
         private afAuth: AngularFireAuth,
@@ -57,22 +56,41 @@ export class AuthService {
 
     }
 
-    public getUser(userID: string) {
+    public getUser(userID) {
       return this.afs.doc<User>(`users/${userID}`).valueChanges();
     }
 
-    public getBlogPosts(): Observable<Post> {
-      const post = new Subject<Post>();
+    public getBlogPosts(): Observable<any> {
+      const post = new Subject<any>();
       this.user$.subscribe(user => {
-        this.postDoc = this.afs.doc('posts/' + user.uid);
-        this.postDoc.get().subscribe(value => {
+        const postDoc = this.afs.doc('posts/' + user.uid);
+        postDoc.get().subscribe(value => {
           console.log(value);
         });
-        post.next(this.postDoc.valueChanges());
+        post.next(postDoc.valueChanges());
       });
 
       return post.asObservable();
       // @ts-ignore
+    }
+
+    public updateBlogPost(post, id) {
+
+      const postDoc: AngularFirestoreDocument<Post>  = this.afs.doc('posts/' + id);
+
+      console.log(post);
+      const data = {
+        title: post.title,
+        content: post.content,
+        author: post.author,
+        tags: post.tags,
+        date: post.date,
+        comments: post.comments
+      };
+      console.log(data);
+
+      return postDoc.set(data, { merge: true });
+
     }
 
     getUserData(): Observable<any> {

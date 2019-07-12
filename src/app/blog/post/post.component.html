@@ -16,7 +16,7 @@
       <div class="comment-one__single">
         <div class="comment-one__image">
           <div class="inner-block">
-            <img src="images/comment-1-1.jpg" alt="Awesome Image" />
+            <img [src]="comment.profilePhoto" alt="comment.profilePhoto" class="comment-one__profilephoto"/>
           </div>
         </div>
         <div class="comment-one__content">
@@ -30,8 +30,8 @@
         </div>
       </div>
     </div>
-    <h2 class="blog-details__content-title">Leave a Comment</h2>
-    <form class="reply-form" [formGroup]="commentForm" (ngSubmit)="submit()">
+    <h2 class="blog-details__content-title" *ngIf="authService.user$ | async">Leave a Comment</h2>
+    <form class="reply-form" [formGroup]="commentForm" (ngSubmit)="submit()" *ngIf="authService.user$ | async">
       <div class="row">
         <div class="col-lg-12">
           <textarea placeholder="Write message" class="reply-form__field" formControlName="comment" ></textarea>
