@@ -1,5 +1,7 @@
 <div class="search">
-    <div class="container">
+    <div class="container text-center">
+      <h1>Welcome to our Blog</h1>
+        <a [routerLink]="['/auth']" routerLinkActive="router-link-active"  class="btn btn-primary mx-auto my-4" role="button">Signup or Log In</a>
         <ais-instantsearch [config]="algoliaConfig">
             <ais-search-box>
             </ais-search-box>
@@ -12,19 +14,12 @@
                 </div>
                 <div class="row my-3">
                     <div *ngFor="let hit of hits" class="col-lg-4 col-md-6">
-                      <div class="blog__single">
-                          <div class="blog__single-inner-block">
-                            <a class="blog__author">By {{ hit.author }}</a>
-                            <h3 class="blog__title"><a routerLink="/blog/post/{{ hit.objectID }}">{{ hit.title }}</a></h3>
-                            <p class="blog__text" routerLink="/blog/post/{{ hit.objectID }}">{{ hit.content | slice:0:30 }} ...</p>
-                            <a routerLink="/blog/post/{{ hit.objectID }}" class="search__link"><i class="nonid-icon-left-arrow"></i></a>
-                            <app-tag-viewer [tags]="hit.tags"></app-tag-viewer>
-                          </div><!-- /.blog__single-inner-block -->
+                      <app-blog-card [post]="hit"></app-blog-card>
                     </div>
                   </div>
-                </div>
-              </ng-template>
-            </ais-hits>
+
+                </ng-template>
+              </ais-hits>
           </ais-instantsearch>
     </div>
   </div>

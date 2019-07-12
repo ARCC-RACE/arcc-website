@@ -130,3 +130,10 @@
         }
     }
 }
+
+@media(max-width: $breakpoint-lg) {
+  .deepracer {
+    padding-top: 0px;
+    padding-bottom: 0;
+  }
+}

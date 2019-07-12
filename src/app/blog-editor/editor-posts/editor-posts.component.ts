@@ -33,7 +33,10 @@ export class EditorPostsComponent implements OnInit {
   }
 
   onEnter(new_post_title: any, new_post_author: any, new_post_text: any) {
-    const post: Post = {title: new_post_title.value, content: new_post_text.value, author: new_post_author.value, tags: ['']};
+    const d = new Date();
+    const formatedDate = d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate();
+    // tslint:disable-next-line: max-line-length
+    const post: Post = {title: new_post_title.value, content: new_post_text.value, author: new_post_author.value, tags: [''], date: formatedDate, comments: null};
     this.addItem(post, (domInput => {
       return data => {
         domInput.value = ''; // empty dom input

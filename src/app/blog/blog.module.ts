@@ -7,6 +7,7 @@ import {MarkdownModule} from 'ngx-markdown';
 import { MatChipsModule } from '@angular/material/chips';
 import { CoreModule } from '../core/core.module';
 import { NgAisModule } from 'angular-instantsearch';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -15,7 +16,9 @@ import { NgAisModule } from 'angular-instantsearch';
     MarkdownModule,
     MatChipsModule,
     CoreModule,
-    NgAisModule
+    NgAisModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [PostComponent, AllComponent]
 })

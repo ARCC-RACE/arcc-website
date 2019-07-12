@@ -191,6 +191,45 @@
 
         }
     }
+}
 
+@media(max-width: $breakpoint-xl) {
 
+  #founder-photo {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media(max-width: $breakpoint-lg) {
+  #founder-photo .testimonials-slider-pager-one .pager-item img {
+    width: 400px;
+  }
+
+  #founder-photo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  .founder-letter .my-auto {
+    width: 100%;
+  }
+}
+
+@media(max-width: $breakpoint-xs) {
+
+  #founder-photo {
+    width: 300px;
+    height: 300px;
+    right: 100px !important;
+  }
+
+  #founder-photo .testimonials-slider-pager-one .pager-item img {
+    width: 300px;
+  }
+
+  #founder-photo .founder-icon {
+    display: none !important;
+  }
 }

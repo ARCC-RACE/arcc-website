@@ -5,14 +5,7 @@
     </div><!-- /.block-title -->
     <div class="row">
       <div class="col-lg-4" *ngFor="let post of posts | async; let i = index" >
-        <div class="blog__single" *ngIf="i<3">
-          <div class="blog__single-inner-block">
-            <a href="blog-details.html" class="blog__author">By {{ post.data.author }}</a>
-            <h3 class="blog__title"><a routerLink="/blog/post/{{ post.id }}">{{ post.data.title }}</a></h3>
-            <p class="blog__text">{{ post.data.content }} ...</p>
-            <a routerLink="/blog/post/{{ post.id }}" class="blog__link"><i class="nonid-icon-left-arrow"></i></a>
-          </div><!-- /.blog__single-inner-block -->
-        </div><!-- /.blog__single -->
+        <app-blog-card *ngIf="i<3" [post]="post.data"></app-blog-card>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
   </div><!-- /.container -->

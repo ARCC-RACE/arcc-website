@@ -1,0 +1,10 @@
+<div class="blog__single" routerLink="/blog/post/{{ post.objectID }}">
+  <div class="blog__single-inner-block">
+    <a class="blog__author">By {{ post.author }}</a>
+    <p class="blog__date">{{ post.date }}</p>
+    <h3 class="blog__title"><a routerLink="/blog/post/{{ post.objectID }}">{{ post.title }}</a></h3>
+    <p class="blog__text" routerLink="/blog/post/{{ post.objectID }}">{{ post.content | slice:0:30 }} ...</p>
+    <a routerLink="/blog/post/{{ post.objectID }}" class="right-arrow"><i class="nonid-icon-left-arrow"></i></a>
+    <app-tag-viewer [tags]="post.tags"></app-tag-viewer>
+  </div><!-- /.blog__single-inner-block -->
+</div>

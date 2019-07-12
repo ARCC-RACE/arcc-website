@@ -9,4 +9,11 @@
     background-color: $thm_light_black;
     color: white;
   }
+
+  .user-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 200px;
+  }
 }

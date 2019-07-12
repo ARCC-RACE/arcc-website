@@ -7,20 +7,32 @@ import {RouterModule} from '@angular/router';
 import { BubblesComponent } from './bubbles/bubbles.component';
 import { TagViewerComponent } from './tag-viewer/tag-viewer.component';
 import { MatChipsModule } from '@angular/material/chips';
+import { BlogCardComponent } from './blog-card/blog-card.component';
+import { DropZoneDirective } from './file-upload/drop-zone.directive';
+import { FileUploadComponent } from './file-upload/file-upload.component';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { FileUploadPipe } from './file-upload/file-upload.pipe';
+
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    MatChipsModule
+    MatChipsModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ],
-  declarations: [NavComponent, EmailSignupComponent, FooterComponent, BubblesComponent, TagViewerComponent],
+// tslint:disable-next-line: max-line-length
+  declarations: [NavComponent, EmailSignupComponent, FooterComponent, BubblesComponent, TagViewerComponent, BlogCardComponent, DropZoneDirective, FileUploadComponent, FileUploadPipe],
   exports: [
     NavComponent,
     FooterComponent,
     EmailSignupComponent,
     BubblesComponent,
-    TagViewerComponent
+    TagViewerComponent,
+    BlogCardComponent,
+    FileUploadComponent
   ]
 })
 export class CoreModule { }

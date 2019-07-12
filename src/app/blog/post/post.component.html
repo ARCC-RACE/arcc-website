@@ -11,71 +11,34 @@
       <markdown class="blog-details__text" [data]="(post | async)?.content"></markdown><!-- /.blog-details__text -->
       <app-tag-viewer [tags]="(post | async)?.tags"></app-tag-viewer>
     </div><!-- /.blog-details__content -->
-    <!--<div class="blog-details__author">-->
-      <!--<div class="blog-details__author-image">-->
-        <!--<img src="images/author-1-1.jpg" alt="Awesome Image" />-->
-      <!--</div>&lt;!&ndash; /.blog-details__image &ndash;&gt;-->
-      <!--<div class="blog-details__author-content">-->
-        <!--<h3>Christine Eve</h3>-->
-        <!--<p>Lorem Ipsum is simply dummy text of the rinting and typesetting been the industry standard dummy text ever sincer condimentum purus. In non ex at ligula fringilla lobortis et not the aliquet.</p>-->
-      <!--</div>&lt;!&ndash; /.blog-details__content &ndash;&gt;-->
-    <!--</div>&lt;!&ndash; /.blog-details__author &ndash;&gt;-->
-    <!--<h2 class="blog-details__content-title">2 Comments</h2>&lt;!&ndash; /.blog-details__content-title &ndash;&gt;-->
-    <!--<div class="comment-one">-->
-      <!--<div class="comment-one__single">-->
-        <!--<div class="comment-one__image">-->
-          <!--<div class="inner-block">-->
-            <!--<img src="images/comment-1-1.jpg" alt="Awesome Image" />-->
-          <!--</div>&lt;!&ndash; /.inner-block &ndash;&gt;-->
-        <!--</div>&lt;!&ndash; /.comment-one__image &ndash;&gt;-->
-        <!--<div class="comment-one__content">-->
-          <!--<div class="comment-one__content-top">-->
-            <!--<div class="comment-one__top-left">-->
-              <!--<h3 class="comment-one__author">Laquanda Bachmeier</h3>&lt;!&ndash; /.comment-one__author &ndash;&gt;-->
-              <!--<p class="comment-one__date">20 April, 2019 <span class="comment-one__date-sep">.</span> 4:00 pm</p>&lt;!&ndash; /.comment-one__date &ndash;&gt;-->
-              <!--<p class="comment-one__text">Lorem Ipsum is simply dummy text of the rinting and typesetting been the industry standard dummy text ever sincer condimentum purus. In non ex at ligula fringilla lobortis et not the aliquet.</p>&lt;!&ndash; /.comment-one__text &ndash;&gt;-->
-            <!--</div>&lt;!&ndash; /.comment-one__top-left &ndash;&gt;-->
-            <!--<div class="comment-one__top-right">-->
-              <!--<a href="#" class="comment-one__reply">Reply</a>-->
-            <!--</div>&lt;!&ndash; /.comment-one__top-right &ndash;&gt;-->
-          <!--</div>&lt;!&ndash; /.comment-one__content-top &ndash;&gt;-->
-        <!--</div>&lt;!&ndash; /.comment-one__content &ndash;&gt;-->
-      <!--</div>&lt;!&ndash; /.comment-one__single &ndash;&gt;-->
-      <!--<div class="comment-one__single">-->
-        <!--<div class="comment-one__image">-->
-          <!--<div class="inner-block">-->
-            <!--<img src="images/comment-1-2.jpg" alt="Awesome Image" />-->
-          <!--</div>&lt;!&ndash; /.inner-block &ndash;&gt;-->
-        <!--</div>&lt;!&ndash; /.comment-one__image &ndash;&gt;-->
-        <!--<div class="comment-one__content">-->
-          <!--<div class="comment-one__content-top">-->
-            <!--<div class="comment-one__top-left">-->
-              <!--<h3 class="comment-one__author">Vicente Elmore</h3>&lt;!&ndash; /.comment-one__author &ndash;&gt;-->
-              <!--<p class="comment-one__date">20 April, 2019 <span class="comment-one__date-sep">.</span> 4:00 pm</p>&lt;!&ndash; /.comment-one__date &ndash;&gt;-->
-              <!--<p class="comment-one__text">Lorem Ipsum is simply dummy text of the rinting and typesetting been the industry standard dummy text ever sincer condimentum purus. In non ex at ligula fringilla lobortis et not the aliquet.</p>&lt;!&ndash; /.comment-one__text &ndash;&gt;-->
-            <!--</div>&lt;!&ndash; /.comment-one__top-left &ndash;&gt;-->
-            <!--<div class="comment-one__top-right">-->
-              <!--<a href="#" class="comment-one__reply">Reply</a>-->
-            <!--</div>&lt;!&ndash; /.comment-one__top-right &ndash;&gt;-->
-          <!--</div>&lt;!&ndash; /.comment-one__content-top &ndash;&gt;-->
-        <!--</div>&lt;!&ndash; /.comment-one__content &ndash;&gt;-->
-      <!--</div>&lt;!&ndash; /.comment-one__single &ndash;&gt;-->
-    <!--</div>&lt;!&ndash; /.comment-one &ndash;&gt;-->
-    <!--<h2 class="blog-details__content-title">Leave a Comment</h2>&lt;!&ndash; /.blog-details__content-title &ndash;&gt;-->
-    <!--<form action="#" class="reply-form">-->
-      <!--<div class="row">-->
-        <!--<div class="col-lg-6">-->
-          <!--<input type="text" placeholder="Your name" class="reply-form__field">-->
-        <!--</div>&lt;!&ndash; /.col-lg-6 &ndash;&gt;-->
-        <!--<div class="col-lg-6">-->
-          <!--<input type="text" placeholder="Enter email" class="reply-form__field">-->
-        <!--</div>&lt;!&ndash; /.col-lg-6 &ndash;&gt;-->
-        <!--<div class="col-lg-12">-->
-          <!--<textarea placeholder="Write message" class="reply-form__field"></textarea>-->
-          <!--<button class="reply-form__btn" type="submit">Submit Comment</button>-->
-        <!--</div>&lt;!&ndash; /.col-lg-12 &ndash;&gt;-->
-      <!--</div>&lt;!&ndash; /.row &ndash;&gt;-->
-    <!--</form>&lt;!&ndash; /.reply-form &ndash;&gt;-->
+    <br>
+    <div class="comment-one" *ngFor="let comment of (post | async)?.comments">
+      <div class="comment-one__single">
+        <div class="comment-one__image">
+          <div class="inner-block">
+            <img [src]="comment.profilePhoto" alt="comment.profilePhoto" class="comment-one__profilephoto"/>
+          </div>
+        </div>
+        <div class="comment-one__content">
+          <div class="comment-one__content-top">
+            <div class="comment-one__top-left">
+              <h3 class="comment-one__author">{{ comment.author }}</h3>
+              <p class="comment-one__date">{{ comment.date }}</p>
+              <p class="comment-one__text">{{ comment.comment }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="blog-details__content-title" *ngIf="authService.user$ | async">Leave a Comment</h2>
+    <form class="reply-form" [formGroup]="commentForm" (ngSubmit)="submit()" *ngIf="authService.user$ | async">
+      <div class="row">
+        <div class="col-lg-12">
+          <textarea placeholder="Write message" class="reply-form__field" formControlName="comment" ></textarea>
+          <button class="reply-form__btn" type="submit">Submit Comment</button>
+        </div>
+      </div>
+    </form>
   </div><!-- /.container -->
 </section><!-- /.blog-details -->
 
