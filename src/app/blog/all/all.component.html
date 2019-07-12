@@ -1,5 +1,7 @@
 <div class="search">
-    <div class="container">
+    <div class="container text-center">
+      <h1>Welcome to our Blog</h1>
+        <a [routerLink]="['/auth']" routerLinkActive="router-link-active"  class="btn btn-primary mx-auto my-4" role="button">Signup or Log In</a>
         <ais-instantsearch [config]="algoliaConfig">
             <ais-search-box>
             </ais-search-box>

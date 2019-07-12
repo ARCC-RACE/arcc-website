@@ -3,6 +3,7 @@ import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firest
 import {Post} from '../../_models/post.model';
 import {Observable} from 'rxjs';
 import { map } from 'rxjs/operators';
+import { AuthService } from 'src/app/_services/auth.service';
 
 @Component({
   selector: 'app-all',
@@ -10,6 +11,10 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./all.component.scss']
 })
 export class AllComponent implements OnInit {
+
+  constructor(
+    public authService: AuthService
+  ) {}
 
   algoliaConfig = {
     apiKey: 'e73dee597304c92fdaceb339109cbbb0',
