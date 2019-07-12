@@ -8,7 +8,7 @@ An Angular 8 webpage for the JHS ARCC Club, an autonomous RC car club out of Jes
 
 Designed and developed by [Caelin Sutch](https://github.com/caelinsutch).
 
-This project is hosted with Firebase webhosting and uses Firestore for the blog. Bootstrap 4 is used for layout, and ngx-markdown is used for markdown support.
+This project is hosted with Firebase webhosting and uses Firestore for the blog and Angolia for search. Firebase functions is used to sync Firestore with the Angolia database used for searching. Bootstrap 4 is used for layout, and ngx-markdown is used for markdown support.
 
 ## Get started with development
 

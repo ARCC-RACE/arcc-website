@@ -260,15 +260,6 @@ export class FooterComponent implements OnInit {
                 &lt;li&gt;
                   &lt;a routerLink&#x3D;&quot;&quot; fragment&#x3D;&quot;ourprojects&quot;&gt;Our Projects&lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li&gt;
-                  &lt;a routerLink&#x3D;&quot;&quot; fragment&#x3D;&quot;jetsoncar&quot;&gt;Jetson Car&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a routerLink&#x3D;&quot;support&quot; fragment&#x3D;&quot;race&quot;&gt;R.A.C.E&lt;/a&gt;
-                  &lt;/li&gt;
-                &lt;li&gt;
-                  &lt;a routerLink&#x3D;&quot;blog&quot; fragment&#x3D;&quot;deepracer&quot;&gt;Deep Racer&lt;/a&gt;
-                &lt;/li&gt;
             &lt;/ul&gt;&lt;!-- /.footer-widget__link-list --&gt;
           &lt;/div&gt;&lt;!-- /.footer-widget --&gt;
         &lt;/div&gt;&lt;!-- /.col-lg-2 --&gt;
@@ -278,18 +269,12 @@ export class FooterComponent implements OnInit {
               Projects
             &lt;/h3&gt;&lt;!-- /.footer-widget__title --&gt;
             &lt;ul class&#x3D;&quot;footer-widget__link-list&quot;&gt;
-                &lt;li&gt;
-                    &lt;a routerLink&#x3D;&quot;/&quot;&gt;Home&lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;a routerLink&#x3D;&quot;&quot; fragment&#x3D;&quot;ourprojects&quot;&gt;Our Projects&lt;/a&gt;
-                  &lt;/li&gt;
                   &lt;li&gt;
                     &lt;a routerLink&#x3D;&quot;about&quot;&gt;Jetson Car&lt;/a&gt;
                   &lt;/li&gt;
                   &lt;li&gt;
                       &lt;a routerLink&#x3D;&quot;support&quot;&gt;RACE&lt;/a&gt;
-                    &lt;/li&gt;
+                  &lt;/li&gt;
                   &lt;li&gt;
                     &lt;a routerLink&#x3D;&quot;blog&quot;&gt;Deep Racer&lt;/a&gt;
                   &lt;/li&gt;
@@ -302,7 +287,10 @@ export class FooterComponent implements OnInit {
               Other
             &lt;/h3&gt;&lt;!-- /.footer-widget__title --&gt;
             &lt;ul class&#x3D;&quot;footer-widget__link-list&quot;&gt;
-              &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href&#x3D;&quot;mailto:contact@arcc.ai&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a routerLink&#x3D;&quot;/blog&quot;&gt;Blog&lt;/a&gt;
+              &lt;/li&gt;
             &lt;/ul&gt;&lt;!-- /.footer-widget__link-list --&gt;
           &lt;/div&gt;&lt;!-- /.footer-widget --&gt;
         &lt;/div&gt;&lt;!-- /.col-lg-2 --&gt;
@@ -322,7 +310,7 @@ export class FooterComponent implements OnInit {
   &lt;/div&gt;&lt;!-- /.site-footer__main-footer --&gt;
   &lt;div class&#x3D;&quot;site-footer__bottom-footer text-center&quot;&gt;
     &lt;div class&#x3D;&quot;container&quot;&gt;
-      &lt;p&gt;&amp;copy; copyright 2019 and designed by &lt;a href&#x3D;&quot;caelinsutch.com&quot;&gt;Caelin Sutch&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&amp;copy; copyright 2019 and designed by &lt;a href&#x3D;&quot;https://www.caelinsutch.com&quot;&gt;Caelin Sutch&lt;/a&gt;&lt;/p&gt;
     &lt;/div&gt;&lt;!-- /.container --&gt;
   &lt;/div&gt;&lt;!-- /.site-footer__bottom-footer --&gt;
 &lt;/footer&gt;&lt;!-- /.site-footer --&gt;
@@ -334,6 +322,28 @@ export class FooterComponent implements OnInit {
                     <code>./footer.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">@import &quot;../../../styles/_helper-functions&quot;;
+
+@mixin placeholder {
+  &amp;::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      @content;
+  }
+
+  &amp;::-moz-placeholder {
+      /* Firefox 19+ */
+      @content;
+  }
+
+  &amp;:-ms-input-placeholder {
+      /* IE 10+ */
+      @content;
+  }
+
+  &amp;:-moz-placeholder {
+      /* Firefox 18- */
+      @content;
+  }
+}
 
 .site-footer {
     position: relative;
@@ -516,6 +526,36 @@ export class FooterComponent implements OnInit {
         }
     }
 }
+
+
+@media(max-width: $breakpoint-lg) {
+
+  .footer-widget {
+    margin-bottom: 50px;
+  }
+
+  .site-footer__main-footer {
+    padding-bottom: 70px;
+  }
+
+}
+@media(max-width: $breakpoint-sm) {
+
+  .site-footer__subscribe-form {
+    overflow: visible;
+    margin-bottom: 84px;
+  }
+
+  .site-footer__subscribe-form button[type&#x3D;submit] {
+    right: auto;
+    left: 50%;
+    top: 100%;
+    -webkit-transform: translateY(20px) translateX(-50%);
+    -ms-transform: translateY(20px) translateX(-50%);
+    -o-transform: translateY(20px) translateX(-50%);
+    transform: translateY(20px) translateX(-50%);
+  }
+}
 </code></pre>
     </div>
 
@@ -544,9 +584,9 @@ export class FooterComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><footer class="site-footer">  <app-bubbles></app-bubbles>  <!-- <app-email-signup></app-email-signup> TODO Reincorporate -->  <div class="site-footer__main-footer pt-5">    <div class="container">      <div class="row">        <div class="col-lg-2 col-sm-12">          <div class="footer-widget footer-widget--about-widget">            <a href="/" class="footer-widget__footer-logo"><img src="../../../assets/images/arcc-logo.png" alt="ARCC Logo" /></a>          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-3 -->        <div class="col-lg-3 col-md-6 col-sm-12">          <div class="footer-widget">            <h3 class="footer-widget__title">              Explore            </h3><!-- /.footer-widget__title -->            <ul class="footer-widget__link-list">                <li>                  <a routerLink="/">Home</a>                </li>                <li>                  <a routerLink="" fragment="ourprojects">Our Projects</a>                </li>                <li>                  <a routerLink="" fragment="jetsoncar">Jetson Car</a>                </li>                <li>                    <a routerLink="support" fragment="race">R.A.C.E</a>                  </li>                <li>                  <a routerLink="blog" fragment="deepracer">Deep Racer</a>                </li>            </ul><!-- /.footer-widget__link-list -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-2 -->        <div class="col-lg-3 col-md-6 col-sm-12">          <div class="footer-widget">            <h3 class="footer-widget__title">              Projects            </h3><!-- /.footer-widget__title -->            <ul class="footer-widget__link-list">                <li>                    <a routerLink="/">Home</a>                  </li>                  <li>                    <a routerLink="" fragment="ourprojects">Our Projects</a>                  </li>                  <li>                    <a routerLink="about">Jetson Car</a>                  </li>                  <li>                      <a routerLink="support">RACE</a>                    </li>                  <li>                    <a routerLink="blog">Deep Racer</a>                  </li>            </ul><!-- /.footer-widget__link-list -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-3 -->        <div class="col-lg-2 col-md-6 col-sm-12">          <div class="footer-widget">            <h3 class="footer-widget__title">              Other            </h3><!-- /.footer-widget__title -->            <ul class="footer-widget__link-list">              <li><a href="#">Contact</a></li>            </ul><!-- /.footer-widget__link-list -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-2 -->        <div class="col-lg-2 col-md-6 col-sm-12 d-flex">          <div class="footer-widget my-auto">            <div class="social-block">              <a href="https://www.instagram.com/arcc_ai/"><i class="fab fa-instagram"></i></a>              <a href="https://www.facebook.com/autonomousracecarclub"><i class="fab fa-facebook-f"></i></a>              <a href="https://www.linkedin.com/company/autonomous-race-car-club/about/?viewAsMember=true"><i class="fab fa-linkedin"></i></a>              <a href="https://www.youtube.com/watch?v=eEBaDSQMvGI&feature=youtu.be&fbclid=IwAR2Z2a-vAQ4I24Z0oa8J53msjoBz7xBtaYDQuyWFySr08KxFKJ8m4jwnpvw"><i class="fab fa-youtube"></i></a>              <a href="https://github.com/JHS-ARCC-Club"><i class="fab fa-github"></i></a>            </div><!-- /.social-block -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-2 -->      </div><!-- /.row -->    </div><!-- /.container -->  </div><!-- /.site-footer__main-footer -->  <div class="site-footer__bottom-footer text-center">    <div class="container">      <p>&copy; copyright 2019 and designed by <a href="caelinsutch.com">Caelin Sutch</a></p>    </div><!-- /.container -->  </div><!-- /.site-footer__bottom-footer --></footer><!-- /.site-footer --></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AllComponent', 'selector': 'app-all'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'BubblesComponent', 'selector': 'app-bubbles'},{'name': 'ClubMembersComponent', 'selector': 'app-club-members'},{'name': 'DeepracerComponent', 'selector': 'app-deepracer'},{'name': 'EditorPostComponent', 'selector': 'app-editor-post'},{'name': 'EditorPostsComponent', 'selector': 'app-editor-posts'},{'name': 'EmailSignupComponent', 'selector': 'app-email-signup'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FounderLetterComponent', 'selector': 'app-founder-letter'},{'name': 'FunFactComponent', 'selector': 'app-fun-fact'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JetsonComponent', 'selector': 'app-jetson'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PostComponent', 'selector': 'app-post'},{'name': 'PressComponent', 'selector': 'app-press'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RaceComponent', 'selector': 'app-race'},{'name': 'SupportComponent', 'selector': 'app-support'},{'name': 'TagsComponent', 'selector': 'app-tags'},{'name': 'TagViewerComponent', 'selector': 'app-tag-viewer'}];
-    var DIRECTIVES = [{'name': 'FragmentTargetDirective', 'selector': '[id], a[name]'}];
+        var COMPONENT_TEMPLATE = '<div><footer class="site-footer">  <app-bubbles></app-bubbles>  <!-- <app-email-signup></app-email-signup> TODO Reincorporate -->  <div class="site-footer__main-footer pt-5">    <div class="container">      <div class="row">        <div class="col-lg-2 col-sm-12">          <div class="footer-widget footer-widget--about-widget">            <a href="/" class="footer-widget__footer-logo"><img src="../../../assets/images/arcc-logo.png" alt="ARCC Logo" /></a>          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-3 -->        <div class="col-lg-3 col-md-6 col-sm-12">          <div class="footer-widget">            <h3 class="footer-widget__title">              Explore            </h3><!-- /.footer-widget__title -->            <ul class="footer-widget__link-list">                <li>                  <a routerLink="/">Home</a>                </li>                <li>                  <a routerLink="" fragment="ourprojects">Our Projects</a>                </li>            </ul><!-- /.footer-widget__link-list -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-2 -->        <div class="col-lg-3 col-md-6 col-sm-12">          <div class="footer-widget">            <h3 class="footer-widget__title">              Projects            </h3><!-- /.footer-widget__title -->            <ul class="footer-widget__link-list">                  <li>                    <a routerLink="about">Jetson Car</a>                  </li>                  <li>                      <a routerLink="support">RACE</a>                  </li>                  <li>                    <a routerLink="blog">Deep Racer</a>                  </li>            </ul><!-- /.footer-widget__link-list -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-3 -->        <div class="col-lg-2 col-md-6 col-sm-12">          <div class="footer-widget">            <h3 class="footer-widget__title">              Other            </h3><!-- /.footer-widget__title -->            <ul class="footer-widget__link-list">              <li><a href="mailto:contact@arcc.ai">Contact</a></li>              <li>                <a routerLink="/blog">Blog</a>              </li>            </ul><!-- /.footer-widget__link-list -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-2 -->        <div class="col-lg-2 col-md-6 col-sm-12 d-flex">          <div class="footer-widget my-auto">            <div class="social-block">              <a href="https://www.instagram.com/arcc_ai/"><i class="fab fa-instagram"></i></a>              <a href="https://www.facebook.com/autonomousracecarclub"><i class="fab fa-facebook-f"></i></a>              <a href="https://www.linkedin.com/company/autonomous-race-car-club/about/?viewAsMember=true"><i class="fab fa-linkedin"></i></a>              <a href="https://www.youtube.com/watch?v=eEBaDSQMvGI&feature=youtu.be&fbclid=IwAR2Z2a-vAQ4I24Z0oa8J53msjoBz7xBtaYDQuyWFySr08KxFKJ8m4jwnpvw"><i class="fab fa-youtube"></i></a>              <a href="https://github.com/JHS-ARCC-Club"><i class="fab fa-github"></i></a>            </div><!-- /.social-block -->          </div><!-- /.footer-widget -->        </div><!-- /.col-lg-2 -->      </div><!-- /.row -->    </div><!-- /.container -->  </div><!-- /.site-footer__main-footer -->  <div class="site-footer__bottom-footer text-center">    <div class="container">      <p>&copy; copyright 2019 and designed by <a href="https://www.caelinsutch.com">Caelin Sutch</a></p>    </div><!-- /.container -->  </div><!-- /.site-footer__bottom-footer --></footer><!-- /.site-footer --></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AllComponent', 'selector': 'app-all'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogCardComponent', 'selector': 'app-blog-card'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'BubblesComponent', 'selector': 'app-bubbles'},{'name': 'ClubMembersComponent', 'selector': 'app-club-members'},{'name': 'DeepracerComponent', 'selector': 'app-deepracer'},{'name': 'EditorPostComponent', 'selector': 'app-editor-post'},{'name': 'EditorPostsComponent', 'selector': 'app-editor-posts'},{'name': 'EmailSignupComponent', 'selector': 'app-email-signup'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FounderLetterComponent', 'selector': 'app-founder-letter'},{'name': 'FunFactComponent', 'selector': 'app-fun-fact'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JetsonComponent', 'selector': 'app-jetson'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PostComponent', 'selector': 'app-post'},{'name': 'PressComponent', 'selector': 'app-press'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RaceComponent', 'selector': 'app-race'},{'name': 'SupportComponent', 'selector': 'app-support'},{'name': 'TagsComponent', 'selector': 'app-tags'},{'name': 'TagViewerComponent', 'selector': 'app-tag-viewer'}];
+    var DIRECTIVES = [{'name': 'DropZoneDirective', 'selector': '[dropZone]'},{'name': 'FragmentTargetDirective', 'selector': '[id], a[name]'}];
     var ACTUAL_COMPONENT = {'name': 'FooterComponent'};
 </script>
 <script src="../js/tree.js"></script>
