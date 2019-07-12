@@ -1,6 +1,6 @@
 <section class="account py-3">
   <h4 class="mb-4">Change your Username</h4>
-      <form [formGroup]="form" [hidden]="success" (ngSubmit)="submitHandler()">
+      <form [formGroup]="form" (ngSubmit)="submitHandler()">
 
           <input formControlName="displayName" [value]="currentUser.displayName" *ngIf="currentUser" class="mx-auto mt-2">
 

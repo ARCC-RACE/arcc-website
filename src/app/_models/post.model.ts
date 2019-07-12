@@ -5,7 +5,7 @@ export interface Post {
   tags: string[];
   date: string;
   comments: Array<Comment>;
-};
+}
 
 export interface Comment {
   author: string;
