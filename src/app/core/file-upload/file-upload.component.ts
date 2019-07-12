@@ -40,7 +40,7 @@ export class FileUploadComponent {
 
   startUpload(event: FileList) {
     // The File object
-    const file = event.item(0)
+    const file = event.item(0);
 
     // Client-side validation example
     if (file.type.split('/')[0] !== 'image') {
@@ -87,7 +87,7 @@ export class FileUploadComponent {
 
   // Determines if the upload task is active
   isActive(snapshot) {
-    return snapshot.state === 'running' && snapshot.bytesTransferred < snapshot.totalBytes
+    return snapshot.state === 'running' && snapshot.bytesTransferred < snapshot.totalBytes;
   }
 
 }
