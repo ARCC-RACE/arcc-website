@@ -64,6 +64,13 @@
     <code>src/app/blog/all/all.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Displays all of the blog posts and allows search through Algolia</p>
+
+    </p>
 
 
     <p class="comment">
@@ -174,7 +181,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/blog/all/all.component.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/blog/all/all.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -243,8 +250,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">src/app/blog/all/all.component.ts:25</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/blog/all/all.component.ts:29</a></div>
                 </td>
             </tr>
 
@@ -295,7 +302,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/blog/all/all.component.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/blog/all/all.component.ts:23</a></div>
                             </td>
                         </tr>
 
@@ -323,7 +330,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/blog/all/all.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/blog/all/all.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -343,6 +350,9 @@ import {Observable} from &#x27;rxjs&#x27;;
 import { map } from &#x27;rxjs/operators&#x27;;
 import { AuthService } from &#x27;src/app/_services/auth.service&#x27;;
 
+/**
+ * Displays all of the blog posts and allows search through Algolia
+ */
 @Component({
   selector: &#x27;app-all&#x27;,
   templateUrl: &#x27;./all.component.html&#x27;,
@@ -354,6 +364,7 @@ export class AllComponent implements OnInit {
     public authService: AuthService
   ) {}
 
+  // Sets up Algolia Search
   algoliaConfig &#x3D; {
     apiKey: &#x27;e73dee597304c92fdaceb339109cbbb0&#x27;,
     appId: &#x27;MT2VAQ4QO4&#x27;,

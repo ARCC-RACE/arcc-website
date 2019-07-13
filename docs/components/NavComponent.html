@@ -303,8 +303,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="41"
-                            class="link-to-prism">src/app/core/nav/nav.component.ts:41</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/core/nav/nav.component.ts:42</a></div>
                 </td>
             </tr>
 
@@ -471,6 +471,7 @@ export class NavComponent implements OnInit {
       }
     });
 
+    // Another jank solution to make sure it stays open
     this.breakpointObserver
       .observe([&#x27;(min-width: 1200px)&#x27;])
       .subscribe((breakpointState: BreakpointState) &#x3D;&gt; {

@@ -61,6 +61,13 @@
                 <code>src/app/_guards/admin.guard.ts</code>
             </p>
 
+                <p class="comment">
+                <h3>Description</h3>
+                </p>
+                <p class="comment">
+                    <p>Protects routes so only admins can access</p>
+
+                </p>
 
 
 
@@ -118,7 +125,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/_guards/admin.guard.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/_guards/admin.guard.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -207,8 +214,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">src/app/_guards/admin.guard.ts:19</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/_guards/admin.guard.ts:22</a></div>
                 </td>
             </tr>
 
@@ -280,6 +287,9 @@ import { take, map, tap, catchError } from &#x27;rxjs/operators&#x27;;
 import { AngularFirestore, AngularFirestoreDocument } from &#x27;@angular/fire/firestore&#x27;;
 import { User } from &#x27;../_models/user.model&#x27;;
 
+/**
+ * Protects routes so only admins can access
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
@@ -293,10 +303,10 @@ export class AdminGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable&lt;boolean | UrlTree&gt; | Promise&lt;boolean | UrlTree&gt; | boolean | UrlTree {
-      return this.auth.user$.pipe(
+      return this.auth.user$.pipe( // Gets user
         take(1),
-        map(user &#x3D;&gt; !!user.admin),
-        catchError(err &#x3D;&gt; {
+        map(user &#x3D;&gt; !!user.admin), // Maps user to if they&#x27;re admin
+        catchError(err &#x3D;&gt; { // If error (user doesn&#x27;t have admin attribute), throw error
           this.router.navigate([&#x27;/&#x27;]);
           return throwError(err);
         }),

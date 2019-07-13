@@ -25,6 +25,7 @@ export class NavComponent implements OnInit {
       }
     });
 
+    // Another jank solution to make sure it stays open
     this.breakpointObserver
       .observe(['(min-width: 1200px)'])
       .subscribe((breakpointState: BreakpointState) => {

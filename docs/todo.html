@@ -30,39 +30,25 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="arcc-website">ARCC Website</h1>
-<p><a href="https://arcc.ai">ARCC</a>
-Check out our <a href="https://jhs-arcc-club.github.io/arcc-website/">Compodoc Documentation</a></p>
-<p>Have problems or feature requests? Leave us an issue in Github Issues and I&#39;ll try to get to it as fast as possible.</p>
-<h2 id="about-this-project">About This Project</h2>
-<p>An Angular 8 webpage for the JHS ARCC Club, an autonomous RC car club out of Jesuit High School Sacramento.</p>
-<p>Designed and developed by <a href="https://github.com/caelinsutch">Caelin Sutch</a>.</p>
-<p>This project is hosted with Firebase webhosting and uses Firestore for the blog and Angolia for search. Firebase functions is used to sync Firestore with the Angolia database used for searching. Fireauth through Google oAuth is used for creating user accounts. Bootstrap 4 is used for layout, and ngx-markdown is used for markdown support.</p>
-<p>I question myself daily why I chose to run an Angular app opposed to a static webpage, but here we are and it&#39;s too late for me to redo everything. </p>
-<p>Backend is handled by the library <code>@angular/fire</code>, so Firebase functions and http requests aren&#39;t used directly in the code. </p>
-<h2 id="getting-started-with-development">Getting started with development</h2>
-<ol>
-<li>Install NVM: <code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash</code></li>
-<li>Install node 12 <code>nvm install 12</code></li>
-<li>Set node 12 as default<code>nvm alias default 12</code></li>
-<li>Install Angular CLI globally <code>npm i -g @angular/cli</code></li>
-<li>Install Compodoc <code>npm i -g @compodoc/compodoc</code></li>
-<li>Clone repository <code>git clone https://github.com/JHS-ARCC-Club/arcc-website</code></li>
-<li>Install packages <code>npm i</code></li>
-<li>Start development server <code>ng s</code></li>
-</ol>
-<p><em>Optional for Database and Functions Testing</em></p>
-<ol>
-<li>Install Firebase <code>npm i -g firebase</code> and setup/login to account. For permissions to release, contact Caelin</li>
-</ol>
-<h2 id="release-cycle">Release Cycle</h2>
-<p>Make sure all your code is linted and built before pushing, Travis will run <code>ng lint</code> and <code>npm run build</code> before deploying, if code is not properly linted the build will fail and I will be sad.</p>
-<ol>
-<li>Merge into master branch</li>
-<li>Build documentation <code>npm run doc</code></li>
-<li>Push to Master where deploy is handled by Travis <code>git push</code></li>
-</ol>
-<p>If you have any questions, shoot Caelin a question.</p>
+<h1 id="todo">TODO</h1>
+<p>Some todos are located inilne code in comments formated as <code>// TODO</code>.</p>
+<p>Broader TODOs for refactoring projects are listed below</p>
+<h2 id="refactor-blog-actions-into-services">Refactor blog actions into services</h2>
+<h3 id="problem">Problem</h3>
+<p>Most of the blog posts are reusing code, no WET code allowed</p>
+<h3 id="solution">Solution</h3>
+<p>The majority of the methods can be put into a service in the <code>_services</code> folder. This includes methods like getBlogPost (reused), editng, and updating blog posts.</p>
+<h2 id="refactor-commenting-features">Refactor Commenting Features</h2>
+<h3 id="problem-1">Problem</h3>
+<p>Commenting is really convuluted, required way more code than it should.</p>
+<p>The profile picture displayed on each comment isn&#39;t the same as the current user profile pic, when the user profile pic is changed, the comments aren&#39;t updated</p>
+<h3 id="solution-1">Solution</h3>
+<p>Create a comemnting service to handle comments. FIgure out some way to link user accounts with their respective comments. I did this on yelpcamp, but I don&#39;t remember exactly how :(</p>
+<h2 id="refactor-navbar">Refactor NavBar</h2>
+<h3 id="problem-2">Problem</h3>
+<p>I made the navbar somewhat readable, didn&#39;t change the actual structure, still very jank</p>
+<h3 id="solution-2">Solution</h3>
+<p>Just make it so it&#39;s not jank. Look at the <code>nav.component.ts</code> to see how jank it is</p>
 
 
 
@@ -98,7 +84,7 @@ Check out our <a href="https://jhs-arcc-club.github.io/arcc-website/">Compodoc D
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 0;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
-            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'todo.html';
        </script>
 
        <script src="./js/libs/custom-elements.min.js"></script>
