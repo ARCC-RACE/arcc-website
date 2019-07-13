@@ -32,7 +32,7 @@ export class TagsComponent implements OnInit {
   alltags: string[] = ['Machine Learning', 'AI', 'Deep Racer', 'Jetson Car', 'R.A.C.E.', 'News', 'Press'];
 
   @Input() id: string; // ID of the blog
-  // @Input() tagsInput: string[];
+  @Input() tagsInput: string[];
   @ViewChild('tagInput', {static: false}) tagInput: ElementRef<HTMLInputElement>;
   @ViewChild('auto', {static: false}) matAutocomplete: MatAutocomplete;
 
