@@ -1,5 +1,9 @@
 @import '../../../styles/helper-functions';
 
+markdown ::ng-deep img {
+  width: 100%;
+}
+
 .blog__blog-page {
   background-color: $thm_black;
   background-image: none;
@@ -11,6 +15,15 @@ img {
 }
 
 .blog-details {
+
+  &__text {
+    width: 100% !important;
+  }
+
+  img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 
   input textarea {
     background-color: $thm_light_black !important;
@@ -209,6 +222,7 @@ img {
        font-size: 16px;
        line-height: 34px;
        margin: 0;
+       width: 100% !important;
    }
    &__reply {
        display: inline-block;
