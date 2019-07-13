@@ -6,6 +6,9 @@ import { take, map, tap, catchError } from 'rxjs/operators';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { User } from '../_models/user.model';
 
+/**
+ * Protects routes so only admins can access
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -19,10 +22,10 @@ export class AdminGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      return this.auth.user$.pipe(
+      return this.auth.user$.pipe( // Gets user
         take(1),
-        map(user => !!user.admin),
-        catchError(err => {
+        map(user => !!user.admin), // Maps user to if they're admin
+        catchError(err => { // If error (user doesn't have admin attribute), throw error
           this.router.navigate(['/']);
           return throwError(err);
         }),

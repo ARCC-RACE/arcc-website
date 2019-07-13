@@ -4,6 +4,9 @@ import { Observable } from 'rxjs';
 import { AuthService } from '../_services/auth.service';
 import { take, map, tap } from 'rxjs/operators';
 
+/**
+ * Allows routes only if user is logged in
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -14,12 +17,12 @@ export class AuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       return this.auth.user$.pipe(
-        take(1),
+        take(1), // Takes first user
         map(user => !!user), // <-- map to boolean
-        tap(loggedIn => {
-          if (!loggedIn) {
+        tap(loggedIn => { // Tap makes it a function
+          if (!loggedIn) { // If not logged in navigate to login page
             console.log('access denied');
-            this.router.navigate(['/login']);
+            this.router.navigate(['/auth']);
           }
         })
       );
