@@ -8,6 +8,10 @@ import {map, startWith} from 'rxjs/operators';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Post } from 'src/app/_models/post.model';
 
+/**
+ * Handles the creation of tags for blog posts
+ * TODO Refactor behavior so it takes in an async post instead of making its own calls to the server
+ */
 @Component({
   selector: 'app-tags',
   templateUrl: './tags.component.html',
@@ -15,19 +19,20 @@ import { Post } from 'src/app/_models/post.model';
 })
 export class TagsComponent implements OnInit {
 
-  private postDoc: AngularFirestoreDocument<Post>;
+  private postDoc: AngularFirestoreDocument<Post>; // Reference to post
   visible = true;
   selectable = true;
   removable = true;
   addOnBlur = true;
-  separatorKeysCodes: number[] = [ENTER, COMMA];
-  tagCtrl = new FormControl();
+  separatorKeysCodes: number[] = [ENTER, COMMA]; // Seperators for the tags
+  tagCtrl = new FormControl(); // Form CTRL for tags
   filteredTags: Observable<string[]>;
   tags: string[] = ['Machine Learning'];
+  // List of all the possible tags for autofill
   alltags: string[] = ['Machine Learning', 'AI', 'Deep Racer', 'Jetson Car', 'R.A.C.E.', 'News', 'Press'];
 
-  @Input() id: string;
-  @Input() tagsInput: string[];
+  @Input() id: string; // ID of the blog
+  // @Input() tagsInput: string[];
   @ViewChild('tagInput', {static: false}) tagInput: ElementRef<HTMLInputElement>;
   @ViewChild('auto', {static: false}) matAutocomplete: MatAutocomplete;
 
@@ -46,6 +51,10 @@ export class TagsComponent implements OnInit {
       this.tags = v.tags;
     });  }
 
+  /**
+   * Add a new chiop
+   * @param event MatChipInputEvent
+   */
   add(event: MatChipInputEvent): void {
     // Add tag only when MatAutocomplete is not open
     // To make sure this does not conflict with OptionSelected Event
@@ -63,13 +72,19 @@ export class TagsComponent implements OnInit {
         input.value = '';
       }
 
+      // Reset form ctrl
       this.tagCtrl.setValue(null);
     }
+    // Updates post with new tags
     this.postDoc.update({
       tags: this.tags
     });
   }
 
+  /**
+   * Removes tags from the list
+   * @param tag text of tag
+   */
   remove(tag: string): void {
     const index = this.tags.indexOf(tag);
 
@@ -81,14 +96,24 @@ export class TagsComponent implements OnInit {
     });
   }
 
+  /**
+   * Handles selection of autocomplete tag
+   * @param event Event when autocomplete option is selected
+   */
   selected(event: MatAutocompleteSelectedEvent): void {
+    // Pushes the selected autocomplete to the tag list
     this.tags.push(event.option.viewValue);
+    // Resets the input
     this.tagCtrl.setValue(null);
+    // Updates the database
     this.postDoc.update({
       tags: this.tags
     });
   }
 
+  /**
+   * Method to filter tags and make sure they're usable
+   */
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
 

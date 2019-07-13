@@ -64,6 +64,13 @@
     <code>src/app/core/blog-card/blog-card.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Post card for use in blogs and press</p>
+
+    </p>
 
 
     <p class="comment">
@@ -170,7 +177,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/core/blog-card/blog-card.component.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/core/blog-card/blog-card.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -190,7 +197,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/core/blog-card/blog-card.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/core/blog-card/blog-card.component.ts:14</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -226,8 +233,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/app/core/blog-card/blog-card.component.ts:14</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="18"
+                            class="link-to-prism">src/app/core/blog-card/blog-card.component.ts:18</a></div>
                 </td>
             </tr>
 
@@ -252,12 +259,16 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
 import { post } from &#x27;selenium-webdriver/http&#x27;;
 
+/**
+ * Post card for use in blogs and press
+ */
 @Component({
   selector: &#x27;app-blog-card&#x27;,
   templateUrl: &#x27;./blog-card.component.html&#x27;,
   styleUrls: [&#x27;./blog-card.component.scss&#x27;]
 })
 export class BlogCardComponent implements OnInit {
+  // Post object
   @Input() post;
 
   constructor() { }

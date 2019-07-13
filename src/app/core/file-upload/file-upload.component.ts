@@ -1,3 +1,6 @@
+/**
+ * Handles frontend and backend for file upload
+ */
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
 import { Observable } from 'rxjs/Observable';
@@ -33,16 +36,24 @@ export class FileUploadComponent {
     private authService: AuthService) { }
 
 
+    /**
+     * Toggles if user is hovering over the dropzone
+     * @param event Event
+     */
   toggleHover(event: boolean) {
     this.isHovering = event;
   }
 
 
+  /**
+   * Starts upload to the server.
+   * @param event Forms event, contains the blobs of forms
+   */
   startUpload(event: FileList) {
     // The File object
     const file = event.item(0);
 
-    // Client-side validation example
+    // Client-side validation of image
     if (file.type.split('/')[0] !== 'image') {
       console.error('unsupported file type :( ');
       return;
@@ -66,7 +77,6 @@ export class FileUploadComponent {
     this.snapshot.pipe(finalize(() => {
       this.downloadURL = this.storage.ref(path).getDownloadURL();
       this.downloadURL.subscribe(url => {
-        console.log(url);
         this.user.photoURL = url;
         this.authService.updateUserData(this.user);
       });

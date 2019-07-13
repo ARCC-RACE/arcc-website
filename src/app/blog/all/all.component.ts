@@ -5,6 +5,9 @@ import {Observable} from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AuthService } from 'src/app/_services/auth.service';
 
+/**
+ * Displays all of the blog posts and allows search through Algolia
+ */
 @Component({
   selector: 'app-all',
   templateUrl: './all.component.html',
@@ -16,6 +19,7 @@ export class AllComponent implements OnInit {
     public authService: AuthService
   ) {}
 
+  // Sets up Algolia Search
   algoliaConfig = {
     apiKey: 'e73dee597304c92fdaceb339109cbbb0',
     appId: 'MT2VAQ4QO4',

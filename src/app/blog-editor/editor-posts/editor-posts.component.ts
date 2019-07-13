@@ -5,6 +5,9 @@ import {Router} from '@angular/router';
 import {Post} from '../../_models/post.model';
 import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
 
+/**
+ * Handles creating new posts and editing them
+ */
 @Component({
   selector: 'app-editor-posts',
   templateUrl: './editor-posts.component.html',
