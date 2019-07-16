@@ -24,6 +24,7 @@ export class PressComponent implements OnInit {
           const data = a.payload.doc.data() as Post;
           data.content = data.content.split(' ').slice(0, 20).join(' ');
           const id = a.payload.doc.id;
+          data.objectID = id;
           return { id, data };
         });
       }));
