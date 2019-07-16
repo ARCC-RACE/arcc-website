@@ -9,6 +9,11 @@
 
     position: relative;
 
+  .big-text {
+    font-size: 180px;
+    line-height: 1.0;
+  }
+
     &__moc {
         position: absolute;
         top: 245px;
@@ -20,8 +25,8 @@
         margin-bottom: 35px;
     }
     .block-title__text {
-        font-size: 60px;
-        line-height: 70px;
+        font-size: 30px;
+        line-height: 0;
     }
 
     &__text {
@@ -106,6 +111,10 @@
     padding-bottom: 0;
   }
 
+  .big-text {
+    font-size: 120px !important;
+  }
+
 }
 
 @media(max-width: $breakpoint-sm) {
@@ -124,6 +133,10 @@
 @media(max-width: $breakpoint-xs) {
   .block-title__text span:before {
     display: none;
+  }
+
+  .big-text {
+    font-size: 50px;
   }
 
   .site-header.header .header-navigation .container .right-side-box {

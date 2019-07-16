@@ -37,12 +37,10 @@ nav {
   .navbar-expand-lg .menu-toggler {
     z-index: 10000000;
     display: block;
-    margin-right: 0;
-    border-color: #fff;
     background-color: transparent !important;
     margin: 23px 0;
     color: #fff;
-    border: none;
+    border: none #fff;
     font-size: 28px;
     float: right;
     outline: none;
@@ -70,10 +68,8 @@ nav {
   .navbar-expand-lg .navbar-collapse {
     display: none !important;
     background: transparent;
-    padding: 0px 0px !important;
-    padding-bottom: 0px !important;
+    padding: 0 0 !important;
     margin: 0;
-    background: #000;
     transition: all .5s ease;
     height: 0;
   }
