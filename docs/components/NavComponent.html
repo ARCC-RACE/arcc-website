@@ -499,7 +499,7 @@ export class NavComponent implements OnInit {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;header class&#x3D;&quot;site-header header&quot;&gt;
   &lt;nav class&#x3D;&quot;navbar navbar-expand-lg navbar-light header-navigation&quot;&gt;
-    &lt;div class&#x3D;&quot;container clearfix&quot;&gt;
+    &lt;div class&#x3D;&quot;container-fluid clearfix&quot;&gt;
       &lt;!-- Brand and toggle get grouped for better mobile display --&gt;
       &lt;div class&#x3D;&quot;logo-box clearfix&quot;&gt;
         &lt;a class&#x3D;&quot;navbar-brand&quot; routerLink&#x3D;&quot;/&quot;&gt;
@@ -585,12 +585,10 @@ nav {
   .navbar-expand-lg .menu-toggler {
     z-index: 10000000;
     display: block;
-    margin-right: 0;
-    border-color: #fff;
     background-color: transparent !important;
     margin: 23px 0;
     color: #fff;
-    border: none;
+    border: none #fff;
     font-size: 28px;
     float: right;
     outline: none;
@@ -618,10 +616,8 @@ nav {
   .navbar-expand-lg .navbar-collapse {
     display: none !important;
     background: transparent;
-    padding: 0px 0px !important;
-    padding-bottom: 0px !important;
+    padding: 0 0 !important;
     margin: 0;
-    background: #000;
     transition: all .5s ease;
     height: 0;
   }
@@ -988,7 +984,7 @@ nav {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><header class="site-header header">  <nav class="navbar navbar-expand-lg navbar-light header-navigation">    <div class="container clearfix">      <!-- Brand and toggle get grouped for better mobile display -->      <div class="logo-box clearfix">        <a class="navbar-brand" routerLink="/">          <img src="../../../assets/images/arcc-logo.png" class="main-logo" alt="Main Logo" style="object-fit: cover;"/>        </a>        <button class="menu-toggler" data-target=".header .main-navigation" (click)="toggleCollapse()">          <span class="fa fa-bars"></span>        </button>      </div><!-- /.logo-box -->      <!-- Collect the nav links, forms, and other content for toggling -->      <div class="main-navigation position-block" [@slideInOut]="animationState" >        <ul class=" navigation-box " (click)="toggleCollapse()">          <li>            <a routerLink="/"  [routerLinkActive]="[\'current\', \'active\']" [routerLinkActiveOptions]="{ exact: true }">Home</a>          </li>          <li>            <a routerLink="" fragment="ourprojects">Projects</a>          </li>          <li>            <a routerLink="about" routerLinkActive="current">About</a>          </li>          <li>              <a routerLink="support" routerLinkActive="current">Donate</a>            </li>          <li>            <a routerLink="blog" routerLinkActive="current">Blog</a>          </li>          <li>            <a routerLink="press" routerLinkActive="current">Press</a>          </li>        </ul>      </div><!-- /.navbar-collapse -->      <div class="right-side-box">        <a href="mailto:support@arcc.ai" class="header__btn">Contact</a>      </div><!-- /.right-side-box -->    </div>    <!-- /.container -->  </nav></header><!-- /.header --></div>'
+        var COMPONENT_TEMPLATE = '<div><header class="site-header header">  <nav class="navbar navbar-expand-lg navbar-light header-navigation">    <div class="container-fluid clearfix">      <!-- Brand and toggle get grouped for better mobile display -->      <div class="logo-box clearfix">        <a class="navbar-brand" routerLink="/">          <img src="../../../assets/images/arcc-logo.png" class="main-logo" alt="Main Logo" style="object-fit: cover;"/>        </a>        <button class="menu-toggler" data-target=".header .main-navigation" (click)="toggleCollapse()">          <span class="fa fa-bars"></span>        </button>      </div><!-- /.logo-box -->      <!-- Collect the nav links, forms, and other content for toggling -->      <div class="main-navigation position-block" [@slideInOut]="animationState" >        <ul class=" navigation-box " (click)="toggleCollapse()">          <li>            <a routerLink="/"  [routerLinkActive]="[\'current\', \'active\']" [routerLinkActiveOptions]="{ exact: true }">Home</a>          </li>          <li>            <a routerLink="" fragment="ourprojects">Projects</a>          </li>          <li>            <a routerLink="about" routerLinkActive="current">About</a>          </li>          <li>              <a routerLink="support" routerLinkActive="current">Donate</a>            </li>          <li>            <a routerLink="blog" routerLinkActive="current">Blog</a>          </li>          <li>            <a routerLink="press" routerLinkActive="current">Press</a>          </li>        </ul>      </div><!-- /.navbar-collapse -->      <div class="right-side-box">        <a href="mailto:support@arcc.ai" class="header__btn">Contact</a>      </div><!-- /.right-side-box -->    </div>    <!-- /.container -->  </nav></header><!-- /.header --></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AllComponent', 'selector': 'app-all'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogCardComponent', 'selector': 'app-blog-card'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'BubblesComponent', 'selector': 'app-bubbles'},{'name': 'ClubMembersComponent', 'selector': 'app-club-members'},{'name': 'DeepracerComponent', 'selector': 'app-deepracer'},{'name': 'EditorPostComponent', 'selector': 'app-editor-post'},{'name': 'EditorPostsComponent', 'selector': 'app-editor-posts'},{'name': 'EmailSignupComponent', 'selector': 'app-email-signup'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FounderLetterComponent', 'selector': 'app-founder-letter'},{'name': 'FunFactComponent', 'selector': 'app-fun-fact'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JetsonComponent', 'selector': 'app-jetson'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PostComponent', 'selector': 'app-post'},{'name': 'PressComponent', 'selector': 'app-press'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RaceComponent', 'selector': 'app-race'},{'name': 'SupportComponent', 'selector': 'app-support'},{'name': 'TagsComponent', 'selector': 'app-tags'},{'name': 'TagViewerComponent', 'selector': 'app-tag-viewer'}];
     var DIRECTIVES = [{'name': 'DropZoneDirective', 'selector': '[dropZone]'},{'name': 'FragmentTargetDirective', 'selector': '[id], a[name]'}];
     var ACTUAL_COMPONENT = {'name': 'NavComponent'};

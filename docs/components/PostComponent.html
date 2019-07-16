@@ -805,14 +805,30 @@ export class PostComponent implements OnInit {
                 </p>
                 <pre class="line-numbers"><code class="language-scss">@import &#x27;../../../styles/helper-functions&#x27;;
 
+markdown ::ng-deep img {
+  width: 100%;
+}
+
 .blog__blog-page {
   background-color: $thm_black;
   background-image: none;
   padding-top: 120px;
 }
 
+img {
+  width: 100% !important;
+}
 
 .blog-details {
+
+  &amp;__text {
+    width: 100% !important;
+  }
+
+  img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 
   input textarea {
     background-color: $thm_light_black !important;
@@ -1011,6 +1027,7 @@ export class PostComponent implements OnInit {
        font-size: 16px;
        line-height: 34px;
        margin: 0;
+       width: 100% !important;
    }
    &amp;__reply {
        display: inline-block;

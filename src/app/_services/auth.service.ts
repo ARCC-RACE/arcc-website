@@ -113,7 +113,8 @@ export class AuthService {
       author: post.author,
       tags: post.tags,
       date: post.date,
-      comments: post.comments
+      comments: post.comments,
+      objectID: post.objectID
     };
 
     return postDoc.set(data, { merge: true });

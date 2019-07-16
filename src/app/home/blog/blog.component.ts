@@ -15,13 +15,14 @@ export class BlogComponent implements OnInit {
   posts: Observable<any>;
 
   constructor(private afs: AngularFirestore) {
-    this.postsCollection = afs.collection<Post>('posts');
+    this.postsCollection = afs.collection<any>('posts');
     this.posts = this.postsCollection.snapshotChanges()
       .pipe(map(actions => {
         return actions.map(a => {
-          const data = a.payload.doc.data() as Post;
+          const data = a.payload.doc.data();
           data.content = data.content.split(' ').slice(0, 20).join(' ');
           const id = a.payload.doc.id;
+          data.objectID = id;
           return { id, data };
         });
       }));
