@@ -413,8 +413,12 @@ export class AllComponent implements OnInit {
                 </p>
                 <pre class="line-numbers"><code class="language-scss">@import &#x27;../../../styles/_helper-functions.scss&#x27;;
 
+.container {
+  position: relative;
+  z-index: -10000;
+}
+
 .search {
-  z-index: -100000;
   padding-top: 200px;
 
   &amp;__link {
@@ -439,7 +443,6 @@ ais-instantsearch {
 
 ais-search-box {
   position: relative;
-  z-index: -1000;
 }
 
 ::ng-deep input {
@@ -450,7 +453,6 @@ ais-search-box {
   width: 100%;
   border-radius: 8px;
   position: relative;
-  z-index: -10000;
 }
 
 ::ng-deep .ais-SearchBox-submit {

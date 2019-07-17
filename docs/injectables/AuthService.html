@@ -360,8 +360,8 @@ TODO Figure out what this does and if it&#39;s used?</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="126"
-                            class="link-to-prism">src/app/_services/auth.service.ts:126</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="127"
+                            class="link-to-prism">src/app/_services/auth.service.ts:127</a></div>
                 </td>
             </tr>
 
@@ -453,8 +453,8 @@ Updates user object with information from Google</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="135"
-                            class="link-to-prism">src/app/_services/auth.service.ts:135</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="136"
+                            class="link-to-prism">src/app/_services/auth.service.ts:136</a></div>
                 </td>
             </tr>
 
@@ -796,7 +796,8 @@ export class AuthService {
       author: post.author,
       tags: post.tags,
       date: post.date,
-      comments: post.comments
+      comments: post.comments,
+      objectID: post.objectID
     };
 
     return postDoc.set(data, { merge: true });

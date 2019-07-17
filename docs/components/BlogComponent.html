@@ -243,8 +243,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/app/home/blog/blog.component.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/home/blog/blog.component.ts:31</a></div>
                 </td>
             </tr>
 
@@ -344,13 +344,14 @@ export class BlogComponent implements OnInit {
   posts: Observable&lt;any&gt;;
 
   constructor(private afs: AngularFirestore) {
-    this.postsCollection &#x3D; afs.collection&lt;Post&gt;(&#x27;posts&#x27;);
+    this.postsCollection &#x3D; afs.collection&lt;any&gt;(&#x27;posts&#x27;);
     this.posts &#x3D; this.postsCollection.snapshotChanges()
       .pipe(map(actions &#x3D;&gt; {
         return actions.map(a &#x3D;&gt; {
-          const data &#x3D; a.payload.doc.data() as Post;
+          const data &#x3D; a.payload.doc.data();
           data.content &#x3D; data.content.split(&#x27; &#x27;).slice(0, 20).join(&#x27; &#x27;);
           const id &#x3D; a.payload.doc.id;
+          data.objectID &#x3D; id;
           return { id, data };
         });
       }));

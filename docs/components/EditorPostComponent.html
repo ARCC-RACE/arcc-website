@@ -596,7 +596,7 @@ export class EditorPostComponent implements OnInit {
    */
   ngOnInit() {
     // Sets up form Model
-    this.formModel &#x3D; {title: &#x27;&#x27;, content: &#x27;&#x27;, author: &#x27;&#x27;, tags: [&#x27;&#x27;], date: &#x27;&#x27;, comments: null};
+    this.formModel &#x3D; {title: &#x27;&#x27;, content: &#x27;&#x27;, author: &#x27;&#x27;, tags: [&#x27;&#x27;], date: &#x27;&#x27;, comments: null, objectID: null};
     // subscribe to the parameters observable
     this.route.paramMap.subscribe(params &#x3D;&gt; {
       this.getPost(params.get(&#x27;id&#x27;));

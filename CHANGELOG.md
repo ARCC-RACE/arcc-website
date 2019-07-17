@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## Current
+
+### Edited
+- Tons of grammar and wording changes
+
+### Added
+- Images for homepage
+
+
 ## [1.3.0]
 
 ### Edited

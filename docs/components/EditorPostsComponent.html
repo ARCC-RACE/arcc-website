@@ -648,7 +648,7 @@ export class EditorPostsComponent implements OnInit {
     const d &#x3D; new Date();
     const formatedDate &#x3D; d.getFullYear() + &#x27;/&#x27; + (d.getMonth() + 1) + &#x27;/&#x27; + d.getDate();
     // tslint:disable-next-line: max-line-length
-    const post: Post &#x3D; {title: new_post_title.value, content: new_post_text.value, author: new_post_author.value, tags: [&#x27;&#x27;], date: formatedDate, comments: null};
+    const post: Post &#x3D; {title: new_post_title.value, content: new_post_text.value, author: new_post_author.value, tags: [&#x27;&#x27;], date: formatedDate, comments: null, objectID: null};
     this.addItem(post, (domInput &#x3D;&gt; {
       return data &#x3D;&gt; {
         domInput.value &#x3D; &#x27;&#x27;; // empty dom input
