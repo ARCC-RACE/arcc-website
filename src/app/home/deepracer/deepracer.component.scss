@@ -11,12 +11,10 @@
     }
 
     &__image {
-        overflow: hidden;
-        border-radius: 4px;
-
-        >img {
-            width: 100%;
-        }
+      width: 80%;
+      @media(max-width: 1440px) {
+        display: none;
+      }
     }
 
     &__color-box {
@@ -39,36 +37,6 @@
             width: 60px;
             height: 66px;
             position: absolute;
-        }
-    }
-
-    &__color-box-2 {
-        &:before {
-            top: 0;
-            right: 0;
-            width: 60px;
-            height: 66px;
-            background-color: #ef4059;
-        }
-
-        &:after {
-            bottom: 30px;
-            left: 30px;
-            width: 100px;
-            height: 106px;
-            background-color: #9364d4;
-        }
-    }
-
-    &__color-box-1 {
-        &:before {
-            top: 30px;
-            right: 30px;
-        }
-
-        &:after {
-            bottom: 0;
-            left: 0;
         }
     }
 

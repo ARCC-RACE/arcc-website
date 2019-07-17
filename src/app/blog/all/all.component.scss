@@ -1,5 +1,10 @@
 @import '../../../styles/_helper-functions.scss';
 
+.container {
+  position: relative;
+  z-index: -10000;
+}
+
 .search {
   padding-top: 200px;
 
