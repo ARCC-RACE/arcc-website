@@ -35,6 +35,10 @@ const routes: Routes = [
     loadChildren: './auth/auth.module#AuthModule'
   },
   {
+    path: 'timeline',
+    loadChildren: './timeline/timeline.module#TimelineModule'
+  },
+  {
     path: '**',
     component: HomeComponent
   },
