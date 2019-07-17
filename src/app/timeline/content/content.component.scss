@@ -7,12 +7,63 @@
   float: right;
 }
 
+.rightDot {
+  position: absolute;
+  z-index: -10;
+  width: 2em;
+  height: 2em;
+  left: -8.2em;
+  border-radius: 30px;
+  top: 4.2em;
+}
+
+.behindRightDot {
+  position: absolute;
+  z-index: -20;
+  width: 2.7em;
+  height: 2.7em;
+  left: -8.6em;
+  border-radius: 30px;
+  top: 3.9em;
+}
+
+
+.leftDot {
+  position: absolute;
+  z-index: -10;
+  width: 2em;
+  height: 2em;
+  right: -6.98em;
+  border-radius: 30px;
+  top: 4.5em;
+}
+
+.behindLeftDot {
+  position: absolute;
+  z-index: -20;
+  width: 2.7em;
+  height: 2.7em;
+  right: -7.3em;
+  border-radius: 30px;
+  top: 4.2em;
+}
+
 .eventCard {
   border-radius: 61px;
 }
 
 .timeLine {
+  height: 100%;
+  background-color: white;
+  width: 1em;
+  border-radius: 10px;
+  margin-left: 38em;
+}
 
+.timelineWrapper {
+  height: 100%;
+  position: absolute;
+  z-index: -30;
 }
 
 .eventContent {
