@@ -1,7 +1,6 @@
 @import '../../../styles/_helper-functions.scss';
 
 .search {
-  z-index: -100000;
   padding-top: 200px;
 
   &__link {
@@ -26,7 +25,6 @@ ais-instantsearch {
 
 ais-search-box {
   position: relative;
-  z-index: -1000;
 }
 
 ::ng-deep input {
@@ -37,7 +35,6 @@ ais-search-box {
   width: 100%;
   border-radius: 8px;
   position: relative;
-  z-index: -10000;
 }
 
 ::ng-deep .ais-SearchBox-submit {
