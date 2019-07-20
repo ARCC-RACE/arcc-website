@@ -1,3 +1,9 @@
+@import "../../../styles/_helper-functions";
+
+.title {
+  text-align: center;
+}
+
 .rightTile {
   border-radius: 61px;
 }
@@ -7,72 +13,34 @@
   float: right;
 }
 
-.rightDot {
-  position: absolute;
-  z-index: -10;
-  width: 2em;
-  height: 2em;
-  left: -8.2em;
-  border-radius: 30px;
-  top: 4.2em;
-}
-
-.behindRightDot {
-  position: absolute;
-  z-index: -20;
-  width: 2.7em;
-  height: 2.7em;
-  left: -8.6em;
-  border-radius: 30px;
-  top: 3.9em;
-}
-
-
-.leftDot {
-  position: absolute;
-  z-index: -10;
-  width: 2em;
-  height: 2em;
-  right: -6.98em;
-  border-radius: 30px;
-  top: 4.5em;
-}
-
-.behindLeftDot {
-  position: absolute;
-  z-index: -20;
-  width: 2.7em;
-  height: 2.7em;
-  right: -7.3em;
-  border-radius: 30px;
-  top: 4.2em;
-}
-
 .eventCard {
   border-radius: 61px;
 }
 
-.timeLine {
-  height: 100%;
-  background-color: white;
-  width: 1em;
-  border-radius: 10px;
-  margin-left: 38em;
+.right {
+  margin-left: -16%;
+  margin-top: -25%;
+  margin-right: 16%;
+
+}
+.left {
+  margin-right: -13%;
+  margin-top: -23%;
+  margin-left: 9%;
 }
 
-.timelineWrapper {
-  height: 100%;
-  position: absolute;
-  z-index: -30;
-}
-
-.eventContent {
+.eventContentRight {
   line-height: 125%;
+  margin-left: 14%;
+  margin-top: 8%;
+  margin-right: -4%;
 }
 
-.wrapper {
-  margin-top: 10.3em;
-  text-align: center;
+.eventContentLeft {
+  line-height: 125%;
+  margin-right: 9%;
+  margin-top: 13%;
+  margin-left: -4%;
 }
 
 .red {
@@ -105,4 +73,67 @@
 
 .offPink {
   background-color: #ED529B;
+}
+
+// BREAKPOINTS
+
+@media(max-width: $breakpoint-xl) {
+
+}
+
+@media(max-width: $breakpoint-lg) {
+
+  .right {
+    margin-left: 7%;
+    margin-right: -10%;
+  }
+
+}
+
+@media(max-width: $breakpoint-md) {
+
+}
+
+@media(max-width: $breakpoint-sm) {
+
+  .title {
+    font-size: 0.7em;
+  }
+
+  .eventContentRight {
+    font-size: 0.6em;
+  }
+
+  .eventContentLeft {
+    font-size: 0.6em;
+  }
+
+  .right {
+    margin-top: -32%;
+    margin-left: -21%;
+    margin-right: 6%;
+  }
+
+  .left {
+    margin-top: -36%;
+    margin-left: -17%;
+    margin-right: 0%;
+  }
+
+  .eventContentLeft {
+    margin-top: 17%;
+    margin-left: -8%;
+    margin-right: 8%;
+  }
+
+  .eventContentRight {
+    margin-top: 11%;
+    margin-left: 13%;
+    margin-right: -10%;
+  }
+
+}
+
+@media(max-width: $breakpoint-xs) {
+
 }

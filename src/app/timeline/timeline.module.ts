@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TimelineRoutingModule } from './timeline-routing.module';
 import { ContentComponent } from './content/content.component';
 import {CoreModule} from '../core/core.module';
+import { VerticalTimelineModule } from 'angular-vertical-timeline';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import {CoreModule} from '../core/core.module';
   imports: [
     CommonModule,
     TimelineRoutingModule,
-    CoreModule
+    CoreModule,
+    VerticalTimelineModule
   ]
 })
 export class TimelineModule { }
