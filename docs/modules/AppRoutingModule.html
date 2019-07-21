@@ -107,6 +107,10 @@ const routes: Routes &#x3D; [
     loadChildren: &#x27;./auth/auth.module#AuthModule&#x27;
   },
   {
+    path: &#x27;timeline&#x27;,
+    loadChildren: &#x27;./timeline/timeline.module#TimelineModule&#x27;
+  },
+  {
     path: &#x27;**&#x27;,
     component: HomeComponent
   },
@@ -132,6 +136,7 @@ export class AppRoutingModule { }
 
 
 
+                   
 
 
 

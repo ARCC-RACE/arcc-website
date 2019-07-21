@@ -34,7 +34,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>BlogRoutingModule</li>
+    <li>TimelineRoutingModule</li>
 </ol>
 
 
@@ -54,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/blog/blog-routing.module.ts</code>
+            <code>src/app/timeline/timeline-routing.module.ts</code>
         </p>
 
 
@@ -71,29 +71,21 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
-import {PostComponent} from &#x27;./post/post.component&#x27;;
-import {AllComponent} from &#x27;./all/all.component&#x27;;
+import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
+import { ContentComponent} from &#x27;./content/content.component&#x27;;
 
-const editorRoutes: Routes &#x3D; [
+const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
-    component: AllComponent
-  },
-  {
-    path: &#x27;post/:id&#x27;,
-    component: PostComponent
-  },
+    component: ContentComponent
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(editorRoutes)],
-  exports: [RouterModule],
-  declarations: []
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
-export class BlogRoutingModule {
-
-}
+export class TimelineRoutingModule { }
 </code></pre>
     </div>
 </div>
@@ -129,7 +121,7 @@ export class BlogRoutingModule {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'BlogRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'TimelineRoutingModule.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

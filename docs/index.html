@@ -55,6 +55,24 @@ Check out our <a href="https://jhs-arcc-club.github.io/arcc-website/">Compodoc D
 <ol>
 <li>Install Firebase <code>npm i -g firebase</code> and setup/login to account. For permissions to release, contact Caelin</li>
 </ol>
+<h2 id="fun-stuff-to-know-before-starting-development">Fun Stuff To Know Before Starting Development</h2>
+<h3 id="page-format">Page Format</h3>
+<p>Each page has its own lazy loaded module.</p>
+<h3 id="html-format">HTML Format</h3>
+<p>Every section in an html page is broken up into a seperate component.</p>
+<h3 id="scss">SCSS</h3>
+<p>There are some prebuilt scss variables you can import from <code>_common.scss</code> in the <code>/styles</code> folder. Breakpoint and color variables are included, I&#39;d look at those. In terms of formatting, reference how I did formatting on the home page for scss. I embed structures, an example is included below.</p>
+<div><pre class="line-numbers"><code class="language-none">.home {
+  &amp;__btn {
+    background-color: white;
+  }
+
+  &amp;__block {
+    display: block;
+    margin: 21em;
+  }
+}</code></pre></div><h3 id="included-libraries">Included Libraries</h3>
+<p>I already have bootstrap included for formatting as wells as the scss variables above. For animations, reference animations.css in the project, there are already some prebuilt animation classes in there. </p>
 <h2 id="release-cycle">Release Cycle</h2>
 <p>Make sure all your code is linted and built before pushing, Travis will run <code>ng lint</code> and <code>npm run build</code> before deploying, if code is not properly linted the build will fail and I will be sad.</p>
 <ol>
@@ -77,6 +95,7 @@ Check out our <a href="https://jhs-arcc-club.github.io/arcc-website/">Compodoc D
 
 
 
+                   
 
 
 
