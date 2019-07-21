@@ -32,6 +32,32 @@ _Optional for Database and Functions Testing_
 
 1. Install Firebase `npm i -g firebase` and setup/login to account. For permissions to release, contact Caelin
 
+## Fun Stuff To Know Before Starting Development
+
+### Page Format
+Each page has its own lazy loaded module.
+
+### HTML Format
+Every section in an html page is broken up into a seperate component.
+
+### SCSS
+There are some prebuilt scss variables you can import from `_common.scss` in the `/styles` folder. Breakpoint and color variables are included, I'd look at those. In terms of formatting, reference how I did formatting on the home page for scss. I embed structures, an example is included below.
+
+```
+.home {
+  &__btn {
+    background-color: white;
+  }
+  
+  &__block {
+    display: block;
+    margin: 21em;
+  }
+}
+```
+
+### Included Libraries
+I already have bootstrap included for formatting as wells as the scss variables above. For animations, reference animations.css in the project, there are already some prebuilt animation classes in there. 
 
 ## Release Cycle
 
