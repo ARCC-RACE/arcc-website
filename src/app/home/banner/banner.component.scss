@@ -25,7 +25,6 @@
     }
     .block-title__text {
         font-size: 30px;
-        line-height: 0;
     }
 
     &__text {
@@ -118,7 +117,7 @@
 
 @media(max-width: $breakpoint-sm) {
 
-  .banner .block-title__text,
+  .banner, .block-title__text,
   .block-title__text {
     font-size: 35px;
     line-height: 45px;

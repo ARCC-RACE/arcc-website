@@ -16,7 +16,7 @@ nav {
   color: red;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 990px) {
 
   .header__btn {
     display: none;
@@ -320,7 +320,19 @@ nav {
 
 }
 
-@media (min-width: 1199px) {
+@media(min-width: 1200px) {
+  .right-side-box {
+    display: block !important;
+  }
+}
+
+@media(max-width: 1200px) {
+  .right-side-box {
+    display: none;
+  }
+}
+
+@media (min-width: 990px) {
 
   // Turn off toggler
   .menu-toggler {
