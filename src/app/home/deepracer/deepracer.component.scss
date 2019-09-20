@@ -12,9 +12,6 @@
 
     &__image {
       width: 80%;
-      @media(max-width: 1440px) {
-        display: none;
-      }
     }
 
     &__color-box {

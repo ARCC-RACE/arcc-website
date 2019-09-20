@@ -41,6 +41,11 @@ export class EditorPostComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.getPost(params.get('id'));
     });
+    const textarea = document.getElementById('text-area');
+    textarea.oninput = function() {
+      textarea.style.height = ''; /* Reset the height*/
+      textarea.style.height = textarea.scrollHeight + 'px';
+    };
   }
 
   /**

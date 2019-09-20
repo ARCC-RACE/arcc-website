@@ -21,7 +21,7 @@ import { FileUploadPipe } from './file-upload/file-upload.pipe';
     RouterModule,
     MatChipsModule,
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
   ],
 // tslint:disable-next-line: max-line-length
   declarations: [NavComponent, EmailSignupComponent, FooterComponent, BubblesComponent, TagViewerComponent, BlogCardComponent, DropZoneDirective, FileUploadComponent, FileUploadPipe],
@@ -32,7 +32,7 @@ import { FileUploadPipe } from './file-upload/file-upload.pipe';
     BubblesComponent,
     TagViewerComponent,
     BlogCardComponent,
-    FileUploadComponent
+    FileUploadComponent,
   ]
 })
 export class CoreModule { }

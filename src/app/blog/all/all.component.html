@@ -1,8 +1,13 @@
 <div class="search">
-    <div class="container text-center">
-      <h1>Welcome to our Blog</h1>
+    <div class="container">
+      <div class="text-center">
+        <h1>Welcome to our Blog</h1>
         <a [routerLink]="['/auth']" routerLinkActive="router-link-active"  class="btn btn-primary mx-auto my-4" role="button">Signup or Log In</a>
+      </div>
         <ais-instantsearch [config]="algoliaConfig">
+          <ais-configure
+            [searchParameters]=""
+          ></ais-configure>
             <ais-search-box>
             </ais-search-box>
             <ais-hits>
@@ -13,8 +18,8 @@
                   <strong>{{results.query}}</strong>.
                 </div>
                 <div class="row my-3">
-                    <div *ngFor="let hit of hits" class="col-lg-4 col-md-6">
-                      <app-blog-card [post]="hit"></app-blog-card>
+                    <div *ngFor="let hit of hits" class="col-lg-4 col-md-6 p-3">
+                      <app-blog-card [post]="hit" style="height: 100%"></app-blog-card>
                     </div>
                   </div>
 

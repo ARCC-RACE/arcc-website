@@ -10,14 +10,5 @@
     <div class="mx-auto text-center">
       <a href="https://drive.google.com/drive/folders/1SkoTpY_bDx7jvKH9dUm-oQG0IG9_kzE6?usp=sharing" class="press__btn mx-auto">See our Media Assets</a>
     </div>
-    <div class="press__subtitle mt-3">
-      <h2>Press Releases</h2>
-    </div>
-    <div class="row">
-      <div class="col-lg-4" *ngFor="let post of posts | async">
-        <app-blog-card [post]="post.data"></app-blog-card>
-        <!--<app-blog-card [post]="post.data" *ngIf="post.data.tags.includes('Press')"></app-blog-card>-->
-      </div><!-- /.col-lg-4 -->
-    </div>
   </div>
 </section>

@@ -6,7 +6,7 @@
     </div>
     <div class="form-group">
       <label>Author</label>
-      <textarea class="form-control" [(ngModel)]="formModel.author" (change)="update()"></textarea>
+      <textarea class="form-control" [(ngModel)]="formModel.author" (change)="update()" id="text-area"></textarea>
     </div>
     <div class="form-group">
       <label>Tags</label>
@@ -14,7 +14,7 @@
     </div>
     <div class="form-group">
       <label>Content (Supports Markdown)</label>
-      <textarea class="form-control" [(ngModel)]="formModel.content" (change)="update()" style="height: 200px;"></textarea>
+      <textarea class="form-control" [(ngModel)]="formModel.content" (change)="update()" style="height: 600px;"></textarea>
     </div>
     <div class="form-group">
       <label>Markdown Preview</label>

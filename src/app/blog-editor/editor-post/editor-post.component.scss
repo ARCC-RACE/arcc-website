@@ -1,3 +1,7 @@
 .form-control {
   color: white;
 }
+
+markdown ::ng-deep img {
+  width: 100%;
+}

@@ -6,9 +6,9 @@
   padding-top: 120px;
 }
 
-.editor ~ input textarea {
+.form-control {
   background-color: $thm_light_black;
-  color: $thm_gray;
+  color: white !important;
 }
 
 .form-group > {
