@@ -1,7 +1,7 @@
 # ARCC Website
 
 [ARCC](https://arcc.ai)
-Check out our [Compodoc Documentation](https://jhs-arcc-club.github.io/arcc-website/)
+Check out our [Compodoc Documentation](https://arcc-race.github.io/arcc-website/)
 
 Have problems or feature requests? Leave us an issue in Github Issues and I'll try to get to it as fast as possible.
 
