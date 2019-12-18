@@ -8,1035 +8,773 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-	      <link rel="stylesheet" href="./styles/style.css">
+	    <link rel="stylesheet" href="./styles/style.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
             <a href="./" class="navbar-brand">arcc-website documentation</a>
-            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="./">arcc-website documentation</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="./"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a href="./" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a 
+                                         href="./overview.html" 
+                                        
+                                         href="./overview.html" 
+                                         class="active" >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="./modules.html" >
+                            <span class="fa fa-archive"></span>
+                            <span>Modules</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            ></span>
+                        </a>
+                        <ul class="links collapse in"
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="modules/AboutModule.html" >AboutModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/AboutRoutingModule.html" >AboutRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/AppModule.html" >AppModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/AuthModule.html" >AuthModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/AuthRoutingModule.html" >AuthRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/BlogEditorModule.html" >BlogEditorModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/BlogEditorRoutingModule.html" >BlogEditorRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/BlogModule.html" >BlogModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/CoreModule.html" >CoreModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/FragmentPolyfillModule.html" >FragmentPolyfillModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/HomeModule.html" >HomeModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/HomeRoutingModule.html" >HomeRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/PressModule.html" >PressModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/PressRoutingModule.html" >PressRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/SupportModule.html" >SupportModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/SupportRoutingModule.html" >SupportRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/TimelineModule.html" >TimelineModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="modules/TimelineRoutingModule.html" >TimelineRoutingModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-components-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="components/AboutComponent.html" >AboutComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/AccountComponent.html" >AccountComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/AllComponent.html" >AllComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/AppComponent.html" >AppComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/AuthComponent.html" >AuthComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/BannerComponent.html" >BannerComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/BlogCardComponent.html" >BlogCardComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/BlogComponent.html" >BlogComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/BubblesComponent.html" >BubblesComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/ClubMembersComponent.html" >ClubMembersComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/ContentComponent.html" >ContentComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/DeepracerComponent.html" >DeepracerComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/EditorPostComponent.html" >EditorPostComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/EditorPostsComponent.html" >EditorPostsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/EmailSignupComponent.html" >EmailSignupComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/FileUploadComponent.html" >FileUploadComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/FooterComponent.html" >FooterComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/FounderLetterComponent.html" >FounderLetterComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/FunFactComponent.html" >FunFactComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/HomeComponent.html" >HomeComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/JetsonComponent.html" >JetsonComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/NavComponent.html" >NavComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/PostComponent.html" >PostComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/PressComponent.html" >PressComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/ProjectsComponent.html" >ProjectsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/RaceComponent.html" >RaceComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/SupportComponent.html" >SupportComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/TagViewerComponent.html" >TagViewerComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="components/TagsComponent.html" >TagsComponent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-code"></span>
+                            <span>Directives</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-directives-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-directives-links"
+                            >
+                                <li class="link">
+                                    <a href="directives/DropZoneDirective.html" >DropZoneDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="directives/FragmentTargetDirective.html" >FragmentTargetDirective</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-classes-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="classes/NativeWindowScroller.html" >NativeWindowScroller</a>
+                                </li>
+                                <li class="link">
+                                    <a href="classes/User.html" >User</a>
+                                </li>
+                                <li class="link">
+                                    <a href="classes/WindowScroller.html" >WindowScroller</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="./routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-long-arrow-down"></span>
+                            <span>Injectables</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-injectables-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-injectables-links"
+                            >
+                                <li class="link">
+                                    <a href="injectables/AdminGuard.html" >AdminGuard</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/AuthGuard.html" >AuthGuard</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/AuthService.html" >AuthService</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-interfaces-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="interfaces/Comment.html" >Comment</a>
+                                </li>
+                                <li class="link">
+                                    <a href="interfaces/ModuleOptions.html" >ModuleOptions</a>
+                                </li>
+                                <li class="link">
+                                    <a href="interfaces/Post.html" >Post</a>
+                                </li>
+                                <li class="link">
+                                    <a href="interfaces/WindowScrollerOptions.html" >WindowScrollerOptions</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-plus"></span>
+                            <span>Pipes</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-pipes-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-pipes-links"
+                            >
+                                <li class="link">
+                                    <a href="pipes/FileUploadPipe.html" >FileUploadPipe</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="./miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="./coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                        <img src=".//images/compodoc-vectorise.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
         </div>
 
         <div class="container-fluid main">
            <div class="row main">
                <div class="hidden-xs menu">
-                   <compodoc-menu mode="normal"></compodoc-menu>
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="./">arcc-website documentation</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="./"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a href="./" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a 
+                                                href="./overview.html" 
+                                               
+                                                href="./overview.html" 
+                                                class="active" >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="./modules.html" >
+                                   <span class="fa fa-archive"></span>
+                                   <span>Modules</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   ></span>
+                               </a>
+                               <ul class="links collapse in"
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="modules/AboutModule.html" >AboutModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/AboutRoutingModule.html" >AboutRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/AppModule.html" >AppModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/AuthModule.html" >AuthModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/AuthRoutingModule.html" >AuthRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/BlogEditorModule.html" >BlogEditorModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/BlogEditorRoutingModule.html" >BlogEditorRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/BlogModule.html" >BlogModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/CoreModule.html" >CoreModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/FragmentPolyfillModule.html" >FragmentPolyfillModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/HomeModule.html" >HomeModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/HomeRoutingModule.html" >HomeRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/PressModule.html" >PressModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/PressRoutingModule.html" >PressRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/SupportModule.html" >SupportModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/SupportRoutingModule.html" >SupportRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/TimelineModule.html" >TimelineModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="modules/TimelineRoutingModule.html" >TimelineRoutingModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#components-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="components/AboutComponent.html" >AboutComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/AccountComponent.html" >AccountComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/AllComponent.html" >AllComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/AuthComponent.html" >AuthComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/BannerComponent.html" >BannerComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/BlogCardComponent.html" >BlogCardComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/BlogComponent.html" >BlogComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/BubblesComponent.html" >BubblesComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/ClubMembersComponent.html" >ClubMembersComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/ContentComponent.html" >ContentComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/DeepracerComponent.html" >DeepracerComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/EditorPostComponent.html" >EditorPostComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/EditorPostsComponent.html" >EditorPostsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/EmailSignupComponent.html" >EmailSignupComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/FileUploadComponent.html" >FileUploadComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/FooterComponent.html" >FooterComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/FounderLetterComponent.html" >FounderLetterComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/FunFactComponent.html" >FunFactComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/HomeComponent.html" >HomeComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/JetsonComponent.html" >JetsonComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/NavComponent.html" >NavComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/PostComponent.html" >PostComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/PressComponent.html" >PressComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/ProjectsComponent.html" >ProjectsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/RaceComponent.html" >RaceComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/SupportComponent.html" >SupportComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/TagViewerComponent.html" >TagViewerComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="components/TagsComponent.html" >TagsComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-code"></span>
+                                   <span>Directives</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#directives-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="directives-links"
+                   >
+                                       <li class="link">
+                                           <a href="directives/DropZoneDirective.html" >DropZoneDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="directives/FragmentTargetDirective.html" >FragmentTargetDirective</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#classes-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="classes/NativeWindowScroller.html" >NativeWindowScroller</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="classes/User.html" >User</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="classes/WindowScroller.html" >WindowScroller</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="./routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-long-arrow-down"></span>
+                                   <span>Injectables</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#injectables-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="injectables-links"
+                   >
+                                       <li class="link">
+                                           <a href="injectables/AdminGuard.html" >AdminGuard</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="injectables/AuthGuard.html" >AuthGuard</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="injectables/AuthService.html" >AuthService</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#interfaces-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="interfaces/Comment.html" >Comment</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="interfaces/ModuleOptions.html" >ModuleOptions</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="interfaces/Post.html" >Post</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="interfaces/WindowScrollerOptions.html" >WindowScrollerOptions</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-plus"></span>
+                                   <span>Pipes</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#pipes-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="pipes-links"
+                   >
+                                       <li class="link">
+                                           <a href="pipes/FileUploadPipe.html" >FileUploadPipe</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="./miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="./coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                               <img src=".//images/compodoc-vectorise.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
                </div>
-               <!-- START CONTENT -->
                <div class="content overview">
                    <div class="content-data">
-
-
-<ol class="breadcrumb">
-    <li>Overview</li>
-</ol>
-  
-<div class="text-center module-graph-container">
-    <div id="module-graph-svg">
-        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
- "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Generated by graphviz version 2.40.1 (20161225.0304)
- -->
-<!-- Title: dependencies Pages: 1 -->
-<svg width="5615pt" height="436pt"
- viewBox="0.00 0.00 5615.00 436.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 432)">
-<title>dependencies</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-432 5611,-432 5611,4 -4,4"/>
-<text text-anchor="start" x="2782.5091" y="-42.4" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#000000">Legend</text>
-<polygon fill="#ffffb3" stroke="transparent" points="2569.5,-10 2569.5,-30 2589.5,-30 2589.5,-10 2569.5,-10"/>
-<text text-anchor="start" x="2593.129" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Declarations</text>
-<polygon fill="#8dd3c7" stroke="transparent" points="2682.5,-10 2682.5,-30 2702.5,-30 2702.5,-10 2682.5,-10"/>
-<text text-anchor="start" x="2706.2251" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Module</text>
-<polygon fill="#80b1d3" stroke="transparent" points="2768.5,-10 2768.5,-30 2788.5,-30 2788.5,-10 2768.5,-10"/>
-<text text-anchor="start" x="2792.2812" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Bootstrap</text>
-<polygon fill="#fdb462" stroke="transparent" points="2865.5,-10 2865.5,-30 2885.5,-30 2885.5,-10 2865.5,-10"/>
-<text text-anchor="start" x="2889.1732" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Providers</text>
-<polygon fill="#fb8072" stroke="transparent" points="2961.5,-10 2961.5,-30 2981.5,-30 2981.5,-10 2961.5,-10"/>
-<text text-anchor="start" x="2985.2258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
-<g id="clust1" class="cluster">
-<title>cluster_AboutModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="2658,-146 2658,-282 3074,-282 3074,-146 2658,-146"/>
-</g>
-<g id="clust2" class="cluster">
-<title>cluster_AboutModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="2666,-154 2666,-206 2798,-206 2798,-154 2666,-154"/>
-</g>
-<g id="clust4" class="cluster">
-<title>cluster_AboutModule_imports</title>
-<polygon fill="none" stroke="#000000" points="2806,-154 2806,-206 3066,-206 3066,-154 2806,-154"/>
-</g>
-<g id="clust14" class="cluster">
-<title>cluster_AppModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="392,-146 392,-420 856,-420 856,-146 392,-146"/>
-</g>
-<g id="clust15" class="cluster">
-<title>cluster_AppModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="726,-230 726,-282 848,-282 848,-230 726,-230"/>
-</g>
-<g id="clust17" class="cluster">
-<title>cluster_AppModule_imports</title>
-<polygon fill="none" stroke="#000000" points="400,-154 400,-282 718,-282 718,-154 400,-154"/>
-</g>
-<g id="clust19" class="cluster">
-<title>cluster_AppModule_bootstrap</title>
-<polygon fill="none" stroke="#000000" points="601,-360 601,-412 725,-412 725,-360 601,-360"/>
-</g>
-<g id="clust27" class="cluster">
-<title>cluster_AuthModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="3082,-146 3082,-282 3526,-282 3526,-146 3082,-146"/>
-</g>
-<g id="clust28" class="cluster">
-<title>cluster_AuthModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="3246,-154 3246,-206 3518,-206 3518,-154 3246,-154"/>
-</g>
-<g id="clust31" class="cluster">
-<title>cluster_AuthModule_imports</title>
-<polygon fill="none" stroke="#000000" points="3090,-154 3090,-206 3238,-206 3238,-154 3090,-154"/>
-</g>
-<g id="clust41" class="cluster">
-<title>cluster_BlogEditorModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="4947,-70 4947,-206 5599,-206 5599,-70 4947,-70"/>
-</g>
-<g id="clust42" class="cluster">
-<title>cluster_BlogEditorModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="5145,-78 5145,-130 5591,-130 5591,-78 5145,-78"/>
-</g>
-<g id="clust46" class="cluster">
-<title>cluster_BlogEditorModule_imports</title>
-<polygon fill="none" stroke="#000000" points="4955,-78 4955,-130 5137,-130 5137,-78 4955,-78"/>
-</g>
-<g id="clust56" class="cluster">
-<title>cluster_BlogModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="3534,-146 3534,-282 3945,-282 3945,-146 3534,-146"/>
-</g>
-<g id="clust57" class="cluster">
-<title>cluster_BlogModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="3698,-154 3698,-206 3937,-206 3937,-154 3698,-154"/>
-</g>
-<g id="clust60" class="cluster">
-<title>cluster_BlogModule_imports</title>
-<polygon fill="none" stroke="#000000" points="3542,-154 3542,-206 3690,-206 3690,-154 3542,-154"/>
-</g>
-<g id="clust70" class="cluster">
-<title>cluster_CoreModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="1757,-70 1757,-138 4175,-138 4175,-70 1757,-70"/>
-</g>
-<g id="clust71" class="cluster">
-<title>cluster_CoreModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="2851,-78 2851,-130 4167,-130 4167,-78 2851,-78"/>
-</g>
-<g id="clust82" class="cluster">
-<title>cluster_CoreModule_exports</title>
-<polygon fill="none" stroke="#000000" points="1765,-78 1765,-130 2843,-130 2843,-78 1765,-78"/>
-</g>
-<g id="clust85" class="cluster">
-<title>cluster_FragmentPolyfillModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="8,-222 8,-290 384,-290 384,-222 8,-222"/>
-</g>
-<g id="clust86" class="cluster">
-<title>cluster_FragmentPolyfillModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="202,-230 202,-282 376,-282 376,-230 202,-230"/>
-</g>
-<g id="clust89" class="cluster">
-<title>cluster_FragmentPolyfillModule_exports</title>
-<polygon fill="none" stroke="#000000" points="16,-230 16,-282 194,-282 194,-230 16,-230"/>
-</g>
-<g id="clust92" class="cluster">
-<title>cluster_HomeModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="864,-146 864,-214 2650,-214 2650,-146 864,-146"/>
-</g>
-<g id="clust93" class="cluster">
-<title>cluster_HomeModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="1178,-154 1178,-206 2642,-206 2642,-154 1178,-154"/>
-</g>
-<g id="clust104" class="cluster">
-<title>cluster_HomeModule_imports</title>
-<polygon fill="none" stroke="#000000" points="1016,-154 1016,-206 1170,-206 1170,-154 1016,-154"/>
-</g>
-<g id="clust105" class="cluster">
-<title>cluster_HomeModule_exports</title>
-<polygon fill="none" stroke="#000000" points="872,-154 872,-206 1008,-206 1008,-154 872,-154"/>
-</g>
-<g id="clust114" class="cluster">
-<title>cluster_PressModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="3953,-146 3953,-282 4253,-282 4253,-146 3953,-146"/>
-</g>
-<g id="clust115" class="cluster">
-<title>cluster_PressModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="4119,-154 4119,-206 4245,-206 4245,-154 4119,-154"/>
-</g>
-<g id="clust117" class="cluster">
-<title>cluster_PressModule_imports</title>
-<polygon fill="none" stroke="#000000" points="3961,-154 3961,-206 4111,-206 4111,-154 3961,-154"/>
-</g>
-<g id="clust127" class="cluster">
-<title>cluster_SupportModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="4261,-146 4261,-282 4593,-282 4593,-146 4261,-146"/>
-</g>
-<g id="clust128" class="cluster">
-<title>cluster_SupportModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="4443,-154 4443,-206 4585,-206 4585,-154 4443,-154"/>
-</g>
-<g id="clust130" class="cluster">
-<title>cluster_SupportModule_imports</title>
-<polygon fill="none" stroke="#000000" points="4269,-154 4269,-206 4435,-206 4435,-154 4269,-154"/>
-</g>
-<g id="clust140" class="cluster">
-<title>cluster_TimelineModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="4601,-146 4601,-282 4939,-282 4939,-146 4601,-146"/>
-</g>
-<g id="clust141" class="cluster">
-<title>cluster_TimelineModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="4789,-154 4789,-206 4931,-206 4931,-154 4789,-154"/>
-</g>
-<g id="clust143" class="cluster">
-<title>cluster_TimelineModule_imports</title>
-<polygon fill="none" stroke="#000000" points="4609,-154 4609,-206 4781,-206 4781,-154 4609,-154"/>
-</g>
-<!-- AboutComponent -->
-<g id="node1" class="node">
-<title>AboutComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="2790.3301,-198 2673.6699,-198 2673.6699,-162 2790.3301,-162 2790.3301,-198"/>
-<text text-anchor="middle" x="2732" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">AboutComponent</text>
-</g>
-<!-- AboutModule -->
-<g id="node2" class="node">
-<title>AboutModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="2931.0481,-274 2928.0481,-278 2907.0481,-278 2904.0481,-274 2836.9519,-274 2836.9519,-238 2931.0481,-238 2931.0481,-274"/>
-<text text-anchor="middle" x="2884" y="-251.8" font-family="Times,serif" font-size="14.00" fill="#000000">AboutModule</text>
-</g>
-<!-- AboutComponent&#45;&gt;AboutModule -->
-<g id="edge1" class="edge">
-<title>AboutComponent&#45;&gt;AboutModule</title>
-<path fill="none" stroke="#000000" d="M2732,-198.0109C2732,-220.4852 2732,-256 2732,-256 2732,-256 2826.7395,-256 2826.7395,-256"/>
-<polygon fill="#000000" stroke="#000000" points="2826.7395,-259.5001 2836.7395,-256 2826.7394,-252.5001 2826.7395,-259.5001"/>
-</g>
-<!-- AboutRoutingModule -->
-<g id="node3" class="node">
-<title>AboutRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="2953.6652,-198 2950.6652,-202 2929.6652,-202 2926.6652,-198 2814.3348,-198 2814.3348,-162 2953.6652,-162 2953.6652,-198"/>
-<text text-anchor="middle" x="2884" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">AboutRoutingModule</text>
-</g>
-<!-- AboutRoutingModule&#45;&gt;AboutModule -->
-<g id="edge2" class="edge">
-<title>AboutRoutingModule&#45;&gt;AboutModule</title>
-<path fill="none" stroke="#000000" d="M2884,-198.0109C2884,-198.0109 2884,-227.855 2884,-227.855"/>
-<polygon fill="#000000" stroke="#000000" points="2880.5001,-227.8549 2884,-237.855 2887.5001,-227.855 2880.5001,-227.8549"/>
-</g>
-<!-- CoreModule -->
-<g id="node4" class="node">
-<title>CoreModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="3058.2619,-198 3055.2619,-202 3034.2619,-202 3031.2619,-198 2971.7381,-198 2971.7381,-162 3058.2619,-162 3058.2619,-198"/>
-<text text-anchor="middle" x="3015" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">CoreModule</text>
-</g>
-<!-- CoreModule&#45;&gt;AboutModule -->
-<g id="edge3" class="edge">
-<title>CoreModule&#45;&gt;AboutModule</title>
-<path fill="none" stroke="#000000" d="M2990.8996,-198.1985C2990.8996,-222.3563 2990.8996,-262 2990.8996,-262 2990.8996,-262 2941.1989,-262 2941.1989,-262"/>
-<polygon fill="#000000" stroke="#000000" points="2941.1989,-258.5001 2931.1989,-262 2941.1988,-265.5001 2941.1989,-258.5001"/>
-</g>
-<!-- AppModule -->
-<g id="node6" class="node">
-<title>AppModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="704.6571,-339 701.6571,-343 680.6571,-343 677.6571,-339 621.3429,-339 621.3429,-303 704.6571,-303 704.6571,-339"/>
-<text text-anchor="middle" x="663" y="-316.8" font-family="Times,serif" font-size="14.00" fill="#000000">AppModule</text>
-</g>
-<!-- CoreModule&#45;&gt;AppModule -->
-<g id="edge6" class="edge">
-<title>CoreModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="#000000" d="M3000.5397,-198.0251C3000.5397,-237.2783 3000.5397,-327 3000.5397,-327 3000.5397,-327 714.8142,-327 714.8142,-327"/>
-<polygon fill="#000000" stroke="#000000" points="714.8143,-323.5001 704.8142,-327 714.8142,-330.5001 714.8143,-323.5001"/>
-</g>
-<!-- HomeModule -->
-<g id="node9" class="node">
-<title>HomeModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="709.7619,-274 706.7619,-278 685.7619,-278 682.7619,-274 616.2381,-274 616.2381,-238 709.7619,-238 709.7619,-274"/>
-<text text-anchor="middle" x="663" y="-251.8" font-family="Times,serif" font-size="14.00" fill="#000000">HomeModule</text>
-</g>
-<!-- CoreModule&#45;&gt;HomeModule -->
-<g id="edge50" class="edge">
-<title>CoreModule&#45;&gt;HomeModule</title>
-<path fill="none" stroke="#000000" d="M2981.2594,-198.027C2981.2594,-214.3976 2981.2594,-236 2981.2594,-236 2981.2594,-236 702.6684,-236 702.6684,-236 702.6684,-236 702.6684,-236.1846 702.6684,-236.1846"/>
-<polygon fill="#000000" stroke="#000000" points="699.169,-227.8455 702.6684,-237.8457 706.169,-227.8459 699.169,-227.8455"/>
-</g>
-<!-- AuthModule -->
-<g id="node13" class="node">
-<title>AuthModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="3279.5482,-274 3276.5482,-278 3255.5482,-278 3252.5482,-274 3192.4518,-274 3192.4518,-238 3279.5482,-238 3279.5482,-274"/>
-<text text-anchor="middle" x="3236" y="-251.8" font-family="Times,serif" font-size="14.00" fill="#000000">AuthModule</text>
-</g>
-<!-- CoreModule&#45;&gt;AuthModule -->
-<g id="edge13" class="edge">
-<title>CoreModule&#45;&gt;AuthModule</title>
-<path fill="none" stroke="#000000" d="M3048.7406,-198.0267C3048.7406,-218.7672 3048.7406,-250 3048.7406,-250 3048.7406,-250 3182.096,-250 3182.096,-250"/>
-<polygon fill="#000000" stroke="#000000" points="3182.096,-253.5001 3192.096,-250 3182.096,-246.5001 3182.096,-253.5001"/>
-</g>
-<!-- BlogModule -->
-<g id="node22" class="node">
-<title>BlogModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="3730.2773,-274 3727.2773,-278 3706.2773,-278 3703.2773,-274 3643.7227,-274 3643.7227,-238 3730.2773,-238 3730.2773,-274"/>
-<text text-anchor="middle" x="3687" y="-251.8" font-family="Times,serif" font-size="14.00" fill="#000000">BlogModule</text>
-</g>
-<!-- CoreModule&#45;&gt;BlogModule -->
-<g id="edge21" class="edge">
-<title>CoreModule&#45;&gt;BlogModule</title>
-<path fill="none" stroke="#000000" d="M3010.1799,-198.207C3010.1799,-203.5549 3010.1799,-208 3010.1799,-208 3010.1799,-208 3656.3901,-208 3656.3901,-208 3656.3901,-208 3656.3901,-227.8533 3656.3901,-227.8533"/>
-<polygon fill="#000000" stroke="#000000" points="3652.8902,-227.8532 3656.3901,-237.8533 3659.8902,-227.8533 3652.8902,-227.8532"/>
-</g>
-<!-- BlogCardComponent  -->
-<g id="node33" class="node">
-<title>BlogCardComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="2060.7717,-122 1921.2283,-122 1921.2283,-86 2060.7717,-86 2060.7717,-122"/>
-<text text-anchor="middle" x="1991" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">BlogCardComponent </text>
-</g>
-<!-- CoreModule&#45;&gt;BlogCardComponent  -->
-<g id="edge31" class="edge">
-<title>CoreModule&#45;&gt;BlogCardComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M2978.6286,-161.9445C2978.6286,-150.561 2978.6286,-138 2978.6286,-138 2978.6286,-138 2055.1096,-138 2055.1096,-138 2055.1096,-138 2055.1096,-132.1944 2055.1096,-132.1944"/>
-<polygon fill="#000000" stroke="#000000" points="2058.6096,-132.1944 2055.1096,-122.1944 2051.6096,-132.1945 2058.6096,-132.1944"/>
-</g>
-<!-- BubblesComponent  -->
-<g id="node34" class="node">
-<title>BubblesComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="1903.2191,-122 1772.7809,-122 1772.7809,-86 1903.2191,-86 1903.2191,-122"/>
-<text text-anchor="middle" x="1838" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">BubblesComponent </text>
-</g>
-<!-- CoreModule&#45;&gt;BubblesComponent  -->
-<g id="edge32" class="edge">
-<title>CoreModule&#45;&gt;BubblesComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M2975.1239,-161.8701C2975.1239,-151.6855 2975.1239,-141 2975.1239,-141 2975.1239,-141 1886.8263,-141 1886.8263,-141 1886.8263,-141 1886.8263,-132.0664 1886.8263,-132.0664"/>
-<polygon fill="#000000" stroke="#000000" points="1890.3263,-132.0664 1886.8263,-122.0664 1883.3263,-132.0665 1890.3263,-132.0664"/>
-</g>
-<!-- EmailSignupComponent  -->
-<g id="node35" class="node">
-<title>EmailSignupComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="2834.9446,-122 2677.0554,-122 2677.0554,-86 2834.9446,-86 2834.9446,-122"/>
-<text text-anchor="middle" x="2756" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">EmailSignupComponent </text>
-</g>
-<!-- CoreModule&#45;&gt;EmailSignupComponent  -->
-<g id="edge33" class="edge">
-<title>CoreModule&#45;&gt;EmailSignupComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M2996.1519,-161.9909C2996.1519,-145.9506 2996.1519,-125 2996.1519,-125 2996.1519,-125 2824.57,-125 2824.57,-125 2824.57,-125 2824.57,-124.708 2824.57,-124.708"/>
-<polygon fill="#000000" stroke="#000000" points="2828.0703,-132.0799 2824.57,-122.08 2821.0703,-132.0802 2828.0703,-132.0799"/>
-</g>
-<!-- FileUploadComponent  -->
-<g id="node36" class="node">
-<title>FileUploadComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="2658.8227,-122 2511.1773,-122 2511.1773,-86 2658.8227,-86 2658.8227,-122"/>
-<text text-anchor="middle" x="2585" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">FileUploadComponent </text>
-</g>
-<!-- CoreModule&#45;&gt;FileUploadComponent  -->
-<g id="edge34" class="edge">
-<title>CoreModule&#45;&gt;FileUploadComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M2992.6473,-161.8129C2992.6473,-146.8176 2992.6473,-128 2992.6473,-128 2992.6473,-128 2646.3953,-128 2646.3953,-128 2646.3953,-128 2646.3953,-127.419 2646.3953,-127.419"/>
-<polygon fill="#000000" stroke="#000000" points="2649.8955,-132.1902 2646.3953,-122.1903 2642.8955,-132.1903 2649.8955,-132.1902"/>
-</g>
-<!-- FooterComponent  -->
-<g id="node37" class="node">
-<title>FooterComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="2492.8814,-122 2371.1186,-122 2371.1186,-86 2492.8814,-86 2492.8814,-122"/>
-<text text-anchor="middle" x="2432" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">FooterComponent </text>
-</g>
-<!-- CoreModule&#45;&gt;FooterComponent  -->
-<g id="edge35" class="edge">
-<title>CoreModule&#45;&gt;FooterComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M2989.1426,-161.9489C2989.1426,-147.627 2989.1426,-130 2989.1426,-130 2989.1426,-130 2439.2053,-130 2439.2053,-130 2439.2053,-130 2439.2053,-129.2058 2439.2053,-129.2058"/>
-<polygon fill="#000000" stroke="#000000" points="2442.7054,-132.0578 2439.2053,-122.0579 2435.7054,-132.0579 2442.7054,-132.0578"/>
-</g>
-<!-- NavComponent  -->
-<g id="node38" class="node">
-<title>NavComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="2353.1537,-122 2244.8463,-122 2244.8463,-86 2353.1537,-86 2353.1537,-122"/>
-<text text-anchor="middle" x="2299" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">NavComponent </text>
-</g>
-<!-- CoreModule&#45;&gt;NavComponent  -->
-<g id="edge36" class="edge">
-<title>CoreModule&#45;&gt;NavComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M2985.6379,-161.963C2985.6379,-148.7087 2985.6379,-133 2985.6379,-133 2985.6379,-133 2299,-133 2299,-133 2299,-133 2299,-131.9201 2299,-131.9201"/>
-<polygon fill="#000000" stroke="#000000" points="2302.5001,-132.2014 2299,-122.2015 2295.5001,-132.2015 2302.5001,-132.2014"/>
-</g>
-<!-- TagViewerComponent  -->
-<g id="node39" class="node">
-<title>TagViewerComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="2226.7933,-122 2079.2067,-122 2079.2067,-86 2226.7933,-86 2226.7933,-122"/>
-<text text-anchor="middle" x="2153" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">TagViewerComponent </text>
-</g>
-<!-- CoreModule&#45;&gt;TagViewerComponent  -->
-<g id="edge37" class="edge">
-<title>CoreModule&#45;&gt;TagViewerComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M2982.1332,-161.8495C2982.1332,-149.7292 2982.1332,-136 2982.1332,-136 2982.1332,-136 2216.591,-136 2216.591,-136 2216.591,-136 2216.591,-132.2434 2216.591,-132.2434"/>
-<polygon fill="#000000" stroke="#000000" points="2220.0911,-132.2434 2216.591,-122.2434 2213.0911,-132.2434 2220.0911,-132.2434"/>
-</g>
-<!-- PressModule -->
-<g id="node55" class="node">
-<title>PressModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="4080.5969,-274 4077.5969,-278 4056.5969,-278 4053.5969,-274 3991.4031,-274 3991.4031,-238 4080.5969,-238 4080.5969,-274"/>
-<text text-anchor="middle" x="4036" y="-251.8" font-family="Times,serif" font-size="14.00" fill="#000000">PressModule</text>
-</g>
-<!-- CoreModule&#45;&gt;PressModule -->
-<g id="edge55" class="edge">
-<title>CoreModule&#45;&gt;PressModule</title>
-<path fill="none" stroke="#000000" d="M3019.8201,-198.0579C3019.8201,-202.4945 3019.8201,-206 3019.8201,-206 3019.8201,-206 4021.1505,-206 4021.1505,-206 4021.1505,-206 4021.1505,-227.9489 4021.1505,-227.9489"/>
-<polygon fill="#000000" stroke="#000000" points="4017.6506,-227.9488 4021.1505,-237.9489 4024.6506,-227.9489 4017.6506,-227.9488"/>
-</g>
-<!-- SupportModule -->
-<g id="node58" class="node">
-<title>SupportModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="4403.8837,-274 4400.8837,-278 4379.8837,-278 4376.8837,-274 4300.1163,-274 4300.1163,-238 4403.8837,-238 4403.8837,-274"/>
-<text text-anchor="middle" x="4352" y="-251.8" font-family="Times,serif" font-size="14.00" fill="#000000">SupportModule</text>
-</g>
-<!-- CoreModule&#45;&gt;SupportModule -->
-<g id="edge58" class="edge">
-<title>CoreModule&#45;&gt;SupportModule</title>
-<path fill="none" stroke="#000000" d="M3029.4603,-198.1223C3029.4603,-200.9729 3029.4603,-203 3029.4603,-203 3029.4603,-203 4334.6861,-203 4334.6861,-203 4334.6861,-203 4334.6861,-227.7604 4334.6861,-227.7604"/>
-<polygon fill="#000000" stroke="#000000" points="4331.1862,-227.7604 4334.6861,-237.7604 4338.1862,-227.7604 4331.1862,-227.7604"/>
-</g>
-<!-- TimelineModule -->
-<g id="node61" class="node">
-<title>TimelineModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="4750.094,-274 4747.094,-278 4726.094,-278 4723.094,-274 4639.906,-274 4639.906,-238 4750.094,-238 4750.094,-274"/>
-<text text-anchor="middle" x="4695" y="-251.8" font-family="Times,serif" font-size="14.00" fill="#000000">TimelineModule</text>
-</g>
-<!-- CoreModule&#45;&gt;TimelineModule -->
-<g id="edge61" class="edge">
-<title>CoreModule&#45;&gt;TimelineModule</title>
-<path fill="none" stroke="#000000" d="M3039.1004,-198.08C3039.1004,-199.8464 3039.1004,-201 3039.1004,-201 3039.1004,-201 4676.651,-201 4676.651,-201 4676.651,-201 4676.651,-227.9909 4676.651,-227.9909"/>
-<polygon fill="#000000" stroke="#000000" points="4673.1511,-227.9909 4676.651,-237.9909 4680.1511,-227.991 4673.1511,-227.9909"/>
-</g>
-<!-- AppComponent -->
-<g id="node5" class="node">
-<title>AppComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="839.9399,-274 734.0601,-274 734.0601,-238 839.9399,-238 839.9399,-274"/>
-<text text-anchor="middle" x="787" y="-251.8" font-family="Times,serif" font-size="14.00" fill="#000000">AppComponent</text>
-</g>
-<!-- AppComponent&#45;&gt;AppModule -->
-<g id="edge4" class="edge">
-<title>AppComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="#000000" d="M787,-274.0225C787,-291.3734 787,-315 787,-315 787,-315 714.9807,-315 714.9807,-315"/>
-<polygon fill="#000000" stroke="#000000" points="714.9808,-311.5001 704.9807,-315 714.9807,-318.5001 714.9808,-311.5001"/>
-</g>
-<!-- AppComponent  -->
-<g id="node10" class="node">
-<title>AppComponent </title>
-<polygon fill="#80b1d3" stroke="#000000" points="717.439,-404 608.561,-404 608.561,-368 717.439,-368 717.439,-404"/>
-<text text-anchor="middle" x="663" y="-381.8" font-family="Times,serif" font-size="14.00" fill="#000000">AppComponent </text>
-</g>
-<!-- AppModule&#45;&gt;AppComponent  -->
-<g id="edge9" class="edge">
-<title>AppModule&#45;&gt;AppComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M663,-339.1061C663,-339.1061 663,-357.991 663,-357.991"/>
-<polygon fill="#000000" stroke="#000000" points="659.5001,-357.9909 663,-367.991 666.5001,-357.991 659.5001,-357.9909"/>
-</g>
-<!-- AppRoutingModule -->
-<g id="node7" class="node">
-<title>AppRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="710.2744,-198 707.2744,-202 686.2744,-202 683.2744,-198 581.7256,-198 581.7256,-162 710.2744,-162 710.2744,-198"/>
-<text text-anchor="middle" x="646" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">AppRoutingModule</text>
-</g>
-<!-- AppRoutingModule&#45;&gt;AppModule -->
-<g id="edge5" class="edge">
-<title>AppRoutingModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="#000000" d="M612.3249,-198.2067C612.3249,-235.0559 612.3249,-315 612.3249,-315 612.3249,-315 613.2075,-315 613.2075,-315"/>
-<polygon fill="#000000" stroke="#000000" points="611.1518,-318.5001 621.1518,-315 611.1517,-311.5001 611.1518,-318.5001"/>
-</g>
-<!-- FragmentPolyfillModule -->
-<g id="node8" class="node">
-<title>FragmentPolyfillModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="563.7091,-198 560.7091,-202 539.7091,-202 536.7091,-198 408.2909,-198 408.2909,-162 563.7091,-162 563.7091,-198"/>
-<text text-anchor="middle" x="486" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">FragmentPolyfillModule</text>
-</g>
-<!-- FragmentPolyfillModule&#45;&gt;AppModule -->
-<g id="edge7" class="edge">
-<title>FragmentPolyfillModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="#000000" d="M486,-198.0251C486,-237.2783 486,-327 486,-327 486,-327 611.0535,-327 611.0535,-327"/>
-<polygon fill="#000000" stroke="#000000" points="611.0535,-330.5001 621.0535,-327 611.0534,-323.5001 611.0535,-330.5001"/>
-</g>
-<!-- FragmentPolyfillModule&#45;&gt;HomeModule -->
-<g id="edge51" class="edge">
-<title>FragmentPolyfillModule&#45;&gt;HomeModule</title>
-<path fill="none" stroke="#000000" d="M524.8023,-198.1985C524.8023,-222.3563 524.8023,-262 524.8023,-262 524.8023,-262 606.2125,-262 606.2125,-262"/>
-<polygon fill="#000000" stroke="#000000" points="606.2126,-265.5001 616.2125,-262 606.2125,-258.5001 606.2126,-265.5001"/>
-</g>
-<!-- FragmentTargetDirective  -->
-<g id="node41" class="node">
-<title>FragmentTargetDirective </title>
-<polygon fill="#fb8072" stroke="#000000" points="185.7696,-274 24.2304,-274 24.2304,-238 185.7696,-238 185.7696,-274"/>
-<text text-anchor="middle" x="105" y="-251.8" font-family="Times,serif" font-size="14.00" fill="#000000">FragmentTargetDirective </text>
-</g>
-<!-- FragmentPolyfillModule&#45;&gt;FragmentTargetDirective  -->
-<g id="edge39" class="edge">
-<title>FragmentPolyfillModule&#45;&gt;FragmentTargetDirective </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M407.9796,-180C296.513,-180 105,-180 105,-180 105,-180 105,-227.9891 105,-227.9891"/>
-<polygon fill="#000000" stroke="#000000" points="101.5001,-227.989 105,-237.9891 108.5001,-227.9891 101.5001,-227.989"/>
-</g>
-<!-- HomeModule&#45;&gt;AppModule -->
-<g id="edge8" class="edge">
-<title>HomeModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="#000000" d="M663,-274.1061C663,-274.1061 663,-292.991 663,-292.991"/>
-<polygon fill="#000000" stroke="#000000" points="659.5001,-292.9909 663,-302.991 666.5001,-292.991 659.5001,-292.9909"/>
-</g>
-<!-- HomeComponent  -->
-<g id="node53" class="node">
-<title>HomeComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="999.5442,-198 880.4558,-198 880.4558,-162 999.5442,-162 999.5442,-198"/>
-<text text-anchor="middle" x="940" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">HomeComponent </text>
-</g>
-<!-- HomeModule&#45;&gt;HomeComponent  -->
-<g id="edge53" class="edge">
-<title>HomeModule&#45;&gt;HomeComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M709.932,-256C712.4238,-256 713.9283,-256 713.9283,-256 713.9283,-256 713.9283,-180 713.9283,-180 713.9283,-180 870.3066,-180 870.3066,-180"/>
-<polygon fill="#000000" stroke="#000000" points="870.3066,-183.5001 880.3066,-180 870.3066,-176.5001 870.3066,-183.5001"/>
-</g>
-<!-- AccountComponent -->
-<g id="node11" class="node">
-<title>AccountComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="3510.259,-198 3381.741,-198 3381.741,-162 3510.259,-162 3510.259,-198"/>
-<text text-anchor="middle" x="3446" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">AccountComponent</text>
-</g>
-<!-- AccountComponent&#45;&gt;AuthModule -->
-<g id="edge10" class="edge">
-<title>AccountComponent&#45;&gt;AuthModule</title>
-<path fill="none" stroke="#000000" d="M3446,-198.0109C3446,-220.4852 3446,-256 3446,-256 3446,-256 3289.7673,-256 3289.7673,-256"/>
-<polygon fill="#000000" stroke="#000000" points="3289.7673,-252.5001 3279.7673,-256 3289.7672,-259.5001 3289.7673,-252.5001"/>
-</g>
-<!-- AuthComponent -->
-<g id="node12" class="node">
-<title>AuthComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="3363.8301,-198 3254.1699,-198 3254.1699,-162 3363.8301,-162 3363.8301,-198"/>
-<text text-anchor="middle" x="3309" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">AuthComponent</text>
-</g>
-<!-- AuthComponent&#45;&gt;AuthModule -->
-<g id="edge11" class="edge">
-<title>AuthComponent&#45;&gt;AuthModule</title>
-<path fill="none" stroke="#000000" d="M3267.0544,-198.0109C3267.0544,-198.0109 3267.0544,-227.855 3267.0544,-227.855"/>
-<polygon fill="#000000" stroke="#000000" points="3263.5544,-227.8549 3267.0544,-237.855 3270.5544,-227.855 3263.5544,-227.8549"/>
-</g>
-<!-- AuthRoutingModule -->
-<g id="node14" class="node">
-<title>AuthRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="3230.1652,-198 3227.1652,-202 3206.1652,-202 3203.1652,-198 3097.8348,-198 3097.8348,-162 3230.1652,-162 3230.1652,-198"/>
-<text text-anchor="middle" x="3164" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">AuthRoutingModule</text>
-</g>
-<!-- AuthRoutingModule&#45;&gt;AuthModule -->
-<g id="edge12" class="edge">
-<title>AuthRoutingModule&#45;&gt;AuthModule</title>
-<path fill="none" stroke="#000000" d="M3211.2795,-198.0109C3211.2795,-198.0109 3211.2795,-227.855 3211.2795,-227.855"/>
-<polygon fill="#000000" stroke="#000000" points="3207.7795,-227.8549 3211.2795,-237.855 3214.7795,-227.855 3207.7795,-227.8549"/>
-</g>
-<!-- EditorPostComponent -->
-<g id="node15" class="node">
-<title>EditorPostComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="5457.4453,-122 5316.5547,-122 5316.5547,-86 5457.4453,-86 5457.4453,-122"/>
-<text text-anchor="middle" x="5387" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">EditorPostComponent</text>
-</g>
-<!-- BlogEditorModule -->
-<g id="node18" class="node">
-<title>BlogEditorModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="5366.7716,-198 5363.7716,-202 5342.7716,-202 5339.7716,-198 5245.2284,-198 5245.2284,-162 5366.7716,-162 5366.7716,-198"/>
-<text text-anchor="middle" x="5306" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">BlogEditorModule</text>
-</g>
-<!-- EditorPostComponent&#45;&gt;BlogEditorModule -->
-<g id="edge14" class="edge">
-<title>EditorPostComponent&#45;&gt;BlogEditorModule</title>
-<path fill="none" stroke="#000000" d="M5341.8317,-122.0109C5341.8317,-122.0109 5341.8317,-151.855 5341.8317,-151.855"/>
-<polygon fill="#000000" stroke="#000000" points="5338.3318,-151.8549 5341.8317,-161.855 5345.3318,-151.855 5338.3318,-151.8549"/>
-</g>
-<!-- EditorPostsComponent -->
-<g id="node16" class="node">
-<title>EditorPostsComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="5298.8892,-122 5153.1108,-122 5153.1108,-86 5298.8892,-86 5298.8892,-122"/>
-<text text-anchor="middle" x="5226" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">EditorPostsComponent</text>
-</g>
-<!-- EditorPostsComponent&#45;&gt;BlogEditorModule -->
-<g id="edge15" class="edge">
-<title>EditorPostsComponent&#45;&gt;BlogEditorModule</title>
-<path fill="none" stroke="#000000" d="M5272.0295,-122.0109C5272.0295,-122.0109 5272.0295,-151.855 5272.0295,-151.855"/>
-<polygon fill="#000000" stroke="#000000" points="5268.5295,-151.8549 5272.0295,-161.855 5275.5295,-151.855 5268.5295,-151.8549"/>
-</g>
-<!-- TagsComponent -->
-<g id="node17" class="node">
-<title>TagsComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="5583.0452,-122 5474.9548,-122 5474.9548,-86 5583.0452,-86 5583.0452,-122"/>
-<text text-anchor="middle" x="5529" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">TagsComponent</text>
-</g>
-<!-- TagsComponent&#45;&gt;BlogEditorModule -->
-<g id="edge16" class="edge">
-<title>TagsComponent&#45;&gt;BlogEditorModule</title>
-<path fill="none" stroke="#000000" d="M5529,-122.0109C5529,-144.4852 5529,-180 5529,-180 5529,-180 5376.9357,-180 5376.9357,-180"/>
-<polygon fill="#000000" stroke="#000000" points="5376.9358,-176.5001 5366.9357,-180 5376.9357,-183.5001 5376.9358,-176.5001"/>
-</g>
-<!-- BlogEditorRoutingModule -->
-<g id="node19" class="node">
-<title>BlogEditorRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="5129.3892,-122 5126.3892,-126 5105.3892,-126 5102.3892,-122 4962.6108,-122 4962.6108,-86 5129.3892,-86 5129.3892,-122"/>
-<text text-anchor="middle" x="5046" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">BlogEditorRoutingModule</text>
-</g>
-<!-- BlogEditorRoutingModule&#45;&gt;BlogEditorModule -->
-<g id="edge17" class="edge">
-<title>BlogEditorRoutingModule&#45;&gt;BlogEditorModule</title>
-<path fill="none" stroke="#000000" d="M5046,-122.0109C5046,-144.4852 5046,-180 5046,-180 5046,-180 5235.0416,-180 5235.0416,-180"/>
-<polygon fill="#000000" stroke="#000000" points="5235.0416,-183.5001 5245.0416,-180 5235.0415,-176.5001 5235.0416,-183.5001"/>
-</g>
-<!-- AllComponent -->
-<g id="node20" class="node">
-<title>AllComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="3928.7204,-198 3829.2796,-198 3829.2796,-162 3928.7204,-162 3928.7204,-198"/>
-<text text-anchor="middle" x="3879" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">AllComponent</text>
-</g>
-<!-- AllComponent&#45;&gt;BlogModule -->
-<g id="edge18" class="edge">
-<title>AllComponent&#45;&gt;BlogModule</title>
-<path fill="none" stroke="#000000" d="M3879,-198.0109C3879,-220.4852 3879,-256 3879,-256 3879,-256 3740.5678,-256 3740.5678,-256"/>
-<polygon fill="#000000" stroke="#000000" points="3740.5678,-252.5001 3730.5678,-256 3740.5677,-259.5001 3740.5678,-252.5001"/>
-</g>
-<!-- PostComponent -->
-<g id="node21" class="node">
-<title>PostComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="3811.9512,-198 3706.0488,-198 3706.0488,-162 3811.9512,-162 3811.9512,-198"/>
-<text text-anchor="middle" x="3759" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">PostComponent</text>
-</g>
-<!-- PostComponent&#45;&gt;BlogModule -->
-<g id="edge19" class="edge">
-<title>PostComponent&#45;&gt;BlogModule</title>
-<path fill="none" stroke="#000000" d="M3718.3317,-198.0109C3718.3317,-198.0109 3718.3317,-227.855 3718.3317,-227.855"/>
-<polygon fill="#000000" stroke="#000000" points="3714.8318,-227.8549 3718.3317,-237.855 3721.8318,-227.855 3714.8318,-227.8549"/>
-</g>
-<!-- BlogRoutingModule -->
-<g id="node23" class="node">
-<title>BlogRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="3681.8948,-198 3678.8948,-202 3657.8948,-202 3654.8948,-198 3550.1052,-198 3550.1052,-162 3681.8948,-162 3681.8948,-198"/>
-<text text-anchor="middle" x="3616" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">BlogRoutingModule</text>
-</g>
-<!-- BlogRoutingModule&#45;&gt;BlogModule -->
-<g id="edge20" class="edge">
-<title>BlogRoutingModule&#45;&gt;BlogModule</title>
-<path fill="none" stroke="#000000" d="M3669.1688,-198.0109C3669.1688,-198.0109 3669.1688,-227.855 3669.1688,-227.855"/>
-<polygon fill="#000000" stroke="#000000" points="3665.6689,-227.8549 3669.1688,-237.855 3672.6689,-227.855 3665.6689,-227.8549"/>
-</g>
-<!-- BlogCardComponent -->
-<g id="node24" class="node">
-<title>BlogCardComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="3616.7716,-122 3481.2284,-122 3481.2284,-86 3616.7716,-86 3616.7716,-122"/>
-<text text-anchor="middle" x="3549" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">BlogCardComponent</text>
-</g>
-<!-- BlogCardComponent&#45;&gt;CoreModule -->
-<g id="edge22" class="edge">
-<title>BlogCardComponent&#45;&gt;CoreModule</title>
-<path fill="none" stroke="#000000" d="M3495.7469,-122.0439C3495.7469,-134.5633 3495.7469,-149 3495.7469,-149 3495.7469,-149 3037.4902,-149 3037.4902,-149 3037.4902,-149 3037.4902,-151.9672 3037.4902,-151.9672"/>
-<polygon fill="#000000" stroke="#000000" points="3033.9903,-151.9671 3037.4902,-161.9672 3040.9903,-151.9672 3033.9903,-151.9671"/>
-</g>
-<!-- BubblesComponent -->
-<g id="node25" class="node">
-<title>BubblesComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="3463.719,-122 3336.281,-122 3336.281,-86 3463.719,-86 3463.719,-122"/>
-<text text-anchor="middle" x="3400" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">BubblesComponent</text>
-</g>
-<!-- BubblesComponent&#45;&gt;CoreModule -->
-<g id="edge23" class="edge">
-<title>BubblesComponent&#45;&gt;CoreModule</title>
-<path fill="none" stroke="#000000" d="M3350.0277,-122.0555C3350.0277,-133.439 3350.0277,-146 3350.0277,-146 3350.0277,-146 3033.3121,-146 3033.3121,-146 3033.3121,-146 3033.3121,-151.8056 3033.3121,-151.8056"/>
-<polygon fill="#000000" stroke="#000000" points="3029.8122,-151.8055 3033.3121,-161.8056 3036.8122,-151.8056 3029.8122,-151.8055"/>
-</g>
-<!-- DropZoneDirective -->
-<g id="node26" class="node">
-<title>DropZoneDirective</title>
-<polygon fill="#ffffb3" stroke="#000000" points="3318.6178,-122 3193.3822,-122 3193.3822,-86 3318.6178,-86 3318.6178,-122"/>
-<text text-anchor="middle" x="3256" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">DropZoneDirective</text>
-</g>
-<!-- DropZoneDirective&#45;&gt;CoreModule -->
-<g id="edge24" class="edge">
-<title>DropZoneDirective&#45;&gt;CoreModule</title>
-<path fill="none" stroke="#000000" d="M3211.7619,-122.1274C3211.7619,-132.7109 3211.7619,-144 3211.7619,-144 3211.7619,-144 3029.1339,-144 3029.1339,-144 3029.1339,-144 3029.1339,-151.5782 3029.1339,-151.5782"/>
-<polygon fill="#000000" stroke="#000000" points="3025.634,-151.5781 3029.1339,-161.5782 3032.634,-151.5782 3025.634,-151.5781"/>
-</g>
-<!-- EmailSignupComponent -->
-<g id="node27" class="node">
-<title>EmailSignupComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="3175.4452,-122 3020.5548,-122 3020.5548,-86 3175.4452,-86 3175.4452,-122"/>
-<text text-anchor="middle" x="3098" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">EmailSignupComponent</text>
-</g>
-<!-- EmailSignupComponent&#45;&gt;CoreModule -->
-<g id="edge25" class="edge">
-<title>EmailSignupComponent&#45;&gt;CoreModule</title>
-<path fill="none" stroke="#000000" d="M3024.9558,-122.0109C3024.9558,-122.0109 3024.9558,-151.855 3024.9558,-151.855"/>
-<polygon fill="#000000" stroke="#000000" points="3021.4559,-151.8549 3024.9558,-161.855 3028.4559,-151.855 3021.4559,-151.8549"/>
-</g>
-<!-- FileUploadComponent -->
-<g id="node28" class="node">
-<title>FileUploadComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="3003.323,-122 2858.677,-122 2858.677,-86 3003.323,-86 3003.323,-122"/>
-<text text-anchor="middle" x="2931" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">FileUploadComponent</text>
-</g>
-<!-- FileUploadComponent&#45;&gt;CoreModule -->
-<g id="edge26" class="edge">
-<title>FileUploadComponent&#45;&gt;CoreModule</title>
-<path fill="none" stroke="#000000" d="M2999.6566,-122.0109C2999.6566,-122.0109 2999.6566,-151.855 2999.6566,-151.855"/>
-<polygon fill="#000000" stroke="#000000" points="2996.1567,-151.8549 2999.6566,-161.855 3003.1567,-151.855 2996.1567,-151.8549"/>
-</g>
-<!-- FileUploadPipe -->
-<g id="node29" class="node">
-<title>FileUploadPipe</title>
-<polygon fill="#ffffb3" stroke="#000000" points="4158.8781,-122 4055.1219,-122 4055.1219,-86 4158.8781,-86 4158.8781,-122"/>
-<text text-anchor="middle" x="4107" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">FileUploadPipe</text>
-</g>
-<!-- FileUploadPipe&#45;&gt;CoreModule -->
-<g id="edge27" class="edge">
-<title>FileUploadPipe&#45;&gt;CoreModule</title>
-<path fill="none" stroke="#000000" d="M4079.0842,-122.027C4079.0842,-138.3976 4079.0842,-160 4079.0842,-160 4079.0842,-160 3054.2027,-160 3054.2027,-160 3054.2027,-160 3054.2027,-160.1846 3054.2027,-160.1846"/>
-<polygon fill="#000000" stroke="#000000" points="3050.7033,-151.8455 3054.2027,-161.8457 3057.7033,-151.8459 3050.7033,-151.8455"/>
-</g>
-<!-- FooterComponent -->
-<g id="node30" class="node">
-<title>FooterComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="4036.8809,-122 3919.1191,-122 3919.1191,-86 4036.8809,-86 4036.8809,-122"/>
-<text text-anchor="middle" x="3978" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">FooterComponent</text>
-</g>
-<!-- FooterComponent&#45;&gt;CoreModule -->
-<g id="edge28" class="edge">
-<title>FooterComponent&#45;&gt;CoreModule</title>
-<path fill="none" stroke="#000000" d="M3923.8349,-122.2396C3923.8349,-137.5706 3923.8349,-157 3923.8349,-157 3923.8349,-157 3050.0246,-157 3050.0246,-157 3050.0246,-157 3050.0246,-157.4878 3050.0246,-157.4878"/>
-<polygon fill="#000000" stroke="#000000" points="3046.5248,-151.8776 3050.0246,-161.8777 3053.5248,-151.8778 3046.5248,-151.8776"/>
-</g>
-<!-- NavComponent -->
-<g id="node31" class="node">
-<title>NavComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="3901.1542,-122 3796.8458,-122 3796.8458,-86 3901.1542,-86 3901.1542,-122"/>
-<text text-anchor="middle" x="3849" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">NavComponent</text>
-</g>
-<!-- NavComponent&#45;&gt;CoreModule -->
-<g id="edge29" class="edge">
-<title>NavComponent&#45;&gt;CoreModule</title>
-<path fill="none" stroke="#000000" d="M3804.1992,-122.0511C3804.1992,-136.373 3804.1992,-154 3804.1992,-154 3804.1992,-154 3045.8464,-154 3045.8464,-154 3045.8464,-154 3045.8464,-154.7942 3045.8464,-154.7942"/>
-<polygon fill="#000000" stroke="#000000" points="3042.3466,-151.9421 3045.8464,-161.9421 3049.3466,-151.9422 3042.3466,-151.9421"/>
-</g>
-<!-- TagViewerComponent -->
-<g id="node32" class="node">
-<title>TagViewerComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="3779.2935,-122 3634.7065,-122 3634.7065,-86 3779.2935,-86 3779.2935,-122"/>
-<text text-anchor="middle" x="3707" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">TagViewerComponent</text>
-</g>
-<!-- TagViewerComponent&#45;&gt;CoreModule -->
-<g id="edge30" class="edge">
-<title>TagViewerComponent&#45;&gt;CoreModule</title>
-<path fill="none" stroke="#000000" d="M3658.4004,-122.1467C3658.4004,-135.7395 3658.4004,-152 3658.4004,-152 3658.4004,-152 3041.6683,-152 3041.6683,-152 3041.6683,-152 3041.6683,-152.9793 3041.6683,-152.9793"/>
-<polygon fill="#000000" stroke="#000000" points="3038.1684,-151.793 3041.6683,-161.793 3045.1684,-151.7931 3038.1684,-151.793"/>
-</g>
-<!-- FragmentTargetDirective -->
-<g id="node40" class="node">
-<title>FragmentTargetDirective</title>
-<polygon fill="#ffffb3" stroke="#000000" points="368.2696,-274 209.7304,-274 209.7304,-238 368.2696,-238 368.2696,-274"/>
-<text text-anchor="middle" x="289" y="-251.8" font-family="Times,serif" font-size="14.00" fill="#000000">FragmentTargetDirective</text>
-</g>
-<!-- FragmentTargetDirective&#45;&gt;FragmentPolyfillModule -->
-<g id="edge38" class="edge">
-<title>FragmentTargetDirective&#45;&gt;FragmentPolyfillModule</title>
-<path fill="none" stroke="#000000" d="M368.5623,-250C407.9567,-250 447.1978,-250 447.1978,-250 447.1978,-250 447.1978,-208.0267 447.1978,-208.0267"/>
-<polygon fill="#000000" stroke="#000000" points="450.6978,-208.0267 447.1978,-198.0267 443.6978,-208.0268 450.6978,-208.0267"/>
-</g>
-<!-- BannerComponent -->
-<g id="node42" class="node">
-<title>BannerComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="2633.759,-198 2512.241,-198 2512.241,-162 2633.759,-162 2633.759,-198"/>
-<text text-anchor="middle" x="2573" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">BannerComponent</text>
-</g>
-<!-- BannerComponent&#45;&gt;HomeModule -->
-<g id="edge40" class="edge">
-<title>BannerComponent&#45;&gt;HomeModule</title>
-<path fill="none" stroke="#000000" d="M2573,-198.2819C2573,-213.9478 2573,-234 2573,-234 2573,-234 695.4559,-234 695.4559,-234 695.4559,-234 695.4559,-234.3832 695.4559,-234.3832"/>
-<polygon fill="#000000" stroke="#000000" points="691.9562,-227.832 695.4559,-237.8321 698.9562,-227.8322 691.9562,-227.832"/>
-</g>
-<!-- BlogComponent -->
-<g id="node43" class="node">
-<title>BlogComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="2494.0605,-198 2385.9395,-198 2385.9395,-162 2494.0605,-162 2494.0605,-198"/>
-<text text-anchor="middle" x="2440" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">BlogComponent</text>
-</g>
-<!-- BlogComponent&#45;&gt;HomeModule -->
-<g id="edge41" class="edge">
-<title>BlogComponent&#45;&gt;HomeModule</title>
-<path fill="none" stroke="#000000" d="M2440,-198.1243C2440,-212.7832 2440,-231 2440,-231 2440,-231 688.2435,-231 688.2435,-231 688.2435,-231 688.2435,-231.6831 688.2435,-231.6831"/>
-<polygon fill="#000000" stroke="#000000" points="684.7437,-227.8313 688.2435,-237.8314 691.7437,-227.8314 684.7437,-227.8313"/>
-</g>
-<!-- ClubMembersComponent -->
-<g id="node44" class="node">
-<title>ClubMembersComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="2367.9298,-198 2206.0702,-198 2206.0702,-162 2367.9298,-162 2367.9298,-198"/>
-<text text-anchor="middle" x="2287" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClubMembersComponent</text>
-</g>
-<!-- ClubMembersComponent&#45;&gt;HomeModule -->
-<g id="edge42" class="edge">
-<title>ClubMembersComponent&#45;&gt;HomeModule</title>
-<path fill="none" stroke="#000000" d="M2287,-198.2458C2287,-212.1772 2287,-229 2287,-229 2287,-229 681.0311,-229 681.0311,-229 681.0311,-229 681.0311,-229.8841 681.0311,-229.8841"/>
-<polygon fill="#000000" stroke="#000000" points="677.5312,-227.8408 681.0311,-237.8408 684.5312,-227.8409 677.5312,-227.8408"/>
-</g>
-<!-- DeepracerComponent -->
-<g id="node45" class="node">
-<title>DeepracerComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="2188.3333,-198 2049.6667,-198 2049.6667,-162 2188.3333,-162 2188.3333,-198"/>
-<text text-anchor="middle" x="2119" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">DeepracerComponent</text>
-</g>
-<!-- DeepracerComponent&#45;&gt;HomeModule -->
-<g id="edge43" class="edge">
-<title>DeepracerComponent&#45;&gt;HomeModule</title>
-<path fill="none" stroke="#000000" d="M2119,-198.037C2119,-211.2913 2119,-227 2119,-227 2119,-227 673.8186,-227 673.8186,-227 673.8186,-227 673.8186,-228.0799 673.8186,-228.0799"/>
-<polygon fill="#000000" stroke="#000000" points="670.3187,-227.7985 673.8186,-237.7985 677.3187,-227.7986 670.3187,-227.7985"/>
-</g>
-<!-- FounderLetterComponent -->
-<g id="node46" class="node">
-<title>FounderLetterComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="2031.9143,-198 1870.0857,-198 1870.0857,-162 2031.9143,-162 2031.9143,-198"/>
-<text text-anchor="middle" x="1951" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">FounderLetterComponent</text>
-</g>
-<!-- FounderLetterComponent&#45;&gt;HomeModule -->
-<g id="edge44" class="edge">
-<title>FounderLetterComponent&#45;&gt;HomeModule</title>
-<path fill="none" stroke="#000000" d="M1951,-198.1505C1951,-210.2708 1951,-224 1951,-224 1951,-224 666.6062,-224 666.6062,-224 666.6062,-224 666.6062,-227.7566 666.6062,-227.7566"/>
-<polygon fill="#000000" stroke="#000000" points="663.1063,-227.7566 666.6062,-237.7566 670.1063,-227.7566 663.1063,-227.7566"/>
-</g>
-<!-- FunFactComponent -->
-<g id="node47" class="node">
-<title>FunFactComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1852.7176,-198 1725.2824,-198 1725.2824,-162 1852.7176,-162 1852.7176,-198"/>
-<text text-anchor="middle" x="1789" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">FunFactComponent</text>
-</g>
-<!-- FunFactComponent&#45;&gt;HomeModule -->
-<g id="edge45" class="edge">
-<title>FunFactComponent&#45;&gt;HomeModule</title>
-<path fill="none" stroke="#000000" d="M1789,-198.0555C1789,-209.439 1789,-222 1789,-222 1789,-222 659.3938,-222 659.3938,-222 659.3938,-222 659.3938,-227.8056 659.3938,-227.8056"/>
-<polygon fill="#000000" stroke="#000000" points="655.8939,-227.8055 659.3938,-237.8056 662.8939,-227.8056 655.8939,-227.8055"/>
-</g>
-<!-- HomeComponent -->
-<g id="node48" class="node">
-<title>HomeComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1707.5451,-198 1592.4549,-198 1592.4549,-162 1707.5451,-162 1707.5451,-198"/>
-<text text-anchor="middle" x="1650" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">HomeComponent</text>
-</g>
-<!-- HomeComponent&#45;&gt;HomeModule -->
-<g id="edge46" class="edge">
-<title>HomeComponent&#45;&gt;HomeModule</title>
-<path fill="none" stroke="#000000" d="M1650,-198.1274C1650,-208.7109 1650,-220 1650,-220 1650,-220 652.1814,-220 652.1814,-220 652.1814,-220 652.1814,-227.5782 652.1814,-227.5782"/>
-<polygon fill="#000000" stroke="#000000" points="648.6815,-227.5781 652.1814,-237.5782 655.6815,-227.5782 648.6815,-227.5781"/>
-</g>
-<!-- JetsonComponent -->
-<g id="node49" class="node">
-<title>JetsonComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1574.3273,-198 1457.6727,-198 1457.6727,-162 1574.3273,-162 1574.3273,-198"/>
-<text text-anchor="middle" x="1516" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">JetsonComponent</text>
-</g>
-<!-- JetsonComponent&#45;&gt;HomeModule -->
-<g id="edge47" class="edge">
-<title>JetsonComponent&#45;&gt;HomeModule</title>
-<path fill="none" stroke="#000000" d="M1516,-198.0664C1516,-207.4587 1516,-217 1516,-217 1516,-217 644.9689,-217 644.9689,-217 644.9689,-217 644.9689,-227.8701 644.9689,-227.8701"/>
-<polygon fill="#000000" stroke="#000000" points="641.469,-227.8701 644.9689,-237.8701 648.469,-227.8701 641.469,-227.8701"/>
-</g>
-<!-- ProjectsComponent -->
-<g id="node50" class="node">
-<title>ProjectsComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1440.4313,-198 1313.5687,-198 1313.5687,-162 1440.4313,-162 1440.4313,-198"/>
-<text text-anchor="middle" x="1377" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">ProjectsComponent</text>
-</g>
-<!-- ProjectsComponent&#45;&gt;HomeModule -->
-<g id="edge48" class="edge">
-<title>ProjectsComponent&#45;&gt;HomeModule</title>
-<path fill="none" stroke="#000000" d="M1377,-198.32C1377,-206.7883 1377,-215 1377,-215 1377,-215 637.7565,-215 637.7565,-215 637.7565,-215 637.7565,-227.8975 637.7565,-227.8975"/>
-<polygon fill="#000000" stroke="#000000" points="634.2566,-227.8974 637.7565,-237.8975 641.2566,-227.8975 634.2566,-227.8974"/>
-</g>
-<!-- RaceComponent -->
-<g id="node51" class="node">
-<title>RaceComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1295.8132,-198 1186.1868,-198 1186.1868,-162 1295.8132,-162 1295.8132,-198"/>
-<text text-anchor="middle" x="1241" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">RaceComponent</text>
-</g>
-<!-- RaceComponent&#45;&gt;HomeModule -->
-<g id="edge49" class="edge">
-<title>RaceComponent&#45;&gt;HomeModule</title>
-<path fill="none" stroke="#000000" d="M1241,-198.0449C1241,-205.749 1241,-213 1241,-213 1241,-213 630.5441,-213 630.5441,-213 630.5441,-213 630.5441,-227.5146 630.5441,-227.5146"/>
-<polygon fill="#000000" stroke="#000000" points="627.0442,-227.5145 630.5441,-237.5146 634.0442,-227.5146 627.0442,-227.5145"/>
-</g>
-<!-- HomeRoutingModule -->
-<g id="node52" class="node">
-<title>HomeRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="1162.3795,-198 1159.3795,-202 1138.3795,-202 1135.3795,-198 1023.6205,-198 1023.6205,-162 1162.3795,-162 1162.3795,-198"/>
-<text text-anchor="middle" x="1093" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">HomeRoutingModule</text>
-</g>
-<!-- HomeRoutingModule&#45;&gt;HomeModule -->
-<g id="edge52" class="edge">
-<title>HomeRoutingModule&#45;&gt;HomeModule</title>
-<path fill="none" stroke="#000000" d="M1093,-198.1432C1093,-204.4611 1093,-210 1093,-210 1093,-210 623.3316,-210 623.3316,-210 623.3316,-210 623.3316,-227.8196 623.3316,-227.8196"/>
-<polygon fill="#000000" stroke="#000000" points="619.8317,-227.8195 623.3316,-237.8196 626.8317,-227.8196 619.8317,-227.8195"/>
-</g>
-<!-- PressComponent -->
-<g id="node54" class="node">
-<title>PressComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="4237.3795,-198 4126.6205,-198 4126.6205,-162 4237.3795,-162 4237.3795,-198"/>
-<text text-anchor="middle" x="4182" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">PressComponent</text>
-</g>
-<!-- PressComponent&#45;&gt;PressModule -->
-<g id="edge54" class="edge">
-<title>PressComponent&#45;&gt;PressModule</title>
-<path fill="none" stroke="#000000" d="M4182,-198.0109C4182,-220.4852 4182,-256 4182,-256 4182,-256 4090.5981,-256 4090.5981,-256"/>
-<polygon fill="#000000" stroke="#000000" points="4090.5982,-252.5001 4080.5981,-256 4090.5981,-259.5001 4090.5982,-252.5001"/>
-</g>
-<!-- PressRoutingModule -->
-<g id="node56" class="node">
-<title>PressRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="4103.2148,-198 4100.2148,-202 4079.2148,-202 4076.2148,-198 3968.7852,-198 3968.7852,-162 4103.2148,-162 4103.2148,-198"/>
-<text text-anchor="middle" x="4036" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">PressRoutingModule</text>
-</g>
-<!-- PressRoutingModule&#45;&gt;PressModule -->
-<g id="edge56" class="edge">
-<title>PressRoutingModule&#45;&gt;PressModule</title>
-<path fill="none" stroke="#000000" d="M4050.8495,-198.0109C4050.8495,-198.0109 4050.8495,-227.855 4050.8495,-227.855"/>
-<polygon fill="#000000" stroke="#000000" points="4047.3496,-227.8549 4050.8495,-237.855 4054.3496,-227.855 4047.3496,-227.8549"/>
-</g>
-<!-- SupportComponent -->
-<g id="node57" class="node">
-<title>SupportComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="4576.6666,-198 4451.3334,-198 4451.3334,-162 4576.6666,-162 4576.6666,-198"/>
-<text text-anchor="middle" x="4514" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">SupportComponent</text>
-</g>
-<!-- SupportComponent&#45;&gt;SupportModule -->
-<g id="edge57" class="edge">
-<title>SupportComponent&#45;&gt;SupportModule</title>
-<path fill="none" stroke="#000000" d="M4514,-198.0109C4514,-220.4852 4514,-256 4514,-256 4514,-256 4414.1495,-256 4414.1495,-256"/>
-<polygon fill="#000000" stroke="#000000" points="4414.1496,-252.5001 4404.1495,-256 4414.1495,-259.5001 4414.1496,-252.5001"/>
-</g>
-<!-- SupportRoutingModule -->
-<g id="node59" class="node">
-<title>SupportRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="4426.5014,-198 4423.5014,-202 4402.5014,-202 4399.5014,-198 4277.4986,-198 4277.4986,-162 4426.5014,-162 4426.5014,-198"/>
-<text text-anchor="middle" x="4352" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">SupportRoutingModule</text>
-</g>
-<!-- SupportRoutingModule&#45;&gt;SupportModule -->
-<g id="edge59" class="edge">
-<title>SupportRoutingModule&#45;&gt;SupportModule</title>
-<path fill="none" stroke="#000000" d="M4369.3139,-198.0109C4369.3139,-198.0109 4369.3139,-227.855 4369.3139,-227.855"/>
-<polygon fill="#000000" stroke="#000000" points="4365.814,-227.8549 4369.3139,-237.855 4372.814,-227.855 4365.814,-227.8549"/>
-</g>
-<!-- ContentComponent -->
-<g id="node60" class="node">
-<title>ContentComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="4922.6652,-198 4797.3348,-198 4797.3348,-162 4922.6652,-162 4922.6652,-198"/>
-<text text-anchor="middle" x="4860" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">ContentComponent</text>
-</g>
-<!-- ContentComponent&#45;&gt;TimelineModule -->
-<g id="edge60" class="edge">
-<title>ContentComponent&#45;&gt;TimelineModule</title>
-<path fill="none" stroke="#000000" d="M4860,-198.0109C4860,-220.4852 4860,-256 4860,-256 4860,-256 4760.4016,-256 4760.4016,-256"/>
-<polygon fill="#000000" stroke="#000000" points="4760.4017,-252.5001 4750.4016,-256 4760.4016,-259.5001 4760.4017,-252.5001"/>
-</g>
-<!-- TimelineRoutingModule -->
-<g id="node62" class="node">
-<title>TimelineRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="4772.7119,-198 4769.7119,-202 4748.7119,-202 4745.7119,-198 4617.2881,-198 4617.2881,-162 4772.7119,-162 4772.7119,-198"/>
-<text text-anchor="middle" x="4695" y="-175.8" font-family="Times,serif" font-size="14.00" fill="#000000">TimelineRoutingModule</text>
-</g>
-<!-- TimelineRoutingModule&#45;&gt;TimelineModule -->
-<g id="edge62" class="edge">
-<title>TimelineRoutingModule&#45;&gt;TimelineModule</title>
-<path fill="none" stroke="#000000" d="M4713.349,-198.0109C4713.349,-198.0109 4713.349,-227.855 4713.349,-227.855"/>
-<polygon fill="#000000" stroke="#000000" points="4709.8491,-227.8549 4713.349,-237.855 4716.8491,-227.855 4709.8491,-227.8549"/>
-</g>
-</g>
-</svg>
-
-    </div>
-    <i id="fullscreen" class="icon ion-ios-resize module-graph-fullscreen-btn" aria-hidden="true"></i>
+<h3>Overview</h3>
+<div class="text-center">
+    <object id="demo-svg" type="image/svg+xml" data="graph/dependencies.svg" style="width: 100%; height: 250px;">
+            Your browser does not support SVG
+    </object>
     <div class="btn-group">
         <button id="zoom-in" class="btn btn-default btn-sm">Zoom in</button>
         <button id="reset" class="btn btn-default btn-sm">Reset</button>
         <button id="zoom-out" class="btn btn-default btn-sm">Zoom out</button>
     </div>
 </div>
-  
 <div class="container-fluid overview">
     <div class="row">
-        <div class="col-sm-3">
-            <div class="card text-center">
-                <div class="card-block">
-                    <h4 class="card-title"><span class="icon ion-ios-archive"></span></h4>
-                    <p class="card-text">
-                        <a href="./modules.html">20 Modules</a>
-                    </p>
+            <div class="col-sm-3">
+                <div class="card text-center">
+                    <div class="card-block">
+                        <h4 class="card-title"><span class="fa fa-archive"></span></h4>
+                        <p class="card-text">
+                            <a href="./modules.html">18 modules</a>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card text-center">
-                <div class="card-block">
-                    <h4 class="card-title"><span class="icon ion-md-cog"></span></h4>
-                    <p class="card-text">29 Components</p>
+            <div class="col-sm-3">
+                <div class="card text-center">
+                    <div class="card-block">
+                        <h4 class="card-title"><span class="fa fa-cogs"></span></h4>
+                        <p class="card-text">29 components</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card text-center">
-                <div class="card-block">
-                    <h4 class="card-title"><span class="icon ion-md-code-working"></span></h4>
-                    <p class="card-text">2 Directives</p>
+            <div class="col-sm-3">
+                <div class="card text-center">
+                    <div class="card-block">
+                        <h4 class="card-title"><span class="fa fa-code"></span></h4>
+                        <p class="card-text">2 directives</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card text-center">
-                <div class="card-block">
-                    <h4 class="card-title"><span class="icon ion-md-arrow-round-down"></span></h4>
-                    <p class="card-text">1 Injectable</p>
+            <div class="col-sm-3">
+                <div class="card text-center">
+                    <div class="card-block">
+                        <h4 class="card-title"><span class="fa fa-code-fork"></span></h4>
+                        <p class="card-text">3 injectables</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card text-center">
-                <div class="card-block">
-                    <h4 class="card-title"><span class="icon ion-md-add"></span></h4>
-                    <p class="card-text">1 Pipe</p>
+            <div class="col-sm-3">
+                <div class="card text-center">
+                    <div class="card-block">
+                        <h4 class="card-title"><span class="fa fa-plus"></span></h4>
+                        <p class="card-text">1 pipe</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card text-center">
-                <div class="card-block">
-                    <h4 class="card-title"><span class="icon ion-ios-paper"></span></h4>
-                    <p class="card-text">3 Classes</p>
+            <div class="col-sm-3">
+                <div class="card text-center">
+                    <div class="card-block">
+                        <h4 class="card-title"><span class="fa fa-file-code-o"></span></h4>
+                        <p class="card-text">3 classes</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card text-center">
-                <div class="card-block">
-                    <h4 class="card-title"><span class="icon ion-ios-lock"></span></h4>
-                    <p class="card-text">2 Guards</p>
+            <div class="col-sm-3">
+                <div class="card text-center">
+                    <div class="card-block">
+                        <h4 class="card-title"><span class="fa fa-info"></span></h4>
+                        <p class="card-text">4 interfaces</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card text-center">
-                <div class="card-block">
-                    <h4 class="card-title"><span class="icon ion-md-information-circle-outline"></span></h4>
-                    <p class="card-text">4 Interfaces</p>
+            <div class="col-sm-3">
+                <div class="card text-center">
+                    <div class="card-block">
+                        <h4 class="card-title"><span class="fa fa-code-fork"></span></h4>
+                        <p class="card-text">
+                            <a href="./routes.html">9 routes</a>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card text-center">
-                <div class="card-block">
-                    <h4 class="card-title"><span class="icon ion-ios-git-branch"></span></h4>
-                    <p class="card-text">
-                        <a href="./routes.html">30 Routes</a>
-                    </p>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 <script src="js/libs/svg-pan-zoom.min.js"></script>
-<script src="js/svg-pan-zoom.controls.js"></script> 
+<script src="js/svg-pan-zoom.controls.js"></script>
 
 
 
@@ -1044,18 +782,13 @@
 
 
 
-
-
-
-
-                   
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -1063,21 +796,8 @@
     </div>
 </div>
 </div>
-               <!-- END CONTENT -->
            </div>
        </div>
-
-       <script>
-            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'overview';
-            var COMPODOC_CURRENT_PAGE_URL = 'overview.html';
-       </script>
-
-       <script src="./js/libs/custom-elements.min.js"></script>
-       <script src="./js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="./js/menu-wc.js" defer></script>
 
        <script src="./js/libs/bootstrap-native.js"></script>
 
@@ -1088,17 +808,20 @@
 
        <script src="./js/compodoc.js"></script>
 
-       <script src="./js/tabs.js"></script>
-       <script src="./js/menu.js"></script>
-       <script src="./js/libs/clipboard.min.js"></script>
-       <script src="./js/libs/prism.js"></script>
-       <script src="./js/sourceCode.js"></script>
-          <script src="./js/search/search.js"></script>
-          <script src="./js/search/lunr.min.js"></script>
-          <script src="./js/search/search-lunr.js"></script>
-          <script src="./js/search/search_index.js"></script>
-       <script src="./js/lazy-load-graphs.js"></script>
+       <script src="./js/search/search.js"></script>
+       <script src="./js/search/lunr.min.js"></script>
+       <script src="./js/search/search-lunr.js"></script>
 
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/highlight.pack.js"></script>
+       <script src="./js/libs/highlightjs-line-numbers.min.js"></script>
+       <script src="./js/search/search_index.js"></script>
+       <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                hljs.initHighlightingOnLoad();
+                hljs.initLineNumbersOnLoad();
+            });
+       </script>
 
     </body>
 </html>

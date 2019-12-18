@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
-import {Post} from '../../_models/post.model';
-import {Observable} from 'rxjs';
-import { map } from 'rxjs/operators';
 import { AuthService } from 'src/app/_services/auth.service';
+import * as algoliasearch from 'algoliasearch/lite';
+
+const searchClient = algoliasearch(
+  'MT2VAQ4QO4',
+  '5ed00428eb4ea61db6ef4a1a74fab38b'
+);
 
 /**
  * Displays all of the blog posts and allows search through Algolia
@@ -19,11 +21,9 @@ export class AllComponent implements OnInit {
     public authService: AuthService
   ) {}
 
-  // Sets up Algolia Search
-  algoliaConfig = {
-    apiKey: 'e73dee597304c92fdaceb339109cbbb0',
-    appId: 'MT2VAQ4QO4',
-    indexName: 'blog'
+  config = {
+    indexName: 'blog',
+    searchClient
   };
 
   ngOnInit() {

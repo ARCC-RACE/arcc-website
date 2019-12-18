@@ -8,29 +8,688 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	    <link rel="stylesheet" href="../styles/style.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
             <a href="../" class="navbar-brand">arcc-website documentation</a>
-            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../">arcc-website documentation</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="./modules.html" >
+                            <span class="fa fa-archive"></span>
+                            <span>Modules</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            ></span>
+                        </a>
+                        <ul class="links collapse in"
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/AboutModule.html" >AboutModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/AboutRoutingModule.html" >AboutRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/AppModule.html" >AppModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/AuthModule.html" >AuthModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/AuthRoutingModule.html" >AuthRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/BlogEditorModule.html" >BlogEditorModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/BlogEditorRoutingModule.html" >BlogEditorRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/BlogModule.html" >BlogModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/CoreModule.html" >CoreModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/FragmentPolyfillModule.html" >FragmentPolyfillModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/HomeModule.html" >HomeModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/HomeRoutingModule.html" >HomeRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/PressModule.html" >PressModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/PressRoutingModule.html" >PressRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/SupportModule.html" >SupportModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/SupportRoutingModule.html" >SupportRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/TimelineModule.html" >TimelineModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/TimelineRoutingModule.html" >TimelineRoutingModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-components-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/AboutComponent.html" >AboutComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/AccountComponent.html" >AccountComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/AllComponent.html"  class="active" >AllComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/AppComponent.html" >AppComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/AuthComponent.html" >AuthComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/BannerComponent.html" >BannerComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/BlogCardComponent.html" >BlogCardComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/BlogComponent.html" >BlogComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/BubblesComponent.html" >BubblesComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ClubMembersComponent.html" >ClubMembersComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ContentComponent.html" >ContentComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/DeepracerComponent.html" >DeepracerComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/EditorPostComponent.html" >EditorPostComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/EditorPostsComponent.html" >EditorPostsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/EmailSignupComponent.html" >EmailSignupComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/FileUploadComponent.html" >FileUploadComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/FooterComponent.html" >FooterComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/FounderLetterComponent.html" >FounderLetterComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/FunFactComponent.html" >FunFactComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/HomeComponent.html" >HomeComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/JetsonComponent.html" >JetsonComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NavComponent.html" >NavComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/PostComponent.html" >PostComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/PressComponent.html" >PressComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ProjectsComponent.html" >ProjectsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/RaceComponent.html" >RaceComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/SupportComponent.html" >SupportComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/TagViewerComponent.html" >TagViewerComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/TagsComponent.html" >TagsComponent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-code"></span>
+                            <span>Directives</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-directives-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-directives-links"
+                            >
+                                <li class="link">
+                                    <a href="../directives/DropZoneDirective.html" >DropZoneDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/FragmentTargetDirective.html" >FragmentTargetDirective</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-classes-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/NativeWindowScroller.html" >NativeWindowScroller</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/User.html" >User</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/WindowScroller.html" >WindowScroller</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-long-arrow-down"></span>
+                            <span>Injectables</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-injectables-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-injectables-links"
+                            >
+                                <li class="link">
+                                    <a href="../injectables/AdminGuard.html" >AdminGuard</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/AuthGuard.html" >AuthGuard</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/AuthService.html" >AuthService</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-interfaces-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/Comment.html" >Comment</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/ModuleOptions.html" >ModuleOptions</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Post.html" >Post</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/WindowScrollerOptions.html" >WindowScrollerOptions</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-plus"></span>
+                            <span>Pipes</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-pipes-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-pipes-links"
+                            >
+                                <li class="link">
+                                    <a href="../pipes/FileUploadPipe.html" >FileUploadPipe</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
         </div>
 
         <div class="container-fluid main">
            <div class="row main">
                <div class="hidden-xs menu">
-                   <compodoc-menu mode="normal"></compodoc-menu>
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../">arcc-website documentation</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="./modules.html" >
+                                   <span class="fa fa-archive"></span>
+                                   <span>Modules</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   ></span>
+                               </a>
+                               <ul class="links collapse in"
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/AboutModule.html" >AboutModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/AboutRoutingModule.html" >AboutRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/AppModule.html" >AppModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/AuthModule.html" >AuthModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/AuthRoutingModule.html" >AuthRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/BlogEditorModule.html" >BlogEditorModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/BlogEditorRoutingModule.html" >BlogEditorRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/BlogModule.html" >BlogModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/CoreModule.html" >CoreModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/FragmentPolyfillModule.html" >FragmentPolyfillModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/HomeModule.html" >HomeModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/HomeRoutingModule.html" >HomeRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/PressModule.html" >PressModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/PressRoutingModule.html" >PressRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/SupportModule.html" >SupportModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/SupportRoutingModule.html" >SupportRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/TimelineModule.html" >TimelineModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/TimelineRoutingModule.html" >TimelineRoutingModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#components-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/AboutComponent.html" >AboutComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/AccountComponent.html" >AccountComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/AllComponent.html"  class="active" >AllComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/AuthComponent.html" >AuthComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/BannerComponent.html" >BannerComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/BlogCardComponent.html" >BlogCardComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/BlogComponent.html" >BlogComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/BubblesComponent.html" >BubblesComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ClubMembersComponent.html" >ClubMembersComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ContentComponent.html" >ContentComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/DeepracerComponent.html" >DeepracerComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/EditorPostComponent.html" >EditorPostComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/EditorPostsComponent.html" >EditorPostsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/EmailSignupComponent.html" >EmailSignupComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/FileUploadComponent.html" >FileUploadComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/FooterComponent.html" >FooterComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/FounderLetterComponent.html" >FounderLetterComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/FunFactComponent.html" >FunFactComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/HomeComponent.html" >HomeComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/JetsonComponent.html" >JetsonComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NavComponent.html" >NavComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/PostComponent.html" >PostComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/PressComponent.html" >PressComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ProjectsComponent.html" >ProjectsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/RaceComponent.html" >RaceComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/SupportComponent.html" >SupportComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/TagViewerComponent.html" >TagViewerComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/TagsComponent.html" >TagsComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-code"></span>
+                                   <span>Directives</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#directives-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="directives-links"
+                   >
+                                       <li class="link">
+                                           <a href="../directives/DropZoneDirective.html" >DropZoneDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/FragmentTargetDirective.html" >FragmentTargetDirective</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#classes-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/NativeWindowScroller.html" >NativeWindowScroller</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/User.html" >User</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/WindowScroller.html" >WindowScroller</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-long-arrow-down"></span>
+                                   <span>Injectables</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#injectables-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="injectables-links"
+                   >
+                                       <li class="link">
+                                           <a href="../injectables/AdminGuard.html" >AdminGuard</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/AuthGuard.html" >AuthGuard</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/AuthService.html" >AuthService</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#interfaces-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/Comment.html" >Comment</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/ModuleOptions.html" >ModuleOptions</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Post.html" >Post</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/WindowScrollerOptions.html" >WindowScrollerOptions</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-plus"></span>
+                                   <span>Pipes</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#pipes-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="pipes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../pipes/FileUploadPipe.html" >FileUploadPipe</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
                </div>
-               <!-- START CONTENT -->
                <div class="content component">
                    <div class="content-data">
-
-
 
 
 <ol class="breadcrumb">
@@ -38,26 +697,18 @@
   <li>AllComponent</li>
 </ol>
 
-<ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
-        </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
-        </li>
-        <li >
-            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
-        </li>
-        <li >
-            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
-        </li>
-</ul>
 
-<div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
+        </li>
+        <li>
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="infos"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -70,14 +721,6 @@
     <p class="comment">
         <p>Displays all of the blog posts and allows search through Algolia</p>
 
-    </p>
-
-
-    <p class="comment">
-        <h3>Implements</h3>
-    </p>
-    <p class="comment">
-                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
     </p>
 
 
@@ -96,6 +739,7 @@
 
 
 
+
             <tr>
                 <td class="col-md-3">selector</td>
                 <td class="col-md-9"><code>app-all</code></td>
@@ -103,252 +747,81 @@
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./all.component.scss</code></td>
+                <td class="col-md-9"><code>all.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./all.component.html</code></td>
+                <td class="col-md-9"><code>all.component.html</code></td>
             </tr>
 
 
-
-
-
-
-
-
         </tbody>
     </table>
 </section>
 
-    <section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#algoliaConfig">algoliaConfig</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#authService">authService</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#ngOnInit">ngOnInit</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
-
-    <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor(authService: <a href="../injectables/AuthService.html">AuthService</a>)</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/blog/all/all.component.ts:16</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>authService</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
-
-
-
 
 
     <section>
+        <h3 id="constructor">Constructor</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>constructor(authService: any)</code>
+                        </td>
+                    </tr>
     
-    <h3 id="methods">
-        Methods
-    </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="ngOnInit"></a>
-                    <span class="name">
-                        <b>
-                            ngOnInit
-                        </b>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>ngOnInit()</code>
-                </td>
-            </tr>
+                </tbody>
+            </table>
+    </section>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/app/blog/all/all.component.ts:29</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
     <section>
-    
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="algoliaConfig"></a>
-                        <span class="name">
-                            <b>
-                            algoliaConfig</b>
-                            <a href="#algoliaConfig"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
+        <h3 id="inputs">Properties</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-
+                            <b> authService</b>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>{
-    apiKey: &#x27;e73dee597304c92fdaceb339109cbbb0&#x27;,
-    appId: &#x27;MT2VAQ4QO4&#x27;,
-    indexName: &#x27;blog&#x27;
-  }</code>
+                            <code>authService:     <code>any</code>
+    </bcode>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/blog/all/all.component.ts:23</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="authService"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            authService</b>
-                            <a href="#authService"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
-
+                            <b> config</b>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/blog/all/all.component.ts:19</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-</section>
-
+                    <tr>
+                        <td class="col-md-4">
+                            <code>config:     <code>{ indexName: string; searchClient: Client; }</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
 </div>
-
-
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import {AngularFirestore, AngularFirestoreCollection} from &#x27;@angular/fire/firestore&#x27;;
-import {Post} from &#x27;../../_models/post.model&#x27;;
-import {Observable} from &#x27;rxjs&#x27;;
-import { map } from &#x27;rxjs/operators&#x27;;
+        <div class="tab-pane fade tab-source-code" id="source">
+            <pre><code class="hljs javascript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import { AuthService } from &#x27;src/app/_services/auth.service&#x27;;
+import * as algoliasearch from &#x27;algoliasearch/lite&#x27;;
+
+const searchClient &#x3D; algoliasearch(
+  &#x27;MT2VAQ4QO4&#x27;,
+  &#x27;5ed00428eb4ea61db6ef4a1a74fab38b&#x27;
+);
 
 /**
  * Displays all of the blog posts and allows search through Algolia
@@ -364,11 +837,9 @@ export class AllComponent implements OnInit {
     public authService: AuthService
   ) {}
 
-  // Sets up Algolia Search
-  algoliaConfig &#x3D; {
-    apiKey: &#x27;e73dee597304c92fdaceb339109cbbb0&#x27;,
-    appId: &#x27;MT2VAQ4QO4&#x27;,
-    indexName: &#x27;blog&#x27;
+  config &#x3D; {
+    indexName: &#x27;blog&#x27;,
+    searchClient
   };
 
   ngOnInit() {
@@ -376,219 +847,21 @@ export class AllComponent implements OnInit {
 
 }
 </code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;search&quot;&gt;
-    &lt;div class&#x3D;&quot;container text-center&quot;&gt;
-      &lt;h1&gt;Welcome to our Blog&lt;/h1&gt;
-        &lt;a [routerLink]&#x3D;&quot;[&#x27;/auth&#x27;]&quot; routerLinkActive&#x3D;&quot;router-link-active&quot;  class&#x3D;&quot;btn btn-primary mx-auto my-4&quot; role&#x3D;&quot;button&quot;&gt;Signup or Log In&lt;/a&gt;
-        &lt;ais-instantsearch [config]&#x3D;&quot;algoliaConfig&quot;&gt;
-            &lt;ais-search-box&gt;
-            &lt;/ais-search-box&gt;
-            &lt;ais-hits&gt;
-              &lt;ng-template let-hits&#x3D;&quot;hits&quot; let-results&#x3D;&quot;results&quot;&gt;
-                &lt;!-- Nothing found? --&gt;
-                &lt;div *ngIf&#x3D;&quot;hits.length &#x3D;&#x3D;&#x3D; 0&quot;&gt;
-                  😢 Nothing found for
-                  &lt;strong&gt;{{results.query}}&lt;/strong&gt;.
-                &lt;/div&gt;
-                &lt;div class&#x3D;&quot;row my-3&quot;&gt;
-                    &lt;div *ngFor&#x3D;&quot;let hit of hits&quot; class&#x3D;&quot;col-lg-4 col-md-6&quot;&gt;
-                      &lt;app-blog-card [post]&#x3D;&quot;hit&quot;&gt;&lt;/app-blog-card&gt;
-                    &lt;/div&gt;
-                  &lt;/div&gt;
-
-                &lt;/ng-template&gt;
-              &lt;/ais-hits&gt;
-          &lt;/ais-instantsearch&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="c-styleData">
-                <p class="comment">
-                    <code>./all.component.scss</code>
-                </p>
-                <pre class="line-numbers"><code class="language-scss">@import &#x27;../../../styles/_helper-functions.scss&#x27;;
-
-//.container {
-//  position: relative;
-//}
-
-.search {
-  padding-top: 200px;
-
-  &amp;__link {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 16px;
-    color: #BCBFC7;
-    transform: rotate(180deg);
-    transition: all .4s ease;
-
-    &amp;__text {
-      font-size: 12px !important;
-      font-weight: lighter !important;
-    }
-}
-}
-
-ais-instantsearch {
-  position: relative;
-  z-index: -1000;
-}
-
-ais-search-box {
-  position: relative;
-}
-
-::ng-deep input {
-  background-color: $thm_light_black !important;
-  color: white !important;
-  border: none;
-  padding: 8px;
-  width: 100%;
-  border-radius: 8px;
-  position: relative;
-}
-
-::ng-deep .ais-SearchBox-submit {
-  display: none;
-}
-
-ng-ais-clear-refinements {
-  display: block;
-  margin-top: 1rem;
-}
-
-::ng-deep .result-card {
-  font-size: 16px;
-  background: $thm_light_black;
-  border-radius: 8px;
-}
-
-::ng-deep [class*&#x3D;result-card]:nth-child(1) {
-   :hover {
-     background-color:  #5DD8D3;
-   }
-}
-
-::ng-deep [class*&#x3D;result-card]:nth-child(2) {
-  .result-card:hover {
-    background-color: #9364D4;
-
-    &amp;:before {
-        top: 0;
-        right: 0;
-        transform: translate(30%, -30%);
-    }
-
-    &amp;:after {
-        bottom: 0;
-        left: 0;
-        transform: translate(-30%, 30%);
-    }
-  }
-}
-::ng-deep [class*&#x3D;result-card]:nth-child(3) {
-    background-color: #EE539B;
-
-    &amp;:before {
-        top: 0;
-        right: 0;
-        transform: translate(30%, -30%);
-    }
-
-    &amp;:after {
-        bottom: 0;
-        left: 0;
-        transform: translate(-30%, 30%);
-    }
-}
-
-::ng-deep [class*&#x3D;result-card]:nth-child(4) {
-  .result-card:hover {
-    background-color: #413dff;
-
-    &amp;:before {
-        top: 0;
-        right: 0;
-        transform: translate(30%, -30%);
-    }
-
-    &amp;:after {
-        bottom: 0;
-        left: 0;
-        transform: translate(-30%, 30%);
-    }
-  }
-}
-
-::ng-deep .ais-SearchBox-reset {
-  display: none;
-}
-
-.blog {
-  padding-top: 190px;
-  padding-bottom: 90px;
-  background: transparent url(../../../assets/images/blog-bg-1-1.svg) center center no-repeat;
-  background-size: cover;
-  z-index: -10000;
-}
-</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="c-tree">
-        <div id="tree-container"></div>
-        <div class="tree-legend">
-            <div class="title">
-                <b>Legend</b>
-            </div>
-            <div>
-                <div class="color htmlelement"></div><span>Html element</span>
-            </div>
-            <div>
-                <div class="color component"></div><span>Component</span>
-            </div>
-            <div>
-                <div class="color directive"></div><span>Html element with directive</span>
-            </div>
         </div>
     </div>
 
-    
-</div>
-
-<script src="../js/libs/vis.min.js"></script>
-<script src="../js/libs/htmlparser.js"></script>
-<script src="../js/libs/deep-iterator.js"></script>
-<script>
-        var COMPONENT_TEMPLATE = '<div><div class="search">    <div class="container text-center">      <h1>Welcome to our Blog</h1>        <a [routerLink]="[\'/auth\']" routerLinkActive="router-link-active"  class="btn btn-primary mx-auto my-4" role="button">Signup or Log In</a>        <ais-instantsearch [config]="algoliaConfig">            <ais-search-box>            </ais-search-box>            <ais-hits>              <ng-template let-hits="hits" let-results="results">                <!-- Nothing found? -->                <div *ngIf="hits.length === 0">                  😢 Nothing found for                  <strong>{{results.query}}</strong>.                </div>                <div class="row my-3">                    <div *ngFor="let hit of hits" class="col-lg-4 col-md-6">                      <app-blog-card [post]="hit"></app-blog-card>                    </div>                  </div>                </ng-template>              </ais-hits>          </ais-instantsearch>    </div>  </div></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AllComponent', 'selector': 'app-all'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogCardComponent', 'selector': 'app-blog-card'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'BubblesComponent', 'selector': 'app-bubbles'},{'name': 'ClubMembersComponent', 'selector': 'app-club-members'},{'name': 'ContentComponent', 'selector': 'app-content'},{'name': 'DeepracerComponent', 'selector': 'app-deepracer'},{'name': 'EditorPostComponent', 'selector': 'app-editor-post'},{'name': 'EditorPostsComponent', 'selector': 'app-editor-posts'},{'name': 'EmailSignupComponent', 'selector': 'app-email-signup'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FounderLetterComponent', 'selector': 'app-founder-letter'},{'name': 'FunFactComponent', 'selector': 'app-fun-fact'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JetsonComponent', 'selector': 'app-jetson'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PostComponent', 'selector': 'app-post'},{'name': 'PressComponent', 'selector': 'app-press'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RaceComponent', 'selector': 'app-race'},{'name': 'SupportComponent', 'selector': 'app-support'},{'name': 'TagsComponent', 'selector': 'app-tags'},{'name': 'TagViewerComponent', 'selector': 'app-tag-viewer'}];
-    var DIRECTIVES = [{'name': 'DropZoneDirective', 'selector': '[dropZone]'},{'name': 'FragmentTargetDirective', 'selector': '[id], a[name]'}];
-    var ACTUAL_COMPONENT = {'name': 'AllComponent'};
-</script>
-<script src="../js/tree.js"></script>
 
 
 
 
 
-
-
-
-
-
-                   
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -596,21 +869,8 @@ ng-ais-clear-refinements {
     </div>
 </div>
 </div>
-               <!-- END CONTENT -->
            </div>
        </div>
-
-       <script>
-            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'AllComponent.html';
-       </script>
-
-       <script src="../js/libs/custom-elements.min.js"></script>
-       <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="../js/menu-wc.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 
@@ -621,17 +881,20 @@ ng-ais-clear-refinements {
 
        <script src="../js/compodoc.js"></script>
 
-       <script src="../js/tabs.js"></script>
-       <script src="../js/menu.js"></script>
-       <script src="../js/libs/clipboard.min.js"></script>
-       <script src="../js/libs/prism.js"></script>
-       <script src="../js/sourceCode.js"></script>
-          <script src="../js/search/search.js"></script>
-          <script src="../js/search/lunr.min.js"></script>
-          <script src="../js/search/search-lunr.js"></script>
-          <script src="../js/search/search_index.js"></script>
-       <script src="../js/lazy-load-graphs.js"></script>
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
 
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/highlight.pack.js"></script>
+       <script src="../js/libs/highlightjs-line-numbers.min.js"></script>
+       <script src="../js/search/search_index.js"></script>
+       <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                hljs.initHighlightingOnLoad();
+                hljs.initLineNumbersOnLoad();
+            });
+       </script>
 
     </body>
 </html>

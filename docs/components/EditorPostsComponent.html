@@ -8,29 +8,688 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	    <link rel="stylesheet" href="../styles/style.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
             <a href="../" class="navbar-brand">arcc-website documentation</a>
-            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../">arcc-website documentation</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="./modules.html" >
+                            <span class="fa fa-archive"></span>
+                            <span>Modules</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            ></span>
+                        </a>
+                        <ul class="links collapse in"
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/AboutModule.html" >AboutModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/AboutRoutingModule.html" >AboutRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/AppModule.html" >AppModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/AuthModule.html" >AuthModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/AuthRoutingModule.html" >AuthRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/BlogEditorModule.html" >BlogEditorModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/BlogEditorRoutingModule.html" >BlogEditorRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/BlogModule.html" >BlogModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/CoreModule.html" >CoreModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/FragmentPolyfillModule.html" >FragmentPolyfillModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/HomeModule.html" >HomeModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/HomeRoutingModule.html" >HomeRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/PressModule.html" >PressModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/PressRoutingModule.html" >PressRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/SupportModule.html" >SupportModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/SupportRoutingModule.html" >SupportRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/TimelineModule.html" >TimelineModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/TimelineRoutingModule.html" >TimelineRoutingModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-components-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/AboutComponent.html" >AboutComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/AccountComponent.html" >AccountComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/AllComponent.html" >AllComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/AppComponent.html" >AppComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/AuthComponent.html" >AuthComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/BannerComponent.html" >BannerComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/BlogCardComponent.html" >BlogCardComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/BlogComponent.html" >BlogComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/BubblesComponent.html" >BubblesComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ClubMembersComponent.html" >ClubMembersComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ContentComponent.html" >ContentComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/DeepracerComponent.html" >DeepracerComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/EditorPostComponent.html" >EditorPostComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/EditorPostsComponent.html"  class="active" >EditorPostsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/EmailSignupComponent.html" >EmailSignupComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/FileUploadComponent.html" >FileUploadComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/FooterComponent.html" >FooterComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/FounderLetterComponent.html" >FounderLetterComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/FunFactComponent.html" >FunFactComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/HomeComponent.html" >HomeComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/JetsonComponent.html" >JetsonComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NavComponent.html" >NavComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/PostComponent.html" >PostComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/PressComponent.html" >PressComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ProjectsComponent.html" >ProjectsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/RaceComponent.html" >RaceComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/SupportComponent.html" >SupportComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/TagViewerComponent.html" >TagViewerComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/TagsComponent.html" >TagsComponent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-code"></span>
+                            <span>Directives</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-directives-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-directives-links"
+                            >
+                                <li class="link">
+                                    <a href="../directives/DropZoneDirective.html" >DropZoneDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/FragmentTargetDirective.html" >FragmentTargetDirective</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-classes-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/NativeWindowScroller.html" >NativeWindowScroller</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/User.html" >User</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/WindowScroller.html" >WindowScroller</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-long-arrow-down"></span>
+                            <span>Injectables</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-injectables-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-injectables-links"
+                            >
+                                <li class="link">
+                                    <a href="../injectables/AdminGuard.html" >AdminGuard</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/AuthGuard.html" >AuthGuard</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/AuthService.html" >AuthService</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-interfaces-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/Comment.html" >Comment</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/ModuleOptions.html" >ModuleOptions</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Post.html" >Post</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/WindowScrollerOptions.html" >WindowScrollerOptions</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-plus"></span>
+                            <span>Pipes</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-pipes-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-pipes-links"
+                            >
+                                <li class="link">
+                                    <a href="../pipes/FileUploadPipe.html" >FileUploadPipe</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
         </div>
 
         <div class="container-fluid main">
            <div class="row main">
                <div class="hidden-xs menu">
-                   <compodoc-menu mode="normal"></compodoc-menu>
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../">arcc-website documentation</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="./modules.html" >
+                                   <span class="fa fa-archive"></span>
+                                   <span>Modules</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   ></span>
+                               </a>
+                               <ul class="links collapse in"
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/AboutModule.html" >AboutModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/AboutRoutingModule.html" >AboutRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/AppModule.html" >AppModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/AuthModule.html" >AuthModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/AuthRoutingModule.html" >AuthRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/BlogEditorModule.html" >BlogEditorModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/BlogEditorRoutingModule.html" >BlogEditorRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/BlogModule.html" >BlogModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/CoreModule.html" >CoreModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/FragmentPolyfillModule.html" >FragmentPolyfillModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/HomeModule.html" >HomeModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/HomeRoutingModule.html" >HomeRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/PressModule.html" >PressModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/PressRoutingModule.html" >PressRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/SupportModule.html" >SupportModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/SupportRoutingModule.html" >SupportRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/TimelineModule.html" >TimelineModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/TimelineRoutingModule.html" >TimelineRoutingModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#components-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/AboutComponent.html" >AboutComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/AccountComponent.html" >AccountComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/AllComponent.html" >AllComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/AuthComponent.html" >AuthComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/BannerComponent.html" >BannerComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/BlogCardComponent.html" >BlogCardComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/BlogComponent.html" >BlogComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/BubblesComponent.html" >BubblesComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ClubMembersComponent.html" >ClubMembersComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ContentComponent.html" >ContentComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/DeepracerComponent.html" >DeepracerComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/EditorPostComponent.html" >EditorPostComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/EditorPostsComponent.html"  class="active" >EditorPostsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/EmailSignupComponent.html" >EmailSignupComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/FileUploadComponent.html" >FileUploadComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/FooterComponent.html" >FooterComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/FounderLetterComponent.html" >FounderLetterComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/FunFactComponent.html" >FunFactComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/HomeComponent.html" >HomeComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/JetsonComponent.html" >JetsonComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NavComponent.html" >NavComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/PostComponent.html" >PostComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/PressComponent.html" >PressComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ProjectsComponent.html" >ProjectsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/RaceComponent.html" >RaceComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/SupportComponent.html" >SupportComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/TagViewerComponent.html" >TagViewerComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/TagsComponent.html" >TagsComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-code"></span>
+                                   <span>Directives</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#directives-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="directives-links"
+                   >
+                                       <li class="link">
+                                           <a href="../directives/DropZoneDirective.html" >DropZoneDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/FragmentTargetDirective.html" >FragmentTargetDirective</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#classes-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/NativeWindowScroller.html" >NativeWindowScroller</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/User.html" >User</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/WindowScroller.html" >WindowScroller</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-long-arrow-down"></span>
+                                   <span>Injectables</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#injectables-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="injectables-links"
+                   >
+                                       <li class="link">
+                                           <a href="../injectables/AdminGuard.html" >AdminGuard</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/AuthGuard.html" >AuthGuard</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/AuthService.html" >AuthService</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#interfaces-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/Comment.html" >Comment</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/ModuleOptions.html" >ModuleOptions</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Post.html" >Post</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/WindowScrollerOptions.html" >WindowScrollerOptions</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-plus"></span>
+                                   <span>Pipes</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#pipes-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="pipes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../pipes/FileUploadPipe.html" >FileUploadPipe</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
                </div>
-               <!-- START CONTENT -->
                <div class="content component">
                    <div class="content-data">
-
-
 
 
 <ol class="breadcrumb">
@@ -38,26 +697,18 @@
   <li>EditorPostsComponent</li>
 </ol>
 
-<ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
-        </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-        </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
-        </li>
-        <li >
-            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
-        </li>
-        <li >
-            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
-        </li>
-</ul>
 
-<div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
+        </li>
+        <li>
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="infos"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -70,14 +721,6 @@
     <p class="comment">
         <p>Handles creating new posts and editing them</p>
 
-    </p>
-
-
-    <p class="comment">
-        <h3>Implements</h3>
-    </p>
-    <p class="comment">
-                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
     </p>
 
 
@@ -96,6 +739,7 @@
 
 
 
+
             <tr>
                 <td class="col-md-3">selector</td>
                 <td class="col-md-9"><code>app-editor-posts</code></td>
@@ -103,511 +747,149 @@
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./editor-posts.component.scss,<br>../blog-editor.scss</code></td>
+                <td class="col-md-9"><code>editor-posts.component.scss,<br>.blog-editor.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./editor-posts.component.html</code></td>
+                <td class="col-md-9"><code>editor-posts.component.html</code></td>
             </tr>
-
-
-
-
-
-
 
 
         </tbody>
     </table>
 </section>
 
-    <section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#posts">posts</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#postsCollection">postsCollection</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#addItem">addItem</a>
-                            </li>
-                            <li>
-                                <a href="#deleteItem">deleteItem</a>
-                            </li>
-                            <li>
-                                <a href="#ngOnInit">ngOnInit</a>
-                            </li>
-                            <li>
-                                <a href="#onEnter">onEnter</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
-
-    <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor(afs: AngularFirestore, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/blog-editor/editor-posts/editor-posts.component.ts:18</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>afs</td>
-                                                  
-                                                        <td>
-                                                                    <code>AngularFirestore</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>router</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
-
-
-
 
 
     <section>
-    
-    <h3 id="methods">
-        Methods
-    </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="addItem"></a>
-                    <span class="name">
-                        <b>
-                            addItem
-                        </b>
-                        <a href="#addItem"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>addItem(post: <a href="../interfaces/Post.html">Post</a>, successCb?, errCb?)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="58"
-                            class="link-to-prism">src/app/blog-editor/editor-posts/editor-posts.component.ts:58</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>post</td>
-                                    <td>
-                                                <code><a href="../interfaces/Post.html" target="_self" >Post</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>successCb</td>
-                                    <td>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>errCb</td>
-                                    <td>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="deleteItem"></a>
-                    <span class="name">
-                        <b>
-                            deleteItem
-                        </b>
-                        <a href="#deleteItem"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>deleteItem(id)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="54"
-                            class="link-to-prism">src/app/blog-editor/editor-posts/editor-posts.component.ts:54</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>id</td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="ngOnInit"></a>
-                    <span class="name">
-                        <b>
-                            ngOnInit
-                        </b>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>ngOnInit()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/app/blog-editor/editor-posts/editor-posts.component.ts:35</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="onEnter"></a>
-                    <span class="name">
-                        <b>
-                            onEnter
-                        </b>
-                        <a href="#onEnter"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>onEnter(new_post_title: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, new_post_author: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, new_post_text: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="38"
-                            class="link-to-prism">src/app/blog-editor/editor-posts/editor-posts.component.ts:38</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>new_post_title</td>
-                                    <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>new_post_author</td>
-                                    <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>new_post_text</td>
-                                    <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-    <section>
-    
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="posts"></a>
-                        <span class="name">
-                            <b>
-                            posts</b>
-                            <a href="#posts"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
+        <h3 id="constructor">Constructor</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>Observable&lt;any[]&gt;</code>
-
+                            <code>constructor(afs: AngularFirestore, router: <a href="https://angular.io/docs/ts/latest/api/router/index/Router-class.html" target="_blank" >Router</a>)</code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/blog-editor/editor-posts/editor-posts.component.ts:18</a></div>
-                            </td>
-                        </tr>
+    
+                </tbody>
+            </table>
+    </section>
 
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="postsCollection"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            postsCollection</b>
-                            <a href="#postsCollection"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
+    <section>
+        <h3 id="methods">Methods</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../interfaces/Post.html" target="_self" >AngularFirestoreCollection&lt;Post&gt;</a></code>
-
+                            <b> onEnter</b>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/blog-editor/editor-posts/editor-posts.component.ts:17</a></div>
-                            </td>
-                        </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>onEnter(new_post_title: any, new_post_author: any, new_post_text: any)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> deleteItem</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>deleteItem(id: any)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> addItem</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>addItem(post: Post, successCb: any, errCb: any)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
 
-
-            </tbody>
-        </table>
-</section>
-
+    <section>
+        <h3 id="inputs">Properties</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> posts</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>posts:     <code>Observable&lt;any[]&gt;</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b><span class="modifier">Private</span> postsCollection</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <span class="modifier-icon fa fa-lock"></span><code>postsCollection:     <code>any</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
 </div>
-
-
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <div class="tab-pane fade tab-source-code" id="source">
+            <pre><code class="hljs javascript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 import { map } from &#x27;rxjs/operators&#x27;;
 import {Router} from &#x27;@angular/router&#x27;;
@@ -678,120 +960,21 @@ export class EditorPostsComponent implements OnInit {
   }
 }
 </code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;!-- &lt;p&gt;Logged in as {{ user.displayName }}!&lt;/p&gt; --&gt;
-&lt;section class&#x3D;&quot;editor editor-posts&quot;&gt;
-  &lt;div class&#x3D;&quot;container&quot;&gt;
-
-    &lt;form class&#x3D;&quot;py-2&quot;&gt;
-      &lt;div class&#x3D;&quot;form-group&quot;&gt;
-        &lt;input class&#x3D;&quot;form-control&quot; #new_post_title type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Enter Post Title&quot;&gt;
-        &lt;input class&#x3D;&quot;form-control&quot; #new_post_author type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Enter Author&quot;&gt;
-        &lt;textarea class&#x3D;&quot;form-control&quot; #new_post_text placeholder&#x3D;&quot;Write your article here&quot;&gt;&lt;/textarea&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
-
-    &lt;button class&#x3D;&quot;btn btn-dark mx-auto&quot; (click)&#x3D;&quot;onEnter(new_post_title, new_post_author, new_post_text)&quot;&gt;Create New Post&lt;/button&gt;
-
-    &lt;div class&#x3D;&quot;text-center&quot;&gt;
-      &lt;h3&gt;Posts&lt;/h3&gt;
-      &lt;ul class&#x3D;&quot;list-unstyled&quot;&gt;
-        &lt;li class&#x3D;&quot;mb-3 pb-2&quot; *ngFor&#x3D;&quot;let post of posts | async&quot;&gt;
-          {{ post.data.title }} &amp;nbsp;&amp;nbsp;
-          &lt;a class&#x3D;&quot;btn btn-sm btn-dark mx-2&quot; routerLink&#x3D;&quot;/editor/post/{{ post.id }}&quot;&gt;Open&lt;/a&gt;
-          &lt;a class&#x3D;&quot;btn btn-sm btn-dark mx-2&quot; (click)&#x3D;&quot;deleteItem(post.id)&quot;&gt;Delete&lt;/a&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/section&gt;
-
-</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="c-styleData">
-                <p class="comment">
-                    <code>./editor-posts.component.scss</code>
-                </p>
-                <pre class="line-numbers"><code class="language-scss">
-</code></pre>
-                <p class="comment">
-                    <code>../blog-editor.scss</code>
-                </p>
-                <pre class="line-numbers"><code class="language-scss">@import &quot;../../styles/helper-functions&quot;;
-
-.editor {
-  background-color: $thm_black;
-  background-image: none;
-  padding-top: 120px;
-}
-
-.editor ~ input textarea {
-  background-color: $thm_light_black;
-  color: $thm_gray;
-}
-
-.form-group &gt; {
-  .form-control {
-    margin-top: 16px;
-    background-color: $thm_light_black;
-    border: none;
-  }
-}
-</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="c-tree">
-        <div id="tree-container"></div>
-        <div class="tree-legend">
-            <div class="title">
-                <b>Legend</b>
-            </div>
-            <div>
-                <div class="color htmlelement"></div><span>Html element</span>
-            </div>
-            <div>
-                <div class="color component"></div><span>Component</span>
-            </div>
-            <div>
-                <div class="color directive"></div><span>Html element with directive</span>
-            </div>
         </div>
     </div>
 
-    
-</div>
-
-<script src="../js/libs/vis.min.js"></script>
-<script src="../js/libs/htmlparser.js"></script>
-<script src="../js/libs/deep-iterator.js"></script>
-<script>
-        var COMPONENT_TEMPLATE = '<div><!-- <p>Logged in as {{ user.displayName }}!</p> --><section class="editor editor-posts">  <div class="container">    <form class="py-2">      <div class="form-group">        <input class="form-control" #new_post_title type="text" placeholder="Enter Post Title">        <input class="form-control" #new_post_author type="text" placeholder="Enter Author">        <textarea class="form-control" #new_post_text placeholder="Write your article here"></textarea>      </div>    </form>    <button class="btn btn-dark mx-auto" (click)="onEnter(new_post_title, new_post_author, new_post_text)">Create New Post</button>    <div class="text-center">      <h3>Posts</h3>      <ul class="list-unstyled">        <li class="mb-3 pb-2" *ngFor="let post of posts | async">          {{ post.data.title }} &nbsp;&nbsp;          <a class="btn btn-sm btn-dark mx-2" routerLink="/editor/post/{{ post.id }}">Open</a>          <a class="btn btn-sm btn-dark mx-2" (click)="deleteItem(post.id)">Delete</a>        </li>      </ul>    </div>  </div></section></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AllComponent', 'selector': 'app-all'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogCardComponent', 'selector': 'app-blog-card'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'BubblesComponent', 'selector': 'app-bubbles'},{'name': 'ClubMembersComponent', 'selector': 'app-club-members'},{'name': 'ContentComponent', 'selector': 'app-content'},{'name': 'DeepracerComponent', 'selector': 'app-deepracer'},{'name': 'EditorPostComponent', 'selector': 'app-editor-post'},{'name': 'EditorPostsComponent', 'selector': 'app-editor-posts'},{'name': 'EmailSignupComponent', 'selector': 'app-email-signup'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FounderLetterComponent', 'selector': 'app-founder-letter'},{'name': 'FunFactComponent', 'selector': 'app-fun-fact'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JetsonComponent', 'selector': 'app-jetson'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PostComponent', 'selector': 'app-post'},{'name': 'PressComponent', 'selector': 'app-press'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RaceComponent', 'selector': 'app-race'},{'name': 'SupportComponent', 'selector': 'app-support'},{'name': 'TagsComponent', 'selector': 'app-tags'},{'name': 'TagViewerComponent', 'selector': 'app-tag-viewer'}];
-    var DIRECTIVES = [{'name': 'DropZoneDirective', 'selector': '[dropZone]'},{'name': 'FragmentTargetDirective', 'selector': '[id], a[name]'}];
-    var ACTUAL_COMPONENT = {'name': 'EditorPostsComponent'};
-</script>
-<script src="../js/tree.js"></script>
 
 
 
 
 
-
-
-
-
-
-                   
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -799,21 +982,8 @@ export class EditorPostsComponent implements OnInit {
     </div>
 </div>
 </div>
-               <!-- END CONTENT -->
            </div>
        </div>
-
-       <script>
-            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'EditorPostsComponent.html';
-       </script>
-
-       <script src="../js/libs/custom-elements.min.js"></script>
-       <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="../js/menu-wc.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 
@@ -824,17 +994,20 @@ export class EditorPostsComponent implements OnInit {
 
        <script src="../js/compodoc.js"></script>
 
-       <script src="../js/tabs.js"></script>
-       <script src="../js/menu.js"></script>
-       <script src="../js/libs/clipboard.min.js"></script>
-       <script src="../js/libs/prism.js"></script>
-       <script src="../js/sourceCode.js"></script>
-          <script src="../js/search/search.js"></script>
-          <script src="../js/search/lunr.min.js"></script>
-          <script src="../js/search/search-lunr.js"></script>
-          <script src="../js/search/search_index.js"></script>
-       <script src="../js/lazy-load-graphs.js"></script>
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
 
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/highlight.pack.js"></script>
+       <script src="../js/libs/highlightjs-line-numbers.min.js"></script>
+       <script src="../js/search/search_index.js"></script>
+       <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                hljs.initHighlightingOnLoad();
+                hljs.initLineNumbersOnLoad();
+            });
+       </script>
 
     </body>
 </html>

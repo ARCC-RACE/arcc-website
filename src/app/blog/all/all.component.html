@@ -2,14 +2,10 @@
     <div class="container">
       <div class="text-center">
         <h1>Welcome to our Blog</h1>
-        <a [routerLink]="['/auth']" routerLinkActive="router-link-active"  class="btn btn-primary mx-auto my-4" role="button">Signup or Log In</a>
+<!--        <a [routerLink]="['/auth']" routerLinkActive="router-link-active"  class="btn btn-primary mx-auto my-4" role="button">Signup or Log In</a>-->
       </div>
-        <ais-instantsearch [config]="algoliaConfig">
-          <ais-configure
-            [searchParameters]=""
-          ></ais-configure>
-            <ais-search-box>
-            </ais-search-box>
+        <ais-instantsearch [config]="config">
+            <ais-search-box></ais-search-box>
             <ais-hits>
               <ng-template let-hits="hits" let-results="results">
                 <!-- Nothing found? -->
